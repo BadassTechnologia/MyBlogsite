@@ -39,6 +39,7 @@ collections:
           - { label: "Travel", value: "travel" }
           - { label: "Trending", value: "trending" }
           - { label: "Marketing", value: "marketing" }
+          - { label: "Tech Jobs", value: "tech-jobs" }
       - label: "Author"
         name: "author"
         widget: "select"
