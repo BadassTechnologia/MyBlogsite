@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
   // Copy static assets and the Decap CMS admin panel as-is
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
 
   // All published posts, newest first
   eleventyConfig.addCollection("posts", function (collectionApi) {
@@ -50,6 +51,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("catName", function (slug, cats) {
     const c = (cats || []).find((c) => c.slug === slug);
     return c ? c.name : slug;
+  });
+
+  eleventyConfig.addFilter("absoluteUrl", function (url, base) {
+    try {
+      return new URL(url, base).toString();
+    } catch (e) {
+      return url;
+    }
   });
 
   return {
