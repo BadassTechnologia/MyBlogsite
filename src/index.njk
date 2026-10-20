@@ -1,9 +1,10 @@
 ---
 layout: base.njk
-title: KnowledgeoPedia - Discover Amazing Stories Every Day
+title: Bloogsite - Discover Amazing Stories Every Day
 description: Practical, no-fluff articles on tech, AI tools, finance, careers, health, travel and more — written to actually help you make better decisions.
 activeNav: home
 ---
+{% from "article-card.njk" import articleCard %}
 
 <section class="hero">
 
@@ -22,39 +23,43 @@ career growth and much more.
 
 <div class="hero-image">
 
-<img src="https://picsum.photos/700/450" alt="">
+<img
+src="https://picsum.photos/1400/900"
+alt=""
+width="1400"
+height="900"
+fetchpriority="high"
+decoding="async"
+>
 
 </div>
 
 </section>
 
-<div class="search">
+<form class="search" role="search" data-search-mode="articles">
 
-<input type="text" placeholder="Search blogs...">
+<label class="search-label" for="article-search">Search all articles</label>
 
+<div class="search-row">
+<input id="article-search" type="search" name="query" placeholder="Try “JavaScript”, “finance”, or “AI tools”" autocomplete="off" aria-controls="article-search-results" aria-describedby="article-search-status">
+<button class="search-button" type="submit">Search</button>
 </div>
+
+<p id="article-search-status" class="search-status" role="status" aria-live="polite">Type a word or phrase to search the article library.</p>
+
+</form>
+
+<section id="article-search-results" class="search-results" aria-label="Article search results" hidden>
+<ul id="article-search-list" class="search-results-list"></ul>
+</section>
+
+<noscript><p class="search-noscript">Article search requires JavaScript. You can still browse the featured articles and category links below.</p></noscript>
 
 <h2 class="section-title" id="blogs">Featured Blogs</h2>
 
 <section class="blogs">
 {% for post in collections.posts | limit(3) %}
-<a href="{{ post.url }}" class="card">
-
-<img src="{{ post.data.image }}">
-
-<div class="content">
-
-<span class="tag">{{ post.data.category | catName(categories) }}</span>
-
-<h3>{{ post.data.title }}</h3>
-
-<p>{{ post.data.excerpt }}</p>
-
-<span class="read">Read More →</span>
-
-</div>
-
-</a>
+{{ articleCard(post, categories) }}
 {% endfor %}
 </section>
 
@@ -92,8 +97,8 @@ career growth and much more.
 
 <p>Get the latest articles delivered directly to your inbox.</p>
 
-<input type="email" placeholder="Enter your email">
-
-<button>Subscribe</button>
+<p class="newsletter-status">Newsletter signup is coming soon.</p>
 
 </section>
+
+<script src="/assets/js/site-search.js" defer></script>

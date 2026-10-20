@@ -1,138 +1,194 @@
-# KnowledgeoPedia
+# Bloogsite
 
-Your blog, now with a real admin panel for writing and publishing posts —
-built with **Eleventy** (turns your content into pages) and **Decap CMS**
-(the `/admin` writing panel).
+Bloogsite is a static editorial site built with Eleventy and Decap CMS. GitHub
+stores the source and Cloudflare Pages is the intended production host.
 
----
+## Local development
 
-## What changed from before
+Requirements:
 
-- Blog posts are no longer hand-written HTML. Each post is a markdown file in
-  `src/posts/`, with a small block of info (title, category, image, etc.) at
-  the top called "frontmatter."
-- Your header, footer, and page layout live once in `src/_includes/base.njk`
-  and get reused everywhere — you don't edit `index.html`, `categories.html`,
-  etc. by hand anymore.
-- Category pages (`/categories/tech/`, `/categories/finance/`, ...) are
-  generated automatically from whatever posts exist — you never create these
-  by hand.
-- Publishing a post = writing it in `/admin`, clicking Publish, and Netlify
-  rebuilds the site automatically. No more downloading files and dragging
-  them into a folder.
+- Node.js 22.16.0, recorded in `.node-version`
+- npm
 
----
-
-## 1. Run it locally (see it on your computer first)
-
-Open a terminal in this folder and run:
+Install dependencies and start the local preview:
 
 ```bash
 npm install
 npm run start
 ```
 
-This opens a local preview (usually `http://localhost:8080`) so you can see
-the site exactly as it'll look live. Press `Ctrl+C` to stop it.
-
-To just build the final files (without a live preview) run:
+Create the deployable output:
 
 ```bash
 npm run build
 ```
 
-Output goes into a `_site` folder — that's the finished website.
+Eleventy writes the finished site to `_site/`.
 
----
+## Cloudflare Pages build configuration
 
-## 2. Push this to GitHub
+Create a Pages project using the GitHub repository
+`BadassTechnologia/MyBlogsite` and configure:
 
-Replace the contents of your existing `MyBlogSite` GitHub repo with these
-files, then:
+| Setting | Value |
+|---|---|
+| Production branch | `main` |
+| Build command | `npm run build` |
+| Build output directory | `_site` |
+| Root directory | repository root |
+| Node version | `22.16.0` from `.node-version` |
 
-```bash
-git add .
-git commit -m "Migrate to Eleventy + Decap CMS"
-git push
+Do not add production secrets to the repository. Cloudflare automatically
+serves the generated top-level `_site/404.html` for missing static routes. The
+generated `_headers` file contains the response headers required by this site.
+
+## Production identity
+
+The canonical origin is configured once in `src/_data/site.js`:
+
+```text
+https://bloogsite.com
 ```
 
----
+Templates use this value for canonical links, Open Graph URLs, the RSS feed,
+the sitemap, and `robots.txt`. The public language and feed locale are `en` and
+`en-US` respectively.
 
-## 3. Connect the repo to Netlify (free)
+Cloudflare Pages initially supplies a `*.pages.dev` preview address. Verify the
+preview before attaching `bloogsite.com`. After the custom domain works, add
+`www.bloogsite.com` and configure a permanent redirect so only one hostname is
+canonical. Redirecting the `pages.dev` address to the custom domain is an
+account-side Cloudflare rule and is intentionally not performed by this
+repository.
 
-1. Go to [netlify.com](https://www.netlify.com) and sign up / log in (you can
-   use your GitHub account to sign in — one click).
-2. Click **"Add new site" → "Import an existing project"** and pick your
-   `MyBlogSite` repo.
-3. Netlify will auto-detect the build settings from `netlify.toml`
-   (`npm run build`, publish folder `_site`) — just click **Deploy**.
-4. In a minute or two, your site will be live at a `*.netlify.app` address.
+## Decap CMS authentication
 
----
+The admin panel is available at `/admin/`. Its configuration uses Decap's
+GitHub backend and the repository `BadassTechnologia/MyBlogsite`.
 
-## 4. Turn on the admin panel (Identity + Git Gateway)
+Netlify Identity and Git Gateway have been removed from the public site. Decap
+requires a GitHub OAuth proxy before live CMS login will work. The intended
+proxy origin is:
 
-This is what lets you log in at `/admin` and publish posts.
+```text
+https://auth.bloogsite.com
+```
 
-1. In your Netlify site dashboard, go to **Site configuration → Identity**
-   and click **Enable Identity**.
-2. Under Identity settings, set **Registration** to **Invite only** (so
-   random people can't sign up).
-3. Go to **Identity → Services → Git Gateway** and click **Enable Git
-   Gateway**. This lets the admin panel commit posts to your GitHub repo on
-   your behalf.
-4. Back on the main Identity tab, click **Invite users**, enter your own
-   email, and accept the invite email that arrives — it'll ask you to set a
-   password.
-5. Open `admin/config.yml` and replace `your-site-name` in the two `_url`
-   lines near the top with your actual Netlify site address, then commit and
-   push that change.
+Complete these account-side steps after the Pages preview is working:
 
----
+1. Deploy the Cloudflare Worker from Decap's documented `decap-proxy` template.
+2. Attach the custom Worker domain `auth.bloogsite.com`.
+3. Create a GitHub OAuth App owned by the GitHub account or organization that
+   controls the repository.
+4. Set the OAuth App homepage URL to `https://auth.bloogsite.com`.
+5. Set its callback URL to `https://auth.bloogsite.com/callback`.
+6. Store `GITHUB_OAUTH_ID` and `GITHUB_OAUTH_SECRET` as encrypted Worker
+   secrets. Never put either value in this repository or in Pages source.
+7. If the repository is private, configure the proxy's private-repository
+   setting as described by its documentation.
+8. Visit `https://bloogsite.com/admin/`, authenticate with the authorized
+   GitHub account, create a draft, save it, and confirm the editorial workflow
+   opens the expected GitHub branch or pull request before publishing.
 
-## 5. Start writing
+Relevant documentation:
 
-Go to `https://your-site-name.netlify.app/admin`, log in, and you'll see:
+- [Decap GitHub OAuth proxy overview](https://decapcms.org/docs/backends-overview/#using-github-with-an-oauth-proxy)
+- [Decap Cloudflare Worker template](https://github.com/sterlingwes/decap-proxy)
+- [Cloudflare Pages Git integration](https://developers.cloudflare.com/pages/configuration/git-integration/)
 
-- **Blog Posts** — title, date, category, author, cover image, an optional
-  video embed URL, an excerpt, and a full markdown editor with drag-and-drop
-  image uploads.
-- **Author Profiles** — edit the name/bio/photo shown on each post.
+## Custom-domain cutover and rollback
 
-Every save creates a draft; clicking **Publish** commits it to GitHub and
-Netlify rebuilds the live site automatically (about 30-60 seconds).
+Do not change DNS until the `pages.dev` deployment passes review.
 
----
+1. Verify the homepage, category pages, representative articles, search,
+   `/admin/`, feed, sitemap, `robots.txt`, security headers, and a missing URL
+   on the Pages preview.
+2. In the Pages project, add `bloogsite.com` under **Custom domains**.
+3. Confirm Cloudflare provisions HTTPS and the domain resolves to the verified
+   Pages deployment.
+4. Add `www.bloogsite.com` and redirect it permanently to
+   `https://bloogsite.com` while preserving paths and query strings.
+5. Redirect the `pages.dev` hostname to the canonical domain after both custom
+   hostnames work.
+6. Recheck canonical URLs, social previews, RSS, sitemap, CMS authentication,
+   and unknown-route 404 responses on the production hostname.
+
+If cutover verification fails, remove or disable the new custom-domain mapping
+or restore the previous DNS record, then continue using the last verified host
+while the issue is corrected. DNS and deployment changes require explicit
+owner approval.
+
+## Publishing workflow
+
+- Posts are Markdown files in `src/posts/`.
+- Shared page templates live in `src/_includes/`.
+- Categories come from `src/_data/categories.json`.
+- Uploaded article media belongs in `src/assets/img/uploads/`.
+- Saving or publishing through Decap writes to GitHub.
+- A push to `main` triggers a Cloudflare Pages production build after the Git
+  integration is connected.
+
+The newsletter signup remains intentionally disabled until a provider account,
+consent wording, and privacy policy are approved. No placeholder endpoint is
+shipped to production.
+
+## Social links
+
+Public social destinations are maintained in `src/_data/site.js`. The current
+list includes YouTube, Instagram, the Reddit community and profile, Discord,
+and Threads. Add the complete WhatsApp Channel URL only after it is available;
+the supplied screenshot truncated that address.
 
 ## Project structure
 
-```
+```text
 src/
-  _data/
-    categories.json   -> the 9 category definitions (name, color, icon)
-    authors.json       -> author profiles (editable via /admin too)
-    currentYear.js      -> auto-updates the footer copyright year
-  _includes/
-    base.njk           -> shared header/nav/footer for every page
-    post.njk            -> layout for a single blog post
-  posts/
-    *.md                -> every blog post (sample content included)
-  assets/
-    css/style.css       -> all site styling
-    img/uploads/         -> where images uploaded via /admin get saved
-  index.njk             -> homepage
-  categories.njk         -> "all categories" page
-  category-page.njk       -> template that auto-generates one page per category
+  _data/                 site, category, and author data
+  _includes/             shared layouts and article components
+  posts/                 Markdown articles
+  assets/                CSS, JavaScript, and images
+  _headers               Cloudflare Pages response headers
+  robots.njk             generated robots.txt
+  sitemap.njk            generated sitemap.xml
+  feed.njk               generated RSS feed
 admin/
-  index.html            -> loads the Decap CMS admin app
-  config.yml             -> defines what fields the admin panel shows
-eleventy.config.js       -> Eleventy setup (collections, filters, etc.)
-netlify.toml             -> tells Netlify how to build the site
+  index.html             Decap CMS application
+  config.yml             CMS repository, authentication, and content schema
+eleventy.config.js       Eleventy collections, filters, and passthrough files
+.node-version            Cloudflare and local Node version
 ```
 
-## Adding more categories later
+## Repository conventions
 
-Add an entry to `src/_data/categories.json` (slug, name, color, bg, icon SVG
-path) and it'll automatically show up in the nav dropdown, the categories
-page, and become selectable in the admin panel once you also add it to the
-`category` field options in `admin/config.yml`.
+### Generated `_site` output
+
+This repository currently commits `_site/` as a generated snapshot. When a
+source change affects rendered pages, generate and review the corresponding
+`_site/` output before committing it. Never edit `_site/` by hand.
+
+Cloudflare Pages also generates `_site/` from source during every deployment.
+If the repository later adopts a generated-only policy, remove `_site/` from
+Git and add it to `.gitignore` in one deliberate change.
+
+### Local and generated noise
+
+`.gitignore` excludes dependencies, macOS metadata, local environment files,
+logs, temporary files, and common editor settings. Never commit `.env` files,
+OAuth credentials, Cloudflare API tokens, or GitHub tokens.
+
+### Legacy CMS archive and Netlify configuration
+
+`knowledgeopedia-cms.zip` is a legacy recovery snapshot and is not a build
+input. `netlify.toml` is retained temporarily as rollback history; Cloudflare
+Pages does not read it. Neither file is the current deployment source of truth.
+
+### Unpublished India travel draft
+
+`src/posts/best-places-in-india-to-travel.md` remains unpublished until it has
+researched content and approved imagery.
+
+## Adding categories
+
+Add the category to `src/_data/categories.json`, then add the matching option
+to the category field in `admin/config.yml`. This keeps navigation, category
+pages, and the editor aligned.

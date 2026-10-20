@@ -1,7 +1,10 @@
 {
-  "name": "knowledgeopedia",
+  "name": "bloogsite",
   "version": "1.0.0",
-  "description": "KnowledgeoPedia blog - built with Eleventy and Decap CMS",
+  "description": "Bloogsite blog built with Eleventy and Decap CMS",
+  "engines": {
+    "node": ">=22.16.0 <23"
+  },
   "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",

@@ -1,20 +1,25 @@
 ---
 layout: base.njk
 ---
+{% from "article-card.njk" import articleCard %}
 {% set authorData = authors | selectattr("slug", "equalto", author) | first %}
 {% set catData = categories | selectattr("slug", "equalto", category) | first %}
+{% set categoryName = catData.name if catData else (category or "General") %}
+{% set minutesToRead = content | readingTime %}
+{% set related = collections.postsByCategory[category] | relatedPosts(page.url, 3) %}
+{% set safeVideoUrl = videoUrl | safeEmbedUrl %}
 
 <div class="breadcrumb">
-<a href="/">Home</a> / <a href="/categories/">Categories</a> / <a href="/categories/{{ category }}/">{{ catData.name if catData else category }}</a>
+<a href="/">Home</a> / <a href="/categories/">Categories</a> / <a href="/categories/{{ category }}/">{{ categoryName }}</a>
 </div>
 
 <article class="post-page">
 
 {% if image %}
-<img class="post-hero-img" src="{{ image }}" alt="{{ title }}">
+<img class="post-hero-img" src="{{ image }}" alt="{{ imageAlt or '' }}" width="900" height="500">
 {% endif %}
 
-<span class="tag">{{ catData.name if catData else category }}</span>
+<span class="tag">{{ categoryName }}</span>
 
 <h1>{{ title }}</h1>
 
@@ -25,14 +30,20 @@ layout: base.njk
 <span>·</span>
 {% endif %}
 <span>{{ date | readableDate }}</span>
+{% if minutesToRead %}
+<span aria-hidden="true">·</span>
+<span>{{ minutesToRead }} min read</span>
+{% endif %}
 </div>
 
 <div class="post-body">
 {{ content | safe }}
 </div>
 
-{% if videoUrl %}
-<iframe src="{{ videoUrl }}" title="{{ title }}" allowfullscreen></iframe>
+{% if safeVideoUrl %}
+<div class="post-video">
+<iframe src="{{ safeVideoUrl }}" title="Video: {{ title or 'Bloogsite article' }}" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 {% endif %}
 
 {% if authorData %}
@@ -43,6 +54,28 @@ layout: base.njk
 <p>{{ authorData.bio }}</p>
 </div>
 </div>
+{% endif %}
+
+{% if related.length %}
+<aside class="related-articles" aria-labelledby="related-articles-title">
+<div class="related-articles-header">
+<div>
+<p class="related-articles-eyebrow">Continue exploring</p>
+<h2 id="related-articles-title">More from {{ categoryName }}</h2>
+</div>
+<a href="/categories/{{ category }}/">View all {{ categoryName }} articles →</a>
+</div>
+
+<div class="related-articles-grid">
+{% for relatedPost in related %}
+{{ articleCard(relatedPost, categories) }}
+{% endfor %}
+</div>
+</aside>
+{% else %}
+<nav class="post-category-return" aria-label="Continue reading">
+<a href="/categories/{{ category }}/">Browse more {{ categoryName }} articles →</a>
+</nav>
 {% endif %}
 
 </article>

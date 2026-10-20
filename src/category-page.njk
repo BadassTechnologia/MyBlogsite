@@ -6,11 +6,12 @@ pagination:
   alias: cat
 permalink: "/categories/{{ cat.slug }}/"
 eleventyComputed:
-  title: "{{ cat.name }} Articles - KnowledgeoPedia"
-  description: "Explore {{ cat.name }} articles on KnowledgeoPedia — practical, no-fluff reads to help you make better decisions."
+  title: "{{ cat.name }} Articles - Bloogsite"
+  description: "Explore {{ cat.name }} articles on Bloogsite — practical, no-fluff reads to help you make better decisions."
   activeNav: categories
   activeCategory: "{{ cat.slug }}"
 ---
+{% from "article-card.njk" import articleCard %}
 
 <div class="breadcrumb">
 <a href="/">Home</a> / <a href="/categories/">Categories</a> / <span>{{ cat.name }}</span>
@@ -33,23 +34,7 @@ eleventyComputed:
 {% if catPosts and catPosts.length > 0 %}
 <section class="blogs">
 {% for post in catPosts %}
-<a href="{{ post.url }}" class="card">
-
-<img src="{{ post.data.image }}">
-
-<div class="content">
-
-<span class="tag">{{ cat.name }}</span>
-
-<h3>{{ post.data.title }}</h3>
-
-<p>{{ post.data.excerpt }}</p>
-
-<span class="read">Read More →</span>
-
-</div>
-
-</a>
+{{ articleCard(post, categories) }}
 {% endfor %}
 </section>
 {% else %}

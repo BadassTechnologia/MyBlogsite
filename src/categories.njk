@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: Categories - KnowledgeoPedia
-description: Browse KnowledgeoPedia by topic — Tech, AI Tools, Finance, Tech Jobs, Health, Travel, Education, Marketing, and Lifestyle.
+title: Categories - Bloogsite
+description: Browse Bloogsite by topic — Tech, AI Tools, Finance, Tech Jobs, Health, Travel, Education, Marketing, and Lifestyle.
 activeNav: categories
 permalink: /categories/
 ---
@@ -14,17 +14,26 @@ permalink: /categories/
 
 </section>
 
-<div class="search">
+<form class="search" role="search" data-search-mode="categories">
 
-<input type="text" placeholder="Search categories...">
+<label class="search-label" for="category-search">Filter categories</label>
 
+<div class="search-row">
+<input id="category-search" type="search" name="query" placeholder="Try “tech”, “travel”, or “finance”" autocomplete="off" aria-controls="category-list" aria-describedby="category-search-status">
+<button class="search-button" type="submit">Filter</button>
 </div>
+
+<p id="category-search-status" class="search-status" role="status" aria-live="polite">{{ categories | length }} categories available.</p>
+
+</form>
+
+<noscript><p class="search-noscript">Category filtering requires JavaScript. All categories remain available below.</p></noscript>
 
 <section class="categories-section" style="padding-top:10px;">
 
-<div class="categories">
+<div id="category-list" class="categories">
 {% for cat in categories %}
-<a href="/categories/{{ cat.slug }}/" class="cat-card">
+<a href="/categories/{{ cat.slug }}/" class="cat-card" data-category-card data-search-text="{{ cat.name }} {{ cat.slug }}">
 <div class="cat-icon" style="background:{{ cat.bg }};">
 <svg viewBox="0 0 24 24" fill="none" stroke="{{ cat.color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ cat.icon | safe }}</svg>
 </div>
@@ -37,3 +46,5 @@ permalink: /categories/
 </div>
 
 </section>
+
+<script src="/assets/js/site-search.js" defer></script>

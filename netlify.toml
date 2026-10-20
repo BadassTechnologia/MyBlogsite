@@ -1,3 +1,10 @@
 [build]
   command = "npm run build"
   publish = "_site"
+
+# Serve the branded recovery page for unmatched routes while retaining a true
+# 404 status. Existing generated files take precedence because this is not forced.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

@@ -1,0 +1,45 @@
+---
+layout: base.njk
+title: Page Not Found - Bloogsite
+description: The requested page could not be found. Browse recent Bloogsite articles or search the site.
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+
+<main class="not-found" id="main-content">
+
+<div class="not-found-copy">
+<p class="not-found-code" aria-hidden="true">404</p>
+<h1>That page wandered off.</h1>
+<p>The link may be outdated or the address may contain a typo. Choose a route below to continue exploring Bloogsite.</p>
+
+<nav class="not-found-actions" aria-label="Page recovery options">
+<a class="not-found-primary" href="/">Return home</a>
+<a href="/#article-search">Search articles</a>
+<a href="/categories/">Browse categories</a>
+</nav>
+</div>
+
+{% set recentPosts = collections.posts | limit(3) %}
+{% if recentPosts.length %}
+<section class="not-found-recent" aria-labelledby="recent-articles-title">
+<div class="not-found-recent-heading">
+<p>Fresh from the library</p>
+<h2 id="recent-articles-title">Recent articles</h2>
+</div>
+
+<ul>
+{% for post in recentPosts %}
+<li>
+<a href="{{ post.url }}">
+<span>{{ post.data.category | catName(categories) }}</span>
+<strong>{{ post.data.title or "Untitled article" }}</strong>
+<span class="not-found-read">Read article →</span>
+</a>
+</li>
+{% endfor %}
+</ul>
+</section>
+{% endif %}
+
+</main>

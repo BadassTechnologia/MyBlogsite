@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://your-site-name.netlify.app/sitemap.xml
+Sitemap: https://bloogsite.com/sitemap.xml

@@ -10,51 +10,65 @@
 
 
 
-<title>Tech Articles - KnowledgeoPedia</title>
-<meta name="description" content="Explore Tech articles on KnowledgeoPedia — practical, no-fluff reads to help you make better decisions.">
-<link rel="canonical" href="https://your-site-name.netlify.app/categories/tech/">
+<title>Tech Articles - Bloogsite</title>
+<meta name="description" content="Explore Tech articles on Bloogsite — practical, no-fluff reads to help you make better decisions.">
+<link rel="canonical" href="https://bloogsite.com/categories/tech/">
+<link rel="alternate" type="application/rss+xml" title="Bloogsite RSS Feed" href="/feed.xml">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="KnowledgeoPedia">
-<meta property="og:title" content="Tech Articles - KnowledgeoPedia">
-<meta property="og:description" content="Explore Tech articles on KnowledgeoPedia — practical, no-fluff reads to help you make better decisions.">
-<meta property="og:image" content="https://your-site-name.netlify.app/assets/img/social-share-default.jpg">
-<meta property="og:url" content="https://your-site-name.netlify.app/categories/tech/">
+<meta property="og:site_name" content="Bloogsite">
+<meta property="og:title" content="Tech Articles - Bloogsite">
+<meta property="og:description" content="Explore Tech articles on Bloogsite — practical, no-fluff reads to help you make better decisions.">
+<meta property="og:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
+<meta property="og:url" content="https://bloogsite.com/categories/tech/">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@knowledgeopedia">
-<meta name="twitter:title" content="Tech Articles - KnowledgeoPedia">
-<meta name="twitter:description" content="Explore Tech articles on KnowledgeoPedia — practical, no-fluff reads to help you make better decisions.">
-<meta name="twitter:image" content="https://your-site-name.netlify.app/assets/img/social-share-default.jpg">
+
+<meta name="twitter:title" content="Tech Articles - Bloogsite">
+<meta name="twitter:description" content="Explore Tech articles on Bloogsite — practical, no-fluff reads to help you make better decisions.">
+<meta name="twitter:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
 
-<a href="/" class="logo">KnowledgeoPedia</a>
+<a href="/" class="logo">Bloogsite</a>
 
-<nav>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+<span class="visually-hidden">Open main menu</span>
+<svg class="menu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+<path d="M4 7h16M4 12h16M4 17h16"></path>
+</svg>
+<svg class="close-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+<path d="m6 6 12 12M18 6 6 18"></path>
+</svg>
+</button>
 
-<a href="/">Home</a>
+<nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
 
-<a href="/#blogs">Blogs</a>
+<a href="/" class="nav-link">Home</a>
+
+<a href="/#blogs" class="nav-link">Blogs</a>
 
 <div class="nav-dropdown">
 
-<a href="/categories/" class="dropdown-trigger active">
-Categories
-<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-</a>
+<div class="dropdown-label-row">
+<a href="/categories/" class="nav-link dropdown-trigger active">Categories</a>
+<button class="category-toggle" type="button" aria-expanded="false" aria-controls="category-menu" aria-label="Open categories menu">
+<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+</div>
 
-<div class="mega-menu">
+<div id="category-menu" class="mega-menu" aria-label="Article categories">
 
-<a href="/categories/tech/" class="mega-item active-cat">
+<a href="/categories/tech/" class="mega-item active-cat" aria-current="page">
 <span class="mega-icon" style="background:rgba(59,130,246,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
 </span>
@@ -128,13 +142,14 @@ Tech Jobs
 
 </div>
 
-<a href="#">About</a>
+<a href="#" class="nav-link">About</a>
 
-<a href="#">Contact</a>
+<a href="#" class="nav-link">Contact</a>
 
 </nav>
 
 </header>
+
 
 
 <div class="breadcrumb">
@@ -158,59 +173,119 @@ Tech Jobs
 
 <section class="blogs">
 
-<a href="/posts/how-ai-is-changing-software-development/" class="card">
 
-<img src="https://picsum.photos/900/500?1">
 
-<div class="content">
 
-<span class="tag">Tech</span>
 
-<h3>How AI is Changing Software Development</h3>
 
-<p>Artificial Intelligence is transforming the way developers build applications.</p>
 
-<span class="read">Read More →</span>
 
-</div>
 
-</a>
+<article class="article-card">
+<a href="/posts/how-ai-is-changing-software-development/" class="card" aria-labelledby="article-card-title-how-ai-is-changing-software-development" aria-describedby="article-card-excerpt-how-ai-is-changing-software-development">
 
-<a href="/posts/top-10-javascript-tips/" class="card">
-
-<img src="https://picsum.photos/900/500?2">
-
-<div class="content">
-
-<span class="tag">Tech</span>
-
-<h3>Top 10 JavaScript Tips</h3>
-
-<p>Useful JavaScript tricks that every frontend developer should know.</p>
-
-<span class="read">Read More →</span>
-
-</div>
-
-</a>
-
-<a href="/posts/the-rise-of-edge-computing/" class="card">
-
-<img src="https://picsum.photos/900/500?11">
+<img
+class="card-image"
+src="https://picsum.photos/900/500?1"
+alt=""
+width="900"
+height="500"
+loading="lazy"
+decoding="async"
+onerror="this.onerror=null;this.src='/assets/img/article-fallback.svg';"
+>
 
 <div class="content">
 
 <span class="tag">Tech</span>
 
-<h3>The Rise of Edge Computing</h3>
+<h3 id="article-card-title-how-ai-is-changing-software-development">How AI is Changing Software Development</h3>
 
-<p>Why processing data closer to the source is reshaping modern apps.</p>
+<p id="article-card-excerpt-how-ai-is-changing-software-development">Artificial Intelligence is transforming the way developers build applications.</p>
 
-<span class="read">Read More →</span>
+<span class="read" aria-hidden="true">Read More →</span>
 
 </div>
 
 </a>
+</article>
+
+
+
+
+
+
+
+
+
+
+<article class="article-card">
+<a href="/posts/top-10-javascript-tips/" class="card" aria-labelledby="article-card-title-top-10-javascript-tips" aria-describedby="article-card-excerpt-top-10-javascript-tips">
+
+<img
+class="card-image"
+src="https://picsum.photos/900/500?2"
+alt=""
+width="900"
+height="500"
+loading="lazy"
+decoding="async"
+onerror="this.onerror=null;this.src='/assets/img/article-fallback.svg';"
+>
+
+<div class="content">
+
+<span class="tag">Tech</span>
+
+<h3 id="article-card-title-top-10-javascript-tips">Top 10 JavaScript Tips</h3>
+
+<p id="article-card-excerpt-top-10-javascript-tips">Useful JavaScript tricks that every frontend developer should know.</p>
+
+<span class="read" aria-hidden="true">Read More →</span>
+
+</div>
+
+</a>
+</article>
+
+
+
+
+
+
+
+
+
+
+<article class="article-card">
+<a href="/posts/the-rise-of-edge-computing/" class="card" aria-labelledby="article-card-title-the-rise-of-edge-computing" aria-describedby="article-card-excerpt-the-rise-of-edge-computing">
+
+<img
+class="card-image"
+src="https://picsum.photos/900/500?11"
+alt=""
+width="900"
+height="500"
+loading="lazy"
+decoding="async"
+onerror="this.onerror=null;this.src='/assets/img/article-fallback.svg';"
+>
+
+<div class="content">
+
+<span class="tag">Tech</span>
+
+<h3 id="article-card-title-the-rise-of-edge-computing">The Rise of Edge Computing</h3>
+
+<p id="article-card-excerpt-the-rise-of-edge-computing">Why processing data closer to the source is reshaping modern apps.</p>
+
+<span class="read" aria-hidden="true">Read More →</span>
+
+</div>
+
+</a>
+</article>
+
 
 </section>
 
@@ -218,38 +293,100 @@ Tech Jobs
 
 <footer>
 
-© 2026 KnowledgeoPedia. All Rights Reserved.
+<div class="footer-links">
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms/">Terms of Use</a>
+<a href="/categories/">Categories</a>
+<a href="/feed.xml">RSS Feed</a>
+</div>
+
+
+<nav class="footer-socials" aria-label="Bloogsite on social media">
+
+<a href="https://www.youtube.com/@Badass_Technologia" rel="me noopener noreferrer">YouTube</a>
+
+<a href="https://www.instagram.com/badass_technologia/" rel="me noopener noreferrer">Instagram</a>
+
+<a href="https://www.reddit.com/r/Badass_Technologia/" rel="me noopener noreferrer">Reddit community</a>
+
+<a href="https://www.reddit.com/user/Badass_Technologia/" rel="me noopener noreferrer">Reddit profile</a>
+
+<a href="https://discord.gg/X5X2bkgp" rel="me noopener noreferrer">Discord</a>
+
+<a href="https://www.threads.com/@badass_technologia" rel="me noopener noreferrer">Threads</a>
+
+</nav>
+
+
+<p>© 2026 Bloogsite. All Rights Reserved.</p>
 
 </footer>
 
 <script>
-document.querySelectorAll('.nav-dropdown').forEach(function(dd){
-var trigger = dd.querySelector('.dropdown-trigger');
-trigger.addEventListener('click', function(e){
-if(window.matchMedia('(hover: none)').matches){
-e.preventDefault();
-dd.classList.toggle('open');
-}
-});
-});
-document.addEventListener('click', function(e){
-document.querySelectorAll('.nav-dropdown.open').forEach(function(dd){
-if(!dd.contains(e.target)) dd.classList.remove('open');
-});
-});
-</script>
+(function () {
+  var header = document.querySelector('.site-header');
+  var nav = document.querySelector('.site-nav');
+  var navToggle = document.querySelector('.nav-toggle');
+  var navToggleLabel = navToggle && navToggle.querySelector('.visually-hidden');
+  var dropdown = document.querySelector('.nav-dropdown');
+  var categoryToggle = document.querySelector('.category-toggle');
+  var mobileQuery = window.matchMedia('(max-width: 768px)');
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", function (user) {
-    if (!user) {
-      window.netlifyIdentity.on("login", function () {
-        document.location.href = "/admin/";
-      });
+  if (!header || !nav || !navToggle || !dropdown || !categoryToggle) return;
+
+  function setCategoryMenu(open, returnFocus) {
+    dropdown.classList.toggle('open', open);
+    categoryToggle.setAttribute('aria-expanded', String(open));
+    categoryToggle.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' categories menu');
+    if (returnFocus) categoryToggle.focus();
+  }
+
+  function setMainMenu(open, returnFocus) {
+    nav.classList.toggle('open', open);
+    header.classList.toggle('nav-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggleLabel.textContent = (open ? 'Close' : 'Open') + ' main menu';
+    if (!open) setCategoryMenu(false, false);
+    if (returnFocus) navToggle.focus();
+  }
+
+  navToggle.addEventListener('click', function () {
+    setMainMenu(navToggle.getAttribute('aria-expanded') !== 'true', false);
+  });
+
+  categoryToggle.addEventListener('click', function () {
+    setCategoryMenu(categoryToggle.getAttribute('aria-expanded') !== 'true', false);
+  });
+
+  nav.addEventListener('click', function (event) {
+    if (mobileQuery.matches && event.target.closest('a')) setMainMenu(false, false);
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!dropdown.contains(event.target)) setCategoryMenu(false, false);
+    if (mobileQuery.matches && !header.contains(event.target)) setMainMenu(false, false);
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    if (categoryToggle.getAttribute('aria-expanded') === 'true') {
+      setCategoryMenu(false, true);
+    } else if (mobileQuery.matches && navToggle.getAttribute('aria-expanded') === 'true') {
+      setMainMenu(false, true);
     }
   });
-}
+
+  function handleBreakpointChange(event) {
+    setMainMenu(false, false);
+    if (!event.matches) setCategoryMenu(false, false);
+  }
+
+  if (mobileQuery.addEventListener) {
+    mobileQuery.addEventListener('change', handleBreakpointChange);
+  } else {
+    mobileQuery.addListener(handleBreakpointChange);
+  }
+})();
 </script>
 
 </body>

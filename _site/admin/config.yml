@@ -1,11 +1,13 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: BadassTechnologia/MyBlogsite
   branch: main
+  base_url: https://auth.bloogsite.com
+  auth_endpoint: /auth
+  site_domain: bloogsite.com
 
-# This makes Netlify Identity handle logins for /admin
-site_url: https://your-site-name.netlify.app
-display_url: https://your-site-name.netlify.app
-logo_url: /assets/img/logo.png
+site_url: https://bloogsite.com
+display_url: https://bloogsite.com
 
 media_folder: "src/assets/img/uploads"
 public_folder: "/assets/img/uploads"
@@ -47,9 +49,10 @@ collections:
         options:
           - { label: "Ashok Jagarapu", value: "ashok" }
           - { label: "Guest Author", value: "guest" }
-      - { label: "Cover Image", name: "image", widget: "image" }
-      - { label: "Short Excerpt", name: "excerpt", widget: "text", hint: "Shown on cards and listing pages. Keep it to 1-2 sentences." }
-      - { label: "Embedded Video URL", name: "videoUrl", widget: "string", required: false, hint: "Paste a YouTube/Vimeo embed URL, e.g. https://www.youtube.com/embed/VIDEO_ID" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false, hint: "Optional. A branded fallback is used when no image is supplied." }
+      - { label: "Cover Image Description", name: "imageAlt", widget: "string", required: false, hint: "Describe meaningful image content. Leave blank when the image is decorative." }
+      - { label: "Short Excerpt", name: "excerpt", widget: "text", required: false, hint: "Shown on cards and listing pages. Keep it to 1-2 sentences." }
+      - { label: "Embedded Video URL", name: "videoUrl", widget: "string", required: false, pattern: ['^https://(www\\.)?(youtube(-nocookie)?\\.com/embed/|player\\.vimeo\\.com/video/).+$', "Use a secure YouTube or Vimeo embed URL."], hint: "Paste an HTTPS YouTube embed or Vimeo player URL. Other providers are not displayed." }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Draft (hide from live site)", name: "draft", widget: "boolean", default: false, required: false }
 

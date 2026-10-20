@@ -10,49 +10,63 @@
 
 
 
-<title>Categories - KnowledgeoPedia</title>
-<meta name="description" content="Browse KnowledgeoPedia by topic — Tech, AI Tools, Finance, Tech Jobs, Health, Travel, Education, Marketing, and Lifestyle.">
-<link rel="canonical" href="https://your-site-name.netlify.app/categories/">
+<title>Categories - Bloogsite</title>
+<meta name="description" content="Browse Bloogsite by topic — Tech, AI Tools, Finance, Tech Jobs, Health, Travel, Education, Marketing, and Lifestyle.">
+<link rel="canonical" href="https://bloogsite.com/categories/">
+<link rel="alternate" type="application/rss+xml" title="Bloogsite RSS Feed" href="/feed.xml">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="KnowledgeoPedia">
-<meta property="og:title" content="Categories - KnowledgeoPedia">
-<meta property="og:description" content="Browse KnowledgeoPedia by topic — Tech, AI Tools, Finance, Tech Jobs, Health, Travel, Education, Marketing, and Lifestyle.">
-<meta property="og:image" content="https://your-site-name.netlify.app/assets/img/social-share-default.jpg">
-<meta property="og:url" content="https://your-site-name.netlify.app/categories/">
+<meta property="og:site_name" content="Bloogsite">
+<meta property="og:title" content="Categories - Bloogsite">
+<meta property="og:description" content="Browse Bloogsite by topic — Tech, AI Tools, Finance, Tech Jobs, Health, Travel, Education, Marketing, and Lifestyle.">
+<meta property="og:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
+<meta property="og:url" content="https://bloogsite.com/categories/">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@knowledgeopedia">
-<meta name="twitter:title" content="Categories - KnowledgeoPedia">
-<meta name="twitter:description" content="Browse KnowledgeoPedia by topic — Tech, AI Tools, Finance, Tech Jobs, Health, Travel, Education, Marketing, and Lifestyle.">
-<meta name="twitter:image" content="https://your-site-name.netlify.app/assets/img/social-share-default.jpg">
+
+<meta name="twitter:title" content="Categories - Bloogsite">
+<meta name="twitter:description" content="Browse Bloogsite by topic — Tech, AI Tools, Finance, Tech Jobs, Health, Travel, Education, Marketing, and Lifestyle.">
+<meta name="twitter:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
 
-<a href="/" class="logo">KnowledgeoPedia</a>
+<a href="/" class="logo">Bloogsite</a>
 
-<nav>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+<span class="visually-hidden">Open main menu</span>
+<svg class="menu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+<path d="M4 7h16M4 12h16M4 17h16"></path>
+</svg>
+<svg class="close-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+<path d="m6 6 12 12M18 6 6 18"></path>
+</svg>
+</button>
 
-<a href="/">Home</a>
+<nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
 
-<a href="/#blogs">Blogs</a>
+<a href="/" class="nav-link">Home</a>
+
+<a href="/#blogs" class="nav-link">Blogs</a>
 
 <div class="nav-dropdown">
 
-<a href="/categories/" class="dropdown-trigger active">
-Categories
-<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-</a>
+<div class="dropdown-label-row">
+<a href="/categories/" class="nav-link dropdown-trigger active" aria-current="page">Categories</a>
+<button class="category-toggle" type="button" aria-expanded="false" aria-controls="category-menu" aria-label="Open categories menu">
+<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+</div>
 
-<div class="mega-menu">
+<div id="category-menu" class="mega-menu" aria-label="Article categories">
 
 <a href="/categories/tech/" class="mega-item">
 <span class="mega-icon" style="background:rgba(59,130,246,.12);">
@@ -128,9 +142,9 @@ Tech Jobs
 
 </div>
 
-<a href="#">About</a>
+<a href="#" class="nav-link">About</a>
 
-<a href="#">Contact</a>
+<a href="#" class="nav-link">Contact</a>
 
 </nav>
 
@@ -145,17 +159,26 @@ Tech Jobs
 
 </section>
 
-<div class="search">
+<form class="search" role="search" data-search-mode="categories">
 
-<input type="text" placeholder="Search categories...">
+<label class="search-label" for="category-search">Filter categories</label>
 
+<div class="search-row">
+<input id="category-search" type="search" name="query" placeholder="Try “tech”, “travel”, or “finance”" autocomplete="off" aria-controls="category-list" aria-describedby="category-search-status">
+<button class="search-button" type="submit">Filter</button>
 </div>
+
+<p id="category-search-status" class="search-status" role="status" aria-live="polite">10 categories available.</p>
+
+</form>
+
+<noscript><p class="search-noscript">Category filtering requires JavaScript. All categories remain available below.</p></noscript>
 
 <section class="categories-section" style="padding-top:10px;">
 
-<div class="categories">
+<div id="category-list" class="categories">
 
-<a href="/categories/tech/" class="cat-card">
+<a href="/categories/tech/" class="cat-card" data-category-card data-search-text="Tech tech">
 <div class="cat-icon" style="background:rgba(59,130,246,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
 </div>
@@ -165,7 +188,7 @@ Tech Jobs
 </div>
 </a>
 
-<a href="/categories/finance/" class="cat-card">
+<a href="/categories/finance/" class="cat-card" data-category-card data-search-text="Finance finance">
 <div class="cat-icon" style="background:rgba(16,185,129,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
 </div>
@@ -175,7 +198,7 @@ Tech Jobs
 </div>
 </a>
 
-<a href="/categories/education/" class="cat-card">
+<a href="/categories/education/" class="cat-card" data-category-card data-search-text="Education education">
 <div class="cat-icon" style="background:rgba(236,72,153,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg>
 </div>
@@ -185,7 +208,7 @@ Tech Jobs
 </div>
 </a>
 
-<a href="/categories/lifestyle/" class="cat-card">
+<a href="/categories/lifestyle/" class="cat-card" data-category-card data-search-text="Lifestyle lifestyle">
 <div class="cat-icon" style="background:rgba(20,184,166,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 8-11 5 3 8 7 8 11a7 7 0 0 1-7 7Z"></path><path d="M12 9v11"></path></svg>
 </div>
@@ -195,7 +218,7 @@ Tech Jobs
 </div>
 </a>
 
-<a href="/categories/ai-tools/" class="cat-card">
+<a href="/categories/ai-tools/" class="cat-card" data-category-card data-search-text="AI Tools ai-tools">
 <div class="cat-icon" style="background:rgba(139,92,246,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v1a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10V7a5 5 0 0 0-5-5Z"></path><path d="M9 22v-3"></path><path d="M15 22v-3"></path></svg>
 </div>
@@ -205,7 +228,7 @@ Tech Jobs
 </div>
 </a>
 
-<a href="/categories/health/" class="cat-card">
+<a href="/categories/health/" class="cat-card" data-category-card data-search-text="Health health">
 <div class="cat-icon" style="background:rgba(239,68,68,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg>
 </div>
@@ -215,7 +238,7 @@ Tech Jobs
 </div>
 </a>
 
-<a href="/categories/travel/" class="cat-card">
+<a href="/categories/travel/" class="cat-card" data-category-card data-search-text="Travel travel">
 <div class="cat-icon" style="background:rgba(245,158,11,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5Z"></path></svg>
 </div>
@@ -225,7 +248,7 @@ Tech Jobs
 </div>
 </a>
 
-<a href="/categories/trending/" class="cat-card">
+<a href="/categories/trending/" class="cat-card" data-category-card data-search-text="Trending trending">
 <div class="cat-icon" style="background:rgba(6,182,212,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="14 7 21 7 21 14"></polyline></svg>
 </div>
@@ -235,7 +258,7 @@ Tech Jobs
 </div>
 </a>
 
-<a href="/categories/marketing/" class="cat-card">
+<a href="/categories/marketing/" class="cat-card" data-category-card data-search-text="Marketing marketing">
 <div class="cat-icon" style="background:rgba(249,115,22,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-8-8 18-2-8-8-2Z"></path></svg>
 </div>
@@ -245,7 +268,7 @@ Tech Jobs
 </div>
 </a>
 
-<a href="/categories/tech-jobs/" class="cat-card">
+<a href="/categories/tech-jobs/" class="cat-card" data-category-card data-search-text="Tech Jobs tech-jobs">
 <div class="cat-icon" style="background:rgba(99,102,241,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
 </div>
@@ -259,41 +282,105 @@ Tech Jobs
 
 </section>
 
+<script src="/assets/js/site-search.js" defer></script>
+
 
 <footer>
 
-© 2026 KnowledgeoPedia. All Rights Reserved.
+<div class="footer-links">
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms/">Terms of Use</a>
+<a href="/categories/">Categories</a>
+<a href="/feed.xml">RSS Feed</a>
+</div>
+
+
+<nav class="footer-socials" aria-label="Bloogsite on social media">
+
+<a href="https://www.youtube.com/@Badass_Technologia" rel="me noopener noreferrer">YouTube</a>
+
+<a href="https://www.instagram.com/badass_technologia/" rel="me noopener noreferrer">Instagram</a>
+
+<a href="https://www.reddit.com/r/Badass_Technologia/" rel="me noopener noreferrer">Reddit community</a>
+
+<a href="https://www.reddit.com/user/Badass_Technologia/" rel="me noopener noreferrer">Reddit profile</a>
+
+<a href="https://discord.gg/X5X2bkgp" rel="me noopener noreferrer">Discord</a>
+
+<a href="https://www.threads.com/@badass_technologia" rel="me noopener noreferrer">Threads</a>
+
+</nav>
+
+
+<p>© 2026 Bloogsite. All Rights Reserved.</p>
 
 </footer>
 
 <script>
-document.querySelectorAll('.nav-dropdown').forEach(function(dd){
-var trigger = dd.querySelector('.dropdown-trigger');
-trigger.addEventListener('click', function(e){
-if(window.matchMedia('(hover: none)').matches){
-e.preventDefault();
-dd.classList.toggle('open');
-}
-});
-});
-document.addEventListener('click', function(e){
-document.querySelectorAll('.nav-dropdown.open').forEach(function(dd){
-if(!dd.contains(e.target)) dd.classList.remove('open');
-});
-});
-</script>
+(function () {
+  var header = document.querySelector('.site-header');
+  var nav = document.querySelector('.site-nav');
+  var navToggle = document.querySelector('.nav-toggle');
+  var navToggleLabel = navToggle && navToggle.querySelector('.visually-hidden');
+  var dropdown = document.querySelector('.nav-dropdown');
+  var categoryToggle = document.querySelector('.category-toggle');
+  var mobileQuery = window.matchMedia('(max-width: 768px)');
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", function (user) {
-    if (!user) {
-      window.netlifyIdentity.on("login", function () {
-        document.location.href = "/admin/";
-      });
+  if (!header || !nav || !navToggle || !dropdown || !categoryToggle) return;
+
+  function setCategoryMenu(open, returnFocus) {
+    dropdown.classList.toggle('open', open);
+    categoryToggle.setAttribute('aria-expanded', String(open));
+    categoryToggle.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' categories menu');
+    if (returnFocus) categoryToggle.focus();
+  }
+
+  function setMainMenu(open, returnFocus) {
+    nav.classList.toggle('open', open);
+    header.classList.toggle('nav-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggleLabel.textContent = (open ? 'Close' : 'Open') + ' main menu';
+    if (!open) setCategoryMenu(false, false);
+    if (returnFocus) navToggle.focus();
+  }
+
+  navToggle.addEventListener('click', function () {
+    setMainMenu(navToggle.getAttribute('aria-expanded') !== 'true', false);
+  });
+
+  categoryToggle.addEventListener('click', function () {
+    setCategoryMenu(categoryToggle.getAttribute('aria-expanded') !== 'true', false);
+  });
+
+  nav.addEventListener('click', function (event) {
+    if (mobileQuery.matches && event.target.closest('a')) setMainMenu(false, false);
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!dropdown.contains(event.target)) setCategoryMenu(false, false);
+    if (mobileQuery.matches && !header.contains(event.target)) setMainMenu(false, false);
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    if (categoryToggle.getAttribute('aria-expanded') === 'true') {
+      setCategoryMenu(false, true);
+    } else if (mobileQuery.matches && navToggle.getAttribute('aria-expanded') === 'true') {
+      setMainMenu(false, true);
     }
   });
-}
+
+  function handleBreakpointChange(event) {
+    setMainMenu(false, false);
+    if (!event.matches) setCategoryMenu(false, false);
+  }
+
+  if (mobileQuery.addEventListener) {
+    mobileQuery.addEventListener('change', handleBreakpointChange);
+  } else {
+    mobileQuery.addListener(handleBreakpointChange);
+  }
+})();
 </script>
 
 </body>

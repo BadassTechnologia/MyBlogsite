@@ -1,0 +1,37 @@
+{% macro articleCard(post, categories) %}
+{% set cardTitle = post.data.title or "Untitled article" %}
+{% set cardExcerpt = post.data.excerpt or "Open this article to learn more." %}
+{% set cardImage = post.data.image or "/assets/img/article-fallback.svg" %}
+{% set cardImageAlt = post.data.imageAlt or "" %}
+{% set cardCategory = post.data.category | catName(categories) %}
+{% set cardId = post.page.fileSlug or loop.index %}
+
+<article class="article-card">
+<a href="{{ post.url }}" class="card" aria-labelledby="article-card-title-{{ cardId }}" aria-describedby="article-card-excerpt-{{ cardId }}">
+
+<img
+class="card-image"
+src="{{ cardImage }}"
+alt="{{ cardImageAlt }}"
+width="900"
+height="500"
+loading="lazy"
+decoding="async"
+onerror="this.onerror=null;this.src='/assets/img/article-fallback.svg';"
+>
+
+<div class="content">
+
+<span class="tag">{{ cardCategory }}</span>
+
+<h3 id="article-card-title-{{ cardId }}">{{ cardTitle }}</h3>
+
+<p id="article-card-excerpt-{{ cardId }}">{{ cardExcerpt }}</p>
+
+<span class="read" aria-hidden="true">Read More →</span>
+
+</div>
+
+</a>
+</article>
+{% endmacro %}

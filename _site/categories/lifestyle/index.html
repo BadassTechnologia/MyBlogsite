@@ -10,49 +10,63 @@
 
 
 
-<title>Lifestyle Articles - KnowledgeoPedia</title>
-<meta name="description" content="Explore Lifestyle articles on KnowledgeoPedia — practical, no-fluff reads to help you make better decisions.">
-<link rel="canonical" href="https://your-site-name.netlify.app/categories/lifestyle/">
+<title>Lifestyle Articles - Bloogsite</title>
+<meta name="description" content="Explore Lifestyle articles on Bloogsite — practical, no-fluff reads to help you make better decisions.">
+<link rel="canonical" href="https://bloogsite.com/categories/lifestyle/">
+<link rel="alternate" type="application/rss+xml" title="Bloogsite RSS Feed" href="/feed.xml">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="KnowledgeoPedia">
-<meta property="og:title" content="Lifestyle Articles - KnowledgeoPedia">
-<meta property="og:description" content="Explore Lifestyle articles on KnowledgeoPedia — practical, no-fluff reads to help you make better decisions.">
-<meta property="og:image" content="https://your-site-name.netlify.app/assets/img/social-share-default.jpg">
-<meta property="og:url" content="https://your-site-name.netlify.app/categories/lifestyle/">
+<meta property="og:site_name" content="Bloogsite">
+<meta property="og:title" content="Lifestyle Articles - Bloogsite">
+<meta property="og:description" content="Explore Lifestyle articles on Bloogsite — practical, no-fluff reads to help you make better decisions.">
+<meta property="og:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
+<meta property="og:url" content="https://bloogsite.com/categories/lifestyle/">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@knowledgeopedia">
-<meta name="twitter:title" content="Lifestyle Articles - KnowledgeoPedia">
-<meta name="twitter:description" content="Explore Lifestyle articles on KnowledgeoPedia — practical, no-fluff reads to help you make better decisions.">
-<meta name="twitter:image" content="https://your-site-name.netlify.app/assets/img/social-share-default.jpg">
+
+<meta name="twitter:title" content="Lifestyle Articles - Bloogsite">
+<meta name="twitter:description" content="Explore Lifestyle articles on Bloogsite — practical, no-fluff reads to help you make better decisions.">
+<meta name="twitter:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
 
-<a href="/" class="logo">KnowledgeoPedia</a>
+<a href="/" class="logo">Bloogsite</a>
 
-<nav>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+<span class="visually-hidden">Open main menu</span>
+<svg class="menu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+<path d="M4 7h16M4 12h16M4 17h16"></path>
+</svg>
+<svg class="close-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+<path d="m6 6 12 12M18 6 6 18"></path>
+</svg>
+</button>
 
-<a href="/">Home</a>
+<nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
 
-<a href="/#blogs">Blogs</a>
+<a href="/" class="nav-link">Home</a>
+
+<a href="/#blogs" class="nav-link">Blogs</a>
 
 <div class="nav-dropdown">
 
-<a href="/categories/" class="dropdown-trigger active">
-Categories
-<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-</a>
+<div class="dropdown-label-row">
+<a href="/categories/" class="nav-link dropdown-trigger active">Categories</a>
+<button class="category-toggle" type="button" aria-expanded="false" aria-controls="category-menu" aria-label="Open categories menu">
+<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+</div>
 
-<div class="mega-menu">
+<div id="category-menu" class="mega-menu" aria-label="Article categories">
 
 <a href="/categories/tech/" class="mega-item">
 <span class="mega-icon" style="background:rgba(59,130,246,.12);">
@@ -75,7 +89,7 @@ Finance
 Education
 </a>
 
-<a href="/categories/lifestyle/" class="mega-item active-cat">
+<a href="/categories/lifestyle/" class="mega-item active-cat" aria-current="page">
 <span class="mega-icon" style="background:rgba(20,184,166,.12);">
 <svg viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 8-11 5 3 8 7 8 11a7 7 0 0 1-7 7Z"></path><path d="M12 9v11"></path></svg>
 </span>
@@ -128,13 +142,14 @@ Tech Jobs
 
 </div>
 
-<a href="#">About</a>
+<a href="#" class="nav-link">About</a>
 
-<a href="#">Contact</a>
+<a href="#" class="nav-link">Contact</a>
 
 </nav>
 
 </header>
+
 
 
 <div class="breadcrumb">
@@ -158,59 +173,119 @@ Tech Jobs
 
 <section class="blogs">
 
-<a href="/posts/designing-a-morning-routine/" class="card">
 
-<img src="https://picsum.photos/900/500?18">
 
-<div class="content">
 
-<span class="tag">Lifestyle</span>
 
-<h3>Designing a Morning Routine</h3>
 
-<p>Small habits that set the tone for a productive day.</p>
 
-<span class="read">Read More →</span>
 
-</div>
 
-</a>
+<article class="article-card">
+<a href="/posts/designing-a-morning-routine/" class="card" aria-labelledby="article-card-title-designing-a-morning-routine" aria-describedby="article-card-excerpt-designing-a-morning-routine">
 
-<a href="/posts/minimalism-for-beginners/" class="card">
-
-<img src="https://picsum.photos/900/500?19">
-
-<div class="content">
-
-<span class="tag">Lifestyle</span>
-
-<h3>Minimalism for Beginners</h3>
-
-<p>How owning less can make room for what matters.</p>
-
-<span class="read">Read More →</span>
-
-</div>
-
-</a>
-
-<a href="/posts/work-life-balance-in-remote-jobs/" class="card">
-
-<img src="https://picsum.photos/900/500?20">
+<img
+class="card-image"
+src="https://picsum.photos/900/500?18"
+alt=""
+width="900"
+height="500"
+loading="lazy"
+decoding="async"
+onerror="this.onerror=null;this.src='/assets/img/article-fallback.svg';"
+>
 
 <div class="content">
 
 <span class="tag">Lifestyle</span>
 
-<h3>Work-Life Balance in Remote Jobs</h3>
+<h3 id="article-card-title-designing-a-morning-routine">Designing a Morning Routine</h3>
 
-<p>Practical boundaries for staying sane while working from home.</p>
+<p id="article-card-excerpt-designing-a-morning-routine">Small habits that set the tone for a productive day.</p>
 
-<span class="read">Read More →</span>
+<span class="read" aria-hidden="true">Read More →</span>
 
 </div>
 
 </a>
+</article>
+
+
+
+
+
+
+
+
+
+
+<article class="article-card">
+<a href="/posts/minimalism-for-beginners/" class="card" aria-labelledby="article-card-title-minimalism-for-beginners" aria-describedby="article-card-excerpt-minimalism-for-beginners">
+
+<img
+class="card-image"
+src="https://picsum.photos/900/500?19"
+alt=""
+width="900"
+height="500"
+loading="lazy"
+decoding="async"
+onerror="this.onerror=null;this.src='/assets/img/article-fallback.svg';"
+>
+
+<div class="content">
+
+<span class="tag">Lifestyle</span>
+
+<h3 id="article-card-title-minimalism-for-beginners">Minimalism for Beginners</h3>
+
+<p id="article-card-excerpt-minimalism-for-beginners">How owning less can make room for what matters.</p>
+
+<span class="read" aria-hidden="true">Read More →</span>
+
+</div>
+
+</a>
+</article>
+
+
+
+
+
+
+
+
+
+
+<article class="article-card">
+<a href="/posts/work-life-balance-in-remote-jobs/" class="card" aria-labelledby="article-card-title-work-life-balance-in-remote-jobs" aria-describedby="article-card-excerpt-work-life-balance-in-remote-jobs">
+
+<img
+class="card-image"
+src="https://picsum.photos/900/500?20"
+alt=""
+width="900"
+height="500"
+loading="lazy"
+decoding="async"
+onerror="this.onerror=null;this.src='/assets/img/article-fallback.svg';"
+>
+
+<div class="content">
+
+<span class="tag">Lifestyle</span>
+
+<h3 id="article-card-title-work-life-balance-in-remote-jobs">Work-Life Balance in Remote Jobs</h3>
+
+<p id="article-card-excerpt-work-life-balance-in-remote-jobs">Practical boundaries for staying sane while working from home.</p>
+
+<span class="read" aria-hidden="true">Read More →</span>
+
+</div>
+
+</a>
+</article>
+
 
 </section>
 
@@ -218,38 +293,100 @@ Tech Jobs
 
 <footer>
 
-© 2026 KnowledgeoPedia. All Rights Reserved.
+<div class="footer-links">
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms/">Terms of Use</a>
+<a href="/categories/">Categories</a>
+<a href="/feed.xml">RSS Feed</a>
+</div>
+
+
+<nav class="footer-socials" aria-label="Bloogsite on social media">
+
+<a href="https://www.youtube.com/@Badass_Technologia" rel="me noopener noreferrer">YouTube</a>
+
+<a href="https://www.instagram.com/badass_technologia/" rel="me noopener noreferrer">Instagram</a>
+
+<a href="https://www.reddit.com/r/Badass_Technologia/" rel="me noopener noreferrer">Reddit community</a>
+
+<a href="https://www.reddit.com/user/Badass_Technologia/" rel="me noopener noreferrer">Reddit profile</a>
+
+<a href="https://discord.gg/X5X2bkgp" rel="me noopener noreferrer">Discord</a>
+
+<a href="https://www.threads.com/@badass_technologia" rel="me noopener noreferrer">Threads</a>
+
+</nav>
+
+
+<p>© 2026 Bloogsite. All Rights Reserved.</p>
 
 </footer>
 
 <script>
-document.querySelectorAll('.nav-dropdown').forEach(function(dd){
-var trigger = dd.querySelector('.dropdown-trigger');
-trigger.addEventListener('click', function(e){
-if(window.matchMedia('(hover: none)').matches){
-e.preventDefault();
-dd.classList.toggle('open');
-}
-});
-});
-document.addEventListener('click', function(e){
-document.querySelectorAll('.nav-dropdown.open').forEach(function(dd){
-if(!dd.contains(e.target)) dd.classList.remove('open');
-});
-});
-</script>
+(function () {
+  var header = document.querySelector('.site-header');
+  var nav = document.querySelector('.site-nav');
+  var navToggle = document.querySelector('.nav-toggle');
+  var navToggleLabel = navToggle && navToggle.querySelector('.visually-hidden');
+  var dropdown = document.querySelector('.nav-dropdown');
+  var categoryToggle = document.querySelector('.category-toggle');
+  var mobileQuery = window.matchMedia('(max-width: 768px)');
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", function (user) {
-    if (!user) {
-      window.netlifyIdentity.on("login", function () {
-        document.location.href = "/admin/";
-      });
+  if (!header || !nav || !navToggle || !dropdown || !categoryToggle) return;
+
+  function setCategoryMenu(open, returnFocus) {
+    dropdown.classList.toggle('open', open);
+    categoryToggle.setAttribute('aria-expanded', String(open));
+    categoryToggle.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' categories menu');
+    if (returnFocus) categoryToggle.focus();
+  }
+
+  function setMainMenu(open, returnFocus) {
+    nav.classList.toggle('open', open);
+    header.classList.toggle('nav-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggleLabel.textContent = (open ? 'Close' : 'Open') + ' main menu';
+    if (!open) setCategoryMenu(false, false);
+    if (returnFocus) navToggle.focus();
+  }
+
+  navToggle.addEventListener('click', function () {
+    setMainMenu(navToggle.getAttribute('aria-expanded') !== 'true', false);
+  });
+
+  categoryToggle.addEventListener('click', function () {
+    setCategoryMenu(categoryToggle.getAttribute('aria-expanded') !== 'true', false);
+  });
+
+  nav.addEventListener('click', function (event) {
+    if (mobileQuery.matches && event.target.closest('a')) setMainMenu(false, false);
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!dropdown.contains(event.target)) setCategoryMenu(false, false);
+    if (mobileQuery.matches && !header.contains(event.target)) setMainMenu(false, false);
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    if (categoryToggle.getAttribute('aria-expanded') === 'true') {
+      setCategoryMenu(false, true);
+    } else if (mobileQuery.matches && navToggle.getAttribute('aria-expanded') === 'true') {
+      setMainMenu(false, true);
     }
   });
-}
+
+  function handleBreakpointChange(event) {
+    setMainMenu(false, false);
+    if (!event.matches) setCategoryMenu(false, false);
+  }
+
+  if (mobileQuery.addEventListener) {
+    mobileQuery.addEventListener('change', handleBreakpointChange);
+  } else {
+    mobileQuery.addListener(handleBreakpointChange);
+  }
+})();
 </script>
 
 </body>
