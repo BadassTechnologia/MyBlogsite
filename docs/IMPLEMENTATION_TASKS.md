@@ -42,7 +42,7 @@ performed, remaining limitations, and whether the ticket can be marked Done.
 | 12 | KOP-012 | 404 page and broken-route recovery | Done |
 | 13 | KOP-013 | Performance and external-resource pass | Depends on KOP-003 and KOP-008 |
 | 14 | KOP-014 | Automated content and link validation | Depends on KOP-002 and KOP-004 |
-| 15 | KOP-015 | Replace or hide placeholder articles | Depends on editorial queue tasks |
+| 15 | KOP-015 | Replace or hide placeholder articles | In progress: placeholders removed; editorial replacements remain |
 | 16 | KOP-017 | Cloudflare Pages migration readiness | Done; account-side OAuth and deployment remain |
 | 17 | KOP-018 | Automated responsive-image pipeline | Depends on KOP-003 and KOP-008 |
 | 18 | KOP-019 | Privacy-conscious analytics and measurement plan | Depends on KOP-002 and KOP-004 |
@@ -444,7 +444,7 @@ plus an explicit non-forced Netlify fallback that preserves the HTTP 404 status.
 
 ## KOP-015 — Replace or hide placeholder articles
 
-**Status:** Depends on editorial queue tasks  
+**Status:** In progress — public placeholder removal complete; editorial queue remains  
 **Use:** `$knowledgeopedia-content`
 
 **Problem:** 27 of 28 Markdown posts are placeholder demonstrations and are currently treated as published content.
@@ -461,6 +461,14 @@ plus an explicit non-forced Netlify fallback that preserves the HTTP 404 status.
 - No placeholder paragraph is visible on the generated public site.
 - Every public post has a genuine article, valid metadata, real or approved imagery, and appropriate sourcing.
 - Drafts stay available to editors without entering RSS, sitemap, homepage, or category listings.
+
+**Containment completed 2026-10-22:** removed the 27 confirmed demonstration
+article files, including their placeholder titles, dates, authors, categories,
+excerpts, cover-image references, bodies, and generated public routes. Their
+Git history remains recoverable. The editorial queue below now recreates each
+article as researched, publishable content rather than revising a public
+placeholder. The intentionally unpublished India draft and the separate tech
+career article were not removed.
 
 ---
 
@@ -638,7 +646,11 @@ Pages, and changing DNS remain account-side actions requiring owner approval.
 
 # Editorial replacement queue
 
-Each row is a separate implementation task. Use `$knowledgeopedia-content`; research time-sensitive claims from current primary or authoritative sources. Default each unfinished article to `draft: true`.
+Each row is a separate implementation task. Use `$knowledgeopedia-content`;
+research time-sensitive claims from current primary or authoritative sources.
+The removed placeholder filename identifies the intended replacement path.
+Create each unfinished replacement with `draft: true` until its editorial,
+source, metadata, and image review is complete.
 
 | Task | Post | Category | Evidence/risk note | Status |
 |---|---|---|---|---|
