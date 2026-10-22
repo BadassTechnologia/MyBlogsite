@@ -462,13 +462,13 @@ plus an explicit non-forced Netlify fallback that preserves the HTTP 404 status.
 - Every public post has a genuine article, valid metadata, real or approved imagery, and appropriate sourcing.
 - Drafts stay available to editors without entering RSS, sitemap, homepage, or category listings.
 
-**Containment completed 2026-10-22:** removed the 27 confirmed demonstration
-article files, including their placeholder titles, dates, authors, categories,
+**Containment completed 2026-10-22:** removed all 28 unfinished article files,
+including their placeholder titles, dates, authors, categories,
 excerpts, cover-image references, bodies, and generated public routes. Their
 Git history remains recoverable. The editorial queue below now recreates each
 article as researched, publishable content rather than revising a public
-placeholder. The intentionally unpublished India draft and the separate tech
-career article were not removed.
+placeholder. The intentionally unpublished India draft remains excluded from
+the public site.
 
 ---
 
@@ -682,8 +682,7 @@ source, metadata, and image review is complete.
 | KOP-C026 | `viral-tools-worth-trying.md` | Trending | Define selection/evaluation criteria and update date | Ready |
 | KOP-C027 | `this-week-in-startups.md` | Trending | Must be dated, sourced, and refreshed or archived promptly | Ready |
 | KOP-C028 | `best-places-in-india-to-travel.md` | Travel | New unpublished draft; define audience/season and verify transport, safety, and access details | Ready |
-
-The existing `tech-career-roadmaps-worth-following-in-2026.md` contains original-looking content but still requires a separate fact, link, date, image, and editorial review before publication.
+| KOP-C029 | `tech-career-roadmaps-worth-following-in-2026.md` | Tech Jobs | Recreate as a researched draft; verify roadmap and job-board claims and add approved imagery | Ready |
 
 # Feature ideas after launch
 
