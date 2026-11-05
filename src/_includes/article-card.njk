@@ -9,6 +9,8 @@
 <article class="article-card">
 <a href="{{ post.url }}" class="card" aria-labelledby="article-card-title-{{ cardId }}" aria-describedby="article-card-excerpt-{{ cardId }}">
 
+{% if post.data.featured %}<span class="article-ribbon">Featured</span>{% elif post.data.topArticle %}<span class="article-ribbon article-ribbon-top">Top article</span>{% endif %}
+
 <img
 class="card-image"
 src="{{ cardImage }}"

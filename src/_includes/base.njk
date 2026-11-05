@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="icon" type="image/png" href="/assets/img/brand/bloogsite-icon-white.png">
+<link rel="apple-touch-icon" href="/assets/img/brand/bloogsite-icon-white.png">
+
 {% set pageTitle = title or site.name %}
 {% set browserTitle = (pageTitle + " - " + site.name) if category else pageTitle %}
 {% set pageDescription = description or excerpt or site.defaultDescription %}
@@ -12,6 +15,11 @@
 
 <title>{{ browserTitle }}</title>
 <meta name="description" content="{{ pageDescription }}">
+<meta name="application-name" content="{{ site.name }}">
+<meta name="apple-mobile-web-app-title" content="{{ site.name }}">
+{% if site.googleSiteVerification %}
+<meta name="google-site-verification" content="{{ site.googleSiteVerification }}">
+{% endif %}
 <link rel="canonical" href="{{ pageUrl }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }} RSS Feed" href="/feed.xml">
 
@@ -22,6 +30,10 @@
 <meta property="og:description" content="{{ pageDescription }}">
 <meta property="og:image" content="{{ pageImage | absoluteUrl(site.url) }}">
 <meta property="og:url" content="{{ pageUrl }}">
+{% if category %}
+<meta property="article:section" content="{{ category | catName(categories) }}">
+<meta property="article:published_time" content="{{ (date or page.date) | isoDate }}">
+{% endif %}
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -32,12 +44,71 @@
 <meta name="twitter:description" content="{{ pageDescription }}">
 <meta name="twitter:image" content="{{ pageImage | absoluteUrl(site.url) }}">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.name | json | safe }},
+  "alternateName": {{ site.tagline | json | safe }},
+  "description": {{ site.defaultDescription | json | safe }},
+  "url": {{ site.url | json | safe }},
+  "inLanguage": {{ site.locale | json | safe }},
+  "sameAs": {{ site.socialUrls | json | safe }}
+}
+</script>
+
+{% if category %}
+{% set schemaAuthor = authors | selectattr("slug", "equalto", author) | first %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | json | safe }},
+  "description": {{ pageDescription | json | safe }},
+  "image": [{{ pageImage | absoluteUrl(site.url) | json | safe }}],
+  "datePublished": {{ (date or page.date) | isoDate | json | safe }},
+  "articleSection": {{ category | catName(categories) | json | safe }},
+  "mainEntityOfPage": {{ pageUrl | json | safe }},
+  "author": {
+    "@type": "Person",
+    "name": {{ (schemaAuthor.name if schemaAuthor else author) | json | safe }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.name | json | safe }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ "/assets/img/brand/bloogsite-icon-white.png" | absoluteUrl(site.url) | json | safe }}
+    }
+  }
+}
+</script>
+{% endif %}
+
+{% if site.googleAnalyticsId %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalyticsId }}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '{{ site.googleAnalyticsId }}');
+</script>
+{% endif %}
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
+{% from "social-icon.njk" import socialIcon %}
+
+{% if activeNav == 'home' %}
+<aside class="home-announcement" aria-label="Bloogsite update">
+<p>Practical guides for modern life.</p>
+<a href="https://www.instagram.com/badass_technologia/" target="_blank" rel="noopener noreferrer">Follow Bloogsite on Instagram <span aria-hidden="true">→</span></a>
+</aside>
+{% endif %}
 
 <header class="site-header">
 
@@ -57,18 +128,17 @@
 
 <a href="/" class="nav-link{% if activeNav == 'home' %} active{% endif %}"{% if activeNav == 'home' %} aria-current="page"{% endif %}>Home</a>
 
-<a href="/#blogs" class="nav-link">Blogs</a>
-
 <div class="nav-dropdown">
 
 <div class="dropdown-label-row">
-<a href="/categories/" class="nav-link dropdown-trigger{% if activeNav == 'categories' %} active{% endif %}"{% if activeNav == 'categories' and not activeCategory %} aria-current="page"{% endif %}>Categories</a>
-<button class="category-toggle" type="button" aria-expanded="false" aria-controls="category-menu" aria-label="Open categories menu">
+<a href="/blogs/" class="nav-link dropdown-trigger{% if activeNav == 'blogs' or activeNav == 'categories' %} active{% endif %}"{% if activeNav == 'blogs' %} aria-current="page"{% endif %}>Blogs</a>
+<button class="category-toggle" type="button" aria-expanded="false" aria-controls="category-menu" aria-label="Open blogs menu">
 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
 </div>
 
-<div id="category-menu" class="mega-menu" aria-label="Article categories">
+<div id="category-menu" class="mega-menu blog-mega-menu" aria-label="Blogs menu">
+<div class="blog-mega-categories"><p>Blog categories</p><div>
 {% for cat in categories %}
 <a href="/categories/{{ cat.slug }}/" class="mega-item{% if activeCategory == cat.slug %} active-cat{% endif %}"{% if activeCategory == cat.slug %} aria-current="page"{% endif %}>
 <span class="mega-icon" style="background:{{ cat.bg }};">
@@ -77,13 +147,17 @@
 {{ cat.name }}
 </a>
 {% endfor %}
+</div></div>
+<div class="blog-mega-recent"><p>Featured &amp; recently published</p>
+{% if collections.posts.length %}{% for post in collections.posts | limit(3) %}<a href="{{ post.url }}"><strong>{{ post.data.title }}</strong><span>Read article →</span></a>{% endfor %}{% else %}<span class="blog-mega-empty">New practical guides are being prepared.</span>{% endif %}
+<a class="blog-mega-all" href="/blogs/">View all blogs →</a></div>
 </div>
 
 </div>
 
-<a href="#" class="nav-link">About</a>
+<a href="/about/" class="nav-link{% if activeNav == 'about' %} active{% endif %}"{% if activeNav == 'about' %} aria-current="page"{% endif %}>About</a>
 
-<a href="#" class="nav-link">Contact</a>
+<a href="/contact/" class="nav-link{% if activeNav == 'contact' %} active{% endif %}"{% if activeNav == 'contact' %} aria-current="page"{% endif %}>Contact</a>
 
 </nav>
 
@@ -91,25 +165,16 @@
 
 {{ content | safe }}
 
-<footer>
-
-<div class="footer-links">
-<a href="/privacy-policy/">Privacy Policy</a>
-<a href="/terms/">Terms of Use</a>
-<a href="/categories/">Categories</a>
-<a href="/feed.xml">RSS Feed</a>
+<footer class="site-footer">
+<div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo">{{ site.name }}</a><p>Practical knowledge for better decisions across technology, money, careers, health, travel, and modern life.</p>
+{% if site.socialLinks %}<nav class="footer-social-icons" aria-label="Bloogsite on social media">{% for social in site.socialLinks %}<a href="{{ social.url }}" rel="me noopener noreferrer" aria-label="{{ social.name }}">{{ socialIcon(social.name) }}</a>{% endfor %}</nav>{% endif %}</div>
+<nav class="footer-column" aria-label="Footer navigation"><h2>Navigate</h2><a href="/">Home</a><a href="/blogs/">Blogs</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+<nav class="footer-column" aria-label="Footer topics"><h2>Topics</h2>{% for cat in categories | limit(5) %}<a href="/categories/{{ cat.slug }}/">{{ cat.name }}</a>{% endfor %}</nav>
+<div class="footer-column footer-newsletter"><h2>Newsletter</h2><p>Useful guides and important developments, without daily noise.</p><button type="button" disabled>Subscriptions coming soon</button></div>
 </div>
-
-{% if site.socialLinks %}
-<nav class="footer-socials" aria-label="Bloogsite on social media">
-{% for social in site.socialLinks %}
-<a href="{{ social.url }}" rel="me noopener noreferrer">{{ social.name }}</a>
-{% endfor %}
-</nav>
-{% endif %}
-
-<p>© {{ currentYear }} {{ site.name }}. All Rights Reserved.</p>
-
+<div class="footer-watermark" aria-hidden="true">bloogsite</div>
+<div class="footer-bottom"><p>© {{ currentYear }} {{ site.name }}. All Rights Reserved.</p><nav aria-label="Legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><a href="/feed.xml">RSS Feed</a></nav></div>
 </footer>
 
 <script>
@@ -127,7 +192,7 @@
   function setCategoryMenu(open, returnFocus) {
     dropdown.classList.toggle('open', open);
     categoryToggle.setAttribute('aria-expanded', String(open));
-    categoryToggle.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' categories menu');
+    categoryToggle.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' blogs menu');
     if (returnFocus) categoryToggle.focus();
   }
 

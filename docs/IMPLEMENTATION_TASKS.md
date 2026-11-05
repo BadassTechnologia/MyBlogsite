@@ -49,6 +49,38 @@ performed, remaining limitations, and whether the ticket can be marked Done.
 | 19 | KOP-020 | Advertising and affiliate monetization readiness | Post-launch; depends on KOP-004, KOP-010, and publishable content |
 | 20 | KOP-021 | Moderated article comments | Post-launch; provider and moderation policy required |
 | 21 | KOP-016 | Final publish-readiness audit | Depends on all release blockers |
+| 22 | KOP-022 | Balanced photographic homepage hero | Done |
+| 23 | KOP-023 | Blogs navigation and category mega menu | Done |
+| 24 | KOP-024 | Structured footer and social icon system | Done |
+| 25 | KOP-025 | Blogs directory with top/new article ribbons | Done |
+| 26 | KOP-026 | Category hubs with banner and best articles | Done |
+| 27 | KOP-027 | Local CMS article preview workflow | Done |
+| 28 | KOP-028 | Google Analytics tag integration | Done |
+
+---
+
+## KOP-022 through KOP-028 — Blog discovery and editorial workflow redesign
+
+**Status:** Done
+**Requested:** 2026-11-02
+
+This coordinated batch keeps the approved Bloogsite visual identity while adding:
+
+- a fixed two-column desktop hero with copy on the left and photography on the right;
+- a Blogs navigation menu containing all ten categories in two columns;
+- a structured footer with icon-only social links, Navigate, Topics, and newsletter areas;
+- a `/blogs/` directory with category filters, top articles, new articles, and data-driven ribbons;
+- category hubs with an image banner, category introduction, article grid, and cross-category recommendations;
+- a Decap CMS preview template that uses production article styling, plus a local backend workflow to avoid Git pushes while drafting;
+- Google Analytics measurement ID `G-S42N5YN3CV` through the existing conditional tag integration.
+
+**Acceptance criteria completed**
+
+- All routes and controls have real or explicitly pending destinations.
+- Empty content states remain useful before the first article is published.
+- New published posts populate listings from front matter without template edits.
+- Featured and top-article controls are available in the CMS schema.
+- The Eleventy build succeeds and the generated pages remain responsive.
 
 ---
 

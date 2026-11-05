@@ -42,6 +42,34 @@ Do not add production secrets to the repository. Cloudflare automatically
 serves the generated top-level `_site/404.html` for missing static routes. The
 generated `_headers` file contains the response headers required by this site.
 
+Optional Google integrations are configured through Cloudflare Pages build
+environment variables:
+
+| Variable | Value |
+|---|---|
+| `GOOGLE_ANALYTICS_ID` | Google tag measurement ID, such as `G-XXXXXXXXXX` |
+| `GOOGLE_SITE_VERIFICATION` | Google Search Console HTML-tag verification token |
+
+The related markup is omitted when a variable is empty. Analytics should be
+activated only after the site's consent and privacy requirements are approved.
+
+## Local editorial preview before publishing
+
+Use the local CMS workflow to write and preview an article without creating a
+GitHub commit or triggering a Cloudflare build:
+
+1. Run `npm run start` in one terminal.
+2. Run `npm run cms:local` in a second terminal.
+3. Open `http://localhost:8080/admin/` and edit a Blog Post.
+4. Use the preview pane to review the article with the production article
+   typography, cover image, category, author, date, and body styling.
+5. Keep the post as a draft until editorial review is complete. Commit and push
+   the final batch only when it is ready for Cloudflare.
+
+`local_backend: true` keeps local CMS saves on the workstation while the Decap
+proxy is running. The normal production CMS continues to use GitHub editorial
+workflow.
+
 ## Production identity
 
 The canonical origin is configured once in `src/_data/site.js`:
@@ -136,8 +164,7 @@ shipped to production.
 
 Public social destinations are maintained in `src/_data/site.js`. The current
 list includes YouTube, Instagram, the Reddit community and profile, Discord,
-and Threads. Add the complete WhatsApp Channel URL only after it is available;
-the supplied screenshot truncated that address.
+Threads, WhatsApp, and X.
 
 ## Project structure
 

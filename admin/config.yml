@@ -6,8 +6,11 @@ backend:
   auth_endpoint: /auth
   site_domain: bloogsite.com
 
+local_backend: true
+
 site_url: https://bloogsite.com
 display_url: https://bloogsite.com
+logo_url: /assets/img/brand/bloogsite-logo-white.png
 
 media_folder: "src/assets/img/uploads"
 public_folder: "/assets/img/uploads"
@@ -47,11 +50,13 @@ collections:
         widget: "select"
         default: "ashok"
         options:
-          - { label: "Ashok Jagarapu", value: "ashok" }
+          - { label: "Bloogsite Editorial Team", value: "ashok" }
           - { label: "Guest Author", value: "guest" }
       - { label: "Cover Image", name: "image", widget: "image", required: false, hint: "Optional. A branded fallback is used when no image is supplied." }
       - { label: "Cover Image Description", name: "imageAlt", widget: "string", required: false, hint: "Describe meaningful image content. Leave blank when the image is decorative." }
       - { label: "Short Excerpt", name: "excerpt", widget: "text", required: false, hint: "Shown on cards and listing pages. Keep it to 1-2 sentences." }
+      - { label: "Featured ribbon", name: "featured", widget: "boolean", default: false, required: false, hint: "Highlights this article with a Featured ribbon." }
+      - { label: "Top article", name: "topArticle", widget: "boolean", default: false, required: false, hint: "Includes this article in the Top articles collection." }
       - { label: "Embedded Video URL", name: "videoUrl", widget: "string", required: false, pattern: ['^https://(www\\.)?(youtube(-nocookie)?\\.com/embed/|player\\.vimeo\\.com/video/).+$', "Use a secure YouTube or Vimeo embed URL."], hint: "Paste an HTTPS YouTube embed or Vimeo player URL. Other providers are not displayed." }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Draft (hide from live site)", name: "draft", widget: "boolean", default: false, required: false }

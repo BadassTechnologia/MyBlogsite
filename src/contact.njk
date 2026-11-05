@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: Contact Bloogsite
+description: Contact Bloogsite about editorial feedback, corrections, partnerships, or collaboration opportunities.
+activeNav: contact
+permalink: /contact/
+---
+
+<main class="content-page" id="main-content">
+<header class="content-page-header">
+<p class="section-kicker">Contact Bloogsite</p>
+<h1>Let’s start a useful conversation.</h1>
+<p>For editorial feedback, corrections, partnerships, or collaboration opportunities, reach Bloogsite through one of the channels below.</p>
+</header>
+<section class="contact-options" aria-label="Contact options">
+{% for social in site.socialLinks %}
+<a class="contact-option contact-option-{{ loop.index }}" href="{{ social.url }}" rel="me noopener noreferrer">
+<span class="contact-platform-icon" aria-hidden="true">
+{% if social.name == "YouTube" %}
+<svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3Z"></path></svg>
+{% elif social.name == "Instagram" %}
+<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="icon-fill" cx="17.5" cy="6.5" r="1"></circle></svg>
+{% elif social.name == "Reddit community" or social.name == "Reddit profile" %}
+<svg viewBox="0 0 24 24"><path d="M5.5 10.5a3 3 0 0 0 .7 5.8C7.3 18 9.4 19 12 19s4.7-1 5.8-2.7a3 3 0 0 0 .7-5.8"></path><path d="M8 11.2c1.1-.8 2.5-1.2 4-1.2s2.9.4 4 1.2"></path><circle class="icon-fill" cx="9" cy="14" r="1"></circle><circle class="icon-fill" cx="15" cy="14" r="1"></circle><path d="M9.5 16.2c.7.5 1.5.8 2.5.8s1.8-.3 2.5-.8M12 10l1-5 4 1"></path><circle cx="18.5" cy="6.5" r="1.5"></circle></svg>
+{% elif social.name == "Discord" %}
+<svg viewBox="0 0 24 24"><path d="M7.5 7.5A12 12 0 0 1 12 6a12 12 0 0 1 4.5 1.5c1.3 2 2 4.3 2.1 6.8A10 10 0 0 1 15.5 17l-.8-1.1a7 7 0 0 0 1.2-.7c-2.4 1.1-5.4 1.1-7.8 0 .4.3.8.5 1.2.7L8.5 17a10 10 0 0 1-3.1-2.7c.1-2.5.8-4.8 2.1-6.8Z"></path><circle class="icon-fill" cx="9.5" cy="12.5" r="1"></circle><circle class="icon-fill" cx="14.5" cy="12.5" r="1"></circle></svg>
+{% elif social.name == "Threads" %}
+<svg viewBox="0 0 24 24"><path d="M16.8 9.2c-.5-2.4-2.2-3.7-4.8-3.7-3.6 0-5.8 2.5-5.8 6.5s2.2 6.5 5.9 6.5c3.2 0 5.4-1.8 5.4-4.4 0-2.3-1.8-3.7-4.6-3.7-2.3 0-3.8 1.1-3.8 2.8 0 1.5 1.2 2.5 2.9 2.5 2.8 0 4.8-2.1 4.8-5.1 0-2.5-1-4.6-2.8-5.8"></path></svg>
+{% elif social.name == "WhatsApp" %}
+<svg viewBox="0 0 24 24"><path d="M20 11.8a8 8 0 0 1-11.8 7L4 20l1.2-4.1A8 8 0 1 1 20 11.8Z"></path><path d="M9 8.5c.4 2.8 2.1 4.5 5 5.2l1.2-1.1 1.8.9c-.2 1.6-1.2 2.3-2.7 2.2-3.8-.6-6.4-3-7.2-6.7 0-1.4.7-2.3 2-2.5l1 1.8Z"></path></svg>
+{% elif social.name == "X" %}
+<svg viewBox="0 0 24 24"><path d="M5 4 19 20M19 4 5 20"></path></svg>
+{% endif %}
+</span>
+<span class="contact-platform-copy"><strong>{{ social.name }}</strong><small>Open {{ social.name }}</small></span>
+<span class="contact-external" aria-hidden="true">↗</span>
+</a>
+{% endfor %}
+</section>
+<p class="contact-note">Please do not send passwords, payment details, or other sensitive personal information through social media.</p>
+</main>

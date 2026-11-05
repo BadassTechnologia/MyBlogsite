@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="icon" type="image/png" href="/assets/img/brand/bloogsite-icon-white.png">
+<link rel="apple-touch-icon" href="/assets/img/brand/bloogsite-icon-white.png">
+
 
 
 
@@ -11,7 +14,10 @@
 
 
 <title>Tech Articles - Bloogsite</title>
-<meta name="description" content="Explore Tech articles on Bloogsite — practical, no-fluff reads to help you make better decisions.">
+<meta name="description" content="Explore practical Tech guides, new articles, and recommended reads from across Bloogsite.">
+<meta name="application-name" content="Bloogsite">
+<meta name="apple-mobile-web-app-title" content="Bloogsite">
+
 <link rel="canonical" href="https://bloogsite.com/categories/tech/">
 <link rel="alternate" type="application/rss+xml" title="Bloogsite RSS Feed" href="/feed.xml">
 
@@ -19,16 +25,44 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bloogsite">
 <meta property="og:title" content="Tech Articles - Bloogsite">
-<meta property="og:description" content="Explore Tech articles on Bloogsite — practical, no-fluff reads to help you make better decisions.">
+<meta property="og:description" content="Explore practical Tech guides, new articles, and recommended reads from across Bloogsite.">
 <meta property="og:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
 <meta property="og:url" content="https://bloogsite.com/categories/tech/">
+
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 
+<meta name="twitter:site" content="@BadassT16598">
+
 <meta name="twitter:title" content="Tech Articles - Bloogsite">
-<meta name="twitter:description" content="Explore Tech articles on Bloogsite — practical, no-fluff reads to help you make better decisions.">
+<meta name="twitter:description" content="Explore practical Tech guides, new articles, and recommended reads from across Bloogsite.">
 <meta name="twitter:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Bloogsite",
+  "alternateName": "Read Beyond the Obvious.",
+  "description": "Read Beyond the Obvious. Practical guides across technology, finance, careers, health, travel, and modern life so you can act with confidence.",
+  "url": "https://bloogsite.com",
+  "inLanguage": "en-US",
+  "sameAs": ["https://www.youtube.com/@Badass_Technologia","https://www.instagram.com/badass_technologia/","https://www.reddit.com/r/Badass_Technologia/","https://www.reddit.com/user/Badass_Technologia/","https://discord.gg/X5X2bkgp","https://www.threads.com/@badass_technologia","https://whatsapp.com/channel/0029VbBN5fE8V0tknvqCd828","https://x.com/BadassT16598"]
+}
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S42N5YN3CV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-S42N5YN3CV');
+</script>
+
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
@@ -36,6 +70,9 @@
 </head>
 
 <body>
+
+
+
 
 <header class="site-header">
 
@@ -55,18 +92,17 @@
 
 <a href="/" class="nav-link">Home</a>
 
-<a href="/#blogs" class="nav-link">Blogs</a>
-
 <div class="nav-dropdown">
 
 <div class="dropdown-label-row">
-<a href="/categories/" class="nav-link dropdown-trigger active">Categories</a>
-<button class="category-toggle" type="button" aria-expanded="false" aria-controls="category-menu" aria-label="Open categories menu">
+<a href="/blogs/" class="nav-link dropdown-trigger active" aria-current="page">Blogs</a>
+<button class="category-toggle" type="button" aria-expanded="false" aria-controls="category-menu" aria-label="Open blogs menu">
 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
 </div>
 
-<div id="category-menu" class="mega-menu" aria-label="Article categories">
+<div id="category-menu" class="mega-menu blog-mega-menu" aria-label="Blogs menu">
+<div class="blog-mega-categories"><p>Blog categories</p><div>
 
 <a href="/categories/tech/" class="mega-item active-cat" aria-current="page">
 <span class="mega-icon" style="background:rgba(59,130,246,.12);">
@@ -138,13 +174,17 @@ Marketing
 Tech Jobs
 </a>
 
+</div></div>
+<div class="blog-mega-recent"><p>Featured &amp; recently published</p>
+<span class="blog-mega-empty">New practical guides are being prepared.</span>
+<a class="blog-mega-all" href="/blogs/">View all blogs →</a></div>
 </div>
 
 </div>
 
-<a href="#" class="nav-link">About</a>
+<a href="/about/" class="nav-link">About</a>
 
-<a href="#" class="nav-link">Contact</a>
+<a href="/contact/" class="nav-link">Contact</a>
 
 </nav>
 
@@ -152,58 +192,60 @@ Tech Jobs
 
 
 
-<div class="breadcrumb">
-<a href="/">Home</a> / <a href="/categories/">Categories</a> / <span>Tech</span>
+
+<main class="category-hub" id="main-content">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blogs/">Blogs</a> / <span>Tech</span></nav>
+
+<header class="category-feature">
+<div class="category-feature-image"><img src="https://picsum.photos/seed/bloogsite-tech/1200/700" alt="" width="1200" height="700"></div>
+<div class="category-feature-copy"><span class="cat-banner-icon" style="background:rgba(59,130,246,.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></span><p class="section-kicker">Bloogsite topic</p><h1>Tech</h1><p>Practical tech guides that explain what matters, show your options, and help you decide what to do next.</p><span class="category-count">0 published articles</span></div>
+</header>
+
+<div class="category-content-layout">
+<section class="category-articles" aria-labelledby="category-articles-title"><div class="section-heading"><div><p class="section-kicker">Latest in Tech</p><h2 id="category-articles-title">Articles and guides</h2></div></div>
+<div class="blog-empty-state"><h3>New Tech guides are on the way.</h3><p>Articles will appear here after editorial review.</p><a href="/blogs/">Explore all blog topics →</a></div></section>
+
+<aside class="best-articles" aria-labelledby="best-articles-title"><p class="section-kicker">Across Bloogsite</p><h2 id="best-articles-title">Best articles</h2>
+<p class="best-articles-empty">Our first recommended reads will appear here after publication.</p>
+<a class="best-articles-all" href="/blogs/">Browse all blogs →</a></aside>
 </div>
+</main>
 
-<section class="cat-banner">
 
-<div class="cat-banner-icon" style="background:rgba(59,130,246,.12);">
-<svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+<footer class="site-footer">
+<div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo">Bloogsite</a><p>Practical knowledge for better decisions across technology, money, careers, health, travel, and modern life.</p>
+<nav class="footer-social-icons" aria-label="Bloogsite on social media"><a href="https://www.youtube.com/@Badass_Technologia" rel="me noopener noreferrer" aria-label="YouTube">
+<svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3Z"></path></svg>
+
+</a><a href="https://www.instagram.com/badass_technologia/" rel="me noopener noreferrer" aria-label="Instagram">
+<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+
+</a><a href="https://www.reddit.com/r/Badass_Technologia/" rel="me noopener noreferrer" aria-label="Reddit community">
+<svg viewBox="0 0 24 24"><path d="M5.5 10.5a3 3 0 0 0 .7 5.8C7.3 18 9.4 19 12 19s4.7-1 5.8-2.7a3 3 0 0 0 .7-5.8M8 11.2c1.1-.8 2.5-1.2 4-1.2s2.9.4 4 1.2M12 10l1-5 4 1"></path><circle cx="9" cy="14" r="1"></circle><circle cx="15" cy="14" r="1"></circle></svg>
+
+</a><a href="https://www.reddit.com/user/Badass_Technologia/" rel="me noopener noreferrer" aria-label="Reddit profile">
+<svg viewBox="0 0 24 24"><path d="M5.5 10.5a3 3 0 0 0 .7 5.8C7.3 18 9.4 19 12 19s4.7-1 5.8-2.7a3 3 0 0 0 .7-5.8M8 11.2c1.1-.8 2.5-1.2 4-1.2s2.9.4 4 1.2M12 10l1-5 4 1"></path><circle cx="9" cy="14" r="1"></circle><circle cx="15" cy="14" r="1"></circle></svg>
+
+</a><a href="https://discord.gg/X5X2bkgp" rel="me noopener noreferrer" aria-label="Discord">
+<svg viewBox="0 0 24 24"><path d="M7.5 7.5A12 12 0 0 1 12 6a12 12 0 0 1 4.5 1.5c1.3 2 2 4.3 2.1 6.8A10 10 0 0 1 15.5 17l-.8-1.1a7 7 0 0 0 1.2-.7c-2.4 1.1-5.4 1.1-7.8 0 .4.3.8.5 1.2.7L8.5 17a10 10 0 0 1-3.1-2.7c.1-2.5.8-4.8 2.1-6.8Z"></path></svg>
+
+</a><a href="https://www.threads.com/@badass_technologia" rel="me noopener noreferrer" aria-label="Threads">
+<svg viewBox="0 0 24 24"><path d="M16.8 9.2c-.5-2.4-2.2-3.7-4.8-3.7-3.6 0-5.8 2.5-5.8 6.5s2.2 6.5 5.9 6.5c3.2 0 5.4-1.8 5.4-4.4 0-2.3-1.8-3.7-4.6-3.7-2.3 0-3.8 1.1-3.8 2.8 0 1.5 1.2 2.5 2.9 2.5 2.8 0 4.8-2.1 4.8-5.1 0-2.5-1-4.6-2.8-5.8"></path></svg>
+
+</a><a href="https://whatsapp.com/channel/0029VbBN5fE8V0tknvqCd828" rel="me noopener noreferrer" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M20 11.8a8 8 0 0 1-11.8 7L4 20l1.2-4.1A8 8 0 1 1 20 11.8Z"></path><path d="M9 8.5c.4 2.8 2.1 4.5 5 5.2l1.2-1.1 1.8.9"></path></svg>
+
+</a><a href="https://x.com/BadassT16598" rel="me noopener noreferrer" aria-label="X">
+<svg viewBox="0 0 24 24"><path d="M5 4 19 20M19 4 5 20"></path></svg>
+
+</a></nav></div>
+<nav class="footer-column" aria-label="Footer navigation"><h2>Navigate</h2><a href="/">Home</a><a href="/blogs/">Blogs</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+<nav class="footer-column" aria-label="Footer topics"><h2>Topics</h2><a href="/categories/tech/">Tech</a><a href="/categories/finance/">Finance</a><a href="/categories/education/">Education</a><a href="/categories/lifestyle/">Lifestyle</a><a href="/categories/ai-tools/">AI Tools</a></nav>
+<div class="footer-column footer-newsletter"><h2>Newsletter</h2><p>Useful guides and important developments, without daily noise.</p><button type="button" disabled>Subscriptions coming soon</button></div>
 </div>
-
-<h1>Tech</h1>
-
-<p>Browsing 0 articles in Tech.</p>
-
-</section>
-
-
-
-
-<div class="empty-state">No articles in this category yet. Check back soon!</div>
-
-
-
-<footer>
-
-<div class="footer-links">
-<a href="/privacy-policy/">Privacy Policy</a>
-<a href="/terms/">Terms of Use</a>
-<a href="/categories/">Categories</a>
-<a href="/feed.xml">RSS Feed</a>
-</div>
-
-
-<nav class="footer-socials" aria-label="Bloogsite on social media">
-
-<a href="https://www.youtube.com/@Badass_Technologia" rel="me noopener noreferrer">YouTube</a>
-
-<a href="https://www.instagram.com/badass_technologia/" rel="me noopener noreferrer">Instagram</a>
-
-<a href="https://www.reddit.com/r/Badass_Technologia/" rel="me noopener noreferrer">Reddit community</a>
-
-<a href="https://www.reddit.com/user/Badass_Technologia/" rel="me noopener noreferrer">Reddit profile</a>
-
-<a href="https://discord.gg/X5X2bkgp" rel="me noopener noreferrer">Discord</a>
-
-<a href="https://www.threads.com/@badass_technologia" rel="me noopener noreferrer">Threads</a>
-
-</nav>
-
-
-<p>© 2026 Bloogsite. All Rights Reserved.</p>
-
+<div class="footer-watermark" aria-hidden="true">bloogsite</div>
+<div class="footer-bottom"><p>© 2026 Bloogsite. All Rights Reserved.</p><nav aria-label="Legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><a href="/feed.xml">RSS Feed</a></nav></div>
 </footer>
 
 <script>
@@ -221,7 +263,7 @@ Tech Jobs
   function setCategoryMenu(open, returnFocus) {
     dropdown.classList.toggle('open', open);
     categoryToggle.setAttribute('aria-expanded', String(open));
-    categoryToggle.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' categories menu');
+    categoryToggle.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' blogs menu');
     if (returnFocus) categoryToggle.focus();
   }
 

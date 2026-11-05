@@ -7,36 +7,27 @@ pagination:
 permalink: "/categories/{{ cat.slug }}/"
 eleventyComputed:
   title: "{{ cat.name }} Articles - Bloogsite"
-  description: "Explore {{ cat.name }} articles on Bloogsite — practical, no-fluff reads to help you make better decisions."
-  activeNav: categories
+  description: "Explore practical {{ cat.name }} guides, new articles, and recommended reads from across Bloogsite."
+  activeNav: blogs
   activeCategory: "{{ cat.slug }}"
 ---
 {% from "article-card.njk" import articleCard %}
-
-<div class="breadcrumb">
-<a href="/">Home</a> / <a href="/categories/">Categories</a> / <span>{{ cat.name }}</span>
-</div>
-
-<section class="cat-banner">
-
-<div class="cat-banner-icon" style="background:{{ cat.bg }};">
-<svg viewBox="0 0 24 24" fill="none" stroke="{{ cat.color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ cat.icon | safe }}</svg>
-</div>
-
-<h1>{{ cat.name }}</h1>
-
-<p>Browsing {{ collections.postsByCategory[cat.slug] | length }} articles in {{ cat.name }}.</p>
-
-</section>
-
 {% set catPosts = collections.postsByCategory[cat.slug] %}
 
-{% if catPosts and catPosts.length > 0 %}
-<section class="blogs">
-{% for post in catPosts %}
-{{ articleCard(post, categories) }}
-{% endfor %}
-</section>
-{% else %}
-<div class="empty-state">No articles in this category yet. Check back soon!</div>
-{% endif %}
+<main class="category-hub" id="main-content">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blogs/">Blogs</a> / <span>{{ cat.name }}</span></nav>
+
+<header class="category-feature">
+<div class="category-feature-image"><img src="https://picsum.photos/seed/bloogsite-{{ cat.slug }}/1200/700" alt="" width="1200" height="700"></div>
+<div class="category-feature-copy"><span class="cat-banner-icon" style="background:{{ cat.bg }};"><svg viewBox="0 0 24 24" fill="none" stroke="{{ cat.color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ cat.icon | safe }}</svg></span><p class="section-kicker">Bloogsite topic</p><h1>{{ cat.name }}</h1><p>Practical {{ cat.name | lower }} guides that explain what matters, show your options, and help you decide what to do next.</p><span class="category-count">{{ catPosts | length }} published {{ "article" if catPosts.length == 1 else "articles" }}</span></div>
+</header>
+
+<div class="category-content-layout">
+<section class="category-articles" aria-labelledby="category-articles-title"><div class="section-heading"><div><p class="section-kicker">Latest in {{ cat.name }}</p><h2 id="category-articles-title">Articles and guides</h2></div></div>
+{% if catPosts and catPosts.length %}<div class="blogs category-article-grid">{% for post in catPosts %}{{ articleCard(post, categories) }}{% endfor %}</div>{% else %}<div class="blog-empty-state"><h3>New {{ cat.name }} guides are on the way.</h3><p>Articles will appear here after editorial review.</p><a href="/blogs/">Explore all blog topics →</a></div>{% endif %}</section>
+
+<aside class="best-articles" aria-labelledby="best-articles-title"><p class="section-kicker">Across Bloogsite</p><h2 id="best-articles-title">Best articles</h2>
+{% if collections.topArticles.length %}<ol>{% for post in collections.topArticles %}<li><a href="{{ post.url }}"><span>{{ loop.index }}</span><span><small>{{ post.data.category | catName(categories) }}</small><strong>{{ post.data.title }}</strong></span></a></li>{% endfor %}</ol>{% else %}<p class="best-articles-empty">Our first recommended reads will appear here after publication.</p>{% endif %}
+<a class="best-articles-all" href="/blogs/">Browse all blogs →</a></aside>
+</div>
+</main>

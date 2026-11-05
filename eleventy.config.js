@@ -34,6 +34,16 @@ module.exports = function (eleventyConfig) {
     return grouped;
   });
 
+  eleventyConfig.addCollection("topArticles", function (collectionApi) {
+    const posts = collectionApi
+      .getFilteredByGlob("src/posts/*.md")
+      .filter((post) => !post.data.draft);
+    const selected = posts.filter((post) => post.data.topArticle || post.data.featured);
+    return (selected.length ? selected : posts)
+      .sort((a, b) => b.date - a.date)
+      .slice(0, 5);
+  });
+
   // Public HTML pages for the sitemap. Drafts, utility output, and the 404
   // recovery page must not be advertised as indexable production content.
   eleventyConfig.addCollection("sitemapPages", function (collectionApi) {
@@ -85,7 +95,15 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("json", function (value) {
-    return JSON.stringify(value == null ? "" : value);
+    return JSON.stringify(value == null ? "" : value)
+      .replace(/</g, "\\u003c")
+      .replace(/>/g, "\\u003e")
+      .replace(/&/g, "\\u0026");
+  });
+
+  eleventyConfig.addFilter("isoDate", function (dateObj) {
+    if (!dateObj) return "";
+    return new Date(dateObj).toISOString();
   });
 
   eleventyConfig.addFilter("readingTime", function (html) {
