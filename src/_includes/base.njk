@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/png" href="/assets/img/brand/bloogsite-icon-white.png">
-<link rel="apple-touch-icon" href="/assets/img/brand/bloogsite-icon-white.png">
+<link rel="icon" type="image/png" href="/assets/img/brand/bloogsite-icon-white.png?v={{ site.assetVersion }}">
+<link rel="apple-touch-icon" href="/assets/img/brand/bloogsite-icon-white.png?v={{ site.assetVersion }}">
 
 {% set pageTitle = title or site.name %}
 {% set browserTitle = (pageTitle + " - " + site.name) if category else pageTitle %}
@@ -96,12 +96,14 @@ gtag('config', '{{ site.googleAnalyticsId }}');
 {% endif %}
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v={{ site.assetVersion }}">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 {% from "social-icon.njk" import socialIcon %}
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 {% if activeNav == 'home' %}
 <aside class="home-announcement" aria-label="Bloogsite update">
@@ -112,7 +114,10 @@ gtag('config', '{{ site.googleAnalyticsId }}');
 
 <header class="site-header">
 
-<a href="/" class="logo">{{ site.name }}</a>
+<a href="/" class="logo" aria-label="Bloogsite home">
+<span class="header-brand-logo" aria-hidden="true"><img src="/assets/img/brand/bloogsite-logo-white.png?v={{ site.assetVersion }}" alt="" width="500" height="250"></span>
+<span class="visually-hidden">Bloogsite</span>
+</a>
 
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
 <span class="visually-hidden">Open main menu</span>

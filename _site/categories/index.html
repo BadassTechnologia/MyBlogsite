@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/png" href="/assets/img/brand/bloogsite-icon-white.png">
-<link rel="apple-touch-icon" href="/assets/img/brand/bloogsite-icon-white.png">
+<link rel="icon" type="image/png" href="/assets/img/brand/bloogsite-icon-white.png?v=local">
+<link rel="apple-touch-icon" href="/assets/img/brand/bloogsite-icon-white.png?v=local">
 
 
 
@@ -65,18 +65,23 @@ gtag('config', 'G-S42N5YN3CV');
 
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=local">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 
 <header class="site-header">
 
-<a href="/" class="logo">Bloogsite</a>
+<a href="/" class="logo" aria-label="Bloogsite home">
+<span class="header-brand-logo" aria-hidden="true"><img src="/assets/img/brand/bloogsite-logo-white.png?v=local" alt="" width="500" height="250"></span>
+<span class="visually-hidden">Bloogsite</span>
+</a>
 
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
 <span class="visually-hidden">Open main menu</span>
@@ -322,7 +327,7 @@ Tech Jobs
 
 </section>
 
-<script src="/assets/js/site-search.js" defer></script>
+<script src="/assets/js/site-search.js?v=local" defer></script>
 
 
 <footer class="site-footer">

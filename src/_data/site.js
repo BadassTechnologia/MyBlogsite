@@ -9,6 +9,13 @@ const socialLinks = [
   { name: "X", url: "https://x.com/BadassT16598" },
 ];
 
+const assetVersion = (
+  process.env.CF_PAGES_COMMIT_SHA ||
+  process.env.GITHUB_SHA ||
+  process.env.COMMIT_REF ||
+  "local"
+).slice(0, 12);
+
 module.exports = {
   name: "Bloogsite",
   tagline: "Read Beyond the Obvious.",
@@ -23,6 +30,7 @@ module.exports = {
   twitterHandle: "@BadassT16598",
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID || "G-S42N5YN3CV",
   googleSiteVerification: process.env.GOOGLE_SITE_VERIFICATION || "",
+  assetVersion,
   socialLinks,
   socialUrls: socialLinks.map((social) => social.url),
 };

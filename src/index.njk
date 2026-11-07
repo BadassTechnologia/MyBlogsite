@@ -9,9 +9,6 @@ activeNav: home
 <main id="main-content">
 <section class="home-brand-strip" aria-label="Bloogsite — {{ site.tagline }}">
 <div class="home-brand-lockup">
-<span class="home-brand-logo">
-<img src="/assets/img/brand/bloogsite-logo-white.png" alt="Bloogsite" width="500" height="250">
-</span>
 <p>{{ site.tagline }}</p>
 </div>
 <nav class="home-brand-topics" aria-label="Featured topics">
@@ -32,7 +29,7 @@ activeNav: home
 <p>{{ site.subline }}</p>
 <div class="hero-actions">
 <a class="button-link button-primary" href="/blogs/">Explore the blogs</a>
-<a class="button-link button-secondary" href="#blogs">Browse topics</a>
+<a class="hero-secondary-link" href="#blogs">Browse topics <span aria-hidden="true">→</span></a>
 </div>
 </div>
 <figure class="hero-image">
@@ -159,4 +156,4 @@ activeNav: home
 </section>
 </main>
 
-<script src="/assets/js/site-search.js" defer></script>
+<script src="/assets/js/site-search.js?v={{ site.assetVersion }}" defer></script>
