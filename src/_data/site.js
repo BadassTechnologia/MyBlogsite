@@ -9,6 +9,12 @@ const socialLinks = [
   { name: "X", url: "https://x.com/BadassT16598" },
 ];
 
+const linkedinCandidate = process.env.LINKEDIN_URL || "https://www.linkedin.com/company/144024555/";
+const linkedinUrl = /^https:\/\/(www\.)?linkedin\.com\/(company|in)\//.test(linkedinCandidate) ? linkedinCandidate : "";
+if (linkedinUrl) {
+  socialLinks.push({ name: "LinkedIn", url: linkedinUrl });
+}
+
 const assetVersion = (
   process.env.CF_PAGES_COMMIT_SHA ||
   process.env.GITHUB_SHA ||
@@ -17,6 +23,7 @@ const assetVersion = (
 ).slice(0, 12);
 
 module.exports = {
+  linkedinUrl,
   name: "Bloogsite",
   tagline: "Read Beyond the Obvious.",
   subline:

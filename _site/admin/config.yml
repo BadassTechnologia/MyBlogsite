@@ -58,7 +58,7 @@ collections:
       - { label: "Featured ribbon", name: "featured", widget: "boolean", default: false, required: false, hint: "Highlights this article with a Featured ribbon." }
       - { label: "Top article", name: "topArticle", widget: "boolean", default: false, required: false, hint: "Includes this article in the Top articles collection." }
       - { label: "Embedded Video URL", name: "videoUrl", widget: "string", required: false, pattern: ['^https://(www\\.)?(youtube(-nocookie)?\\.com/embed/|player\\.vimeo\\.com/video/).+$', "Use a secure YouTube or Vimeo embed URL."], hint: "Paste an HTTPS YouTube embed or Vimeo player URL. Other providers are not displayed." }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "For fenced code blocks, switch to Markdown mode and put three backticks on separate lines before and after the code. In Rich Text mode, use the Code Block component." }
       - { label: "Draft (hide from live site)", name: "draft", widget: "boolean", default: false, required: false }
 
   - name: "authors"

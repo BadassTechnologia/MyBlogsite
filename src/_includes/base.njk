@@ -14,6 +14,7 @@
 {% set pageUrl = site.url + page.url %}
 
 <title>{{ browserTitle }}</title>
+{% if noindex %}<meta name="robots" content="noindex, follow">{% endif %}
 <meta name="description" content="{{ pageDescription }}">
 <meta name="application-name" content="{{ site.name }}">
 <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
@@ -49,7 +50,6 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": {{ site.name | json | safe }},
-  "alternateName": {{ site.tagline | json | safe }},
   "description": {{ site.defaultDescription | json | safe }},
   "url": {{ site.url | json | safe }},
   "inLanguage": {{ site.locale | json | safe }},
@@ -66,11 +66,12 @@
   "headline": {{ title | json | safe }},
   "description": {{ pageDescription | json | safe }},
   "image": [{{ pageImage | absoluteUrl(site.url) | json | safe }}],
+  {% if updated %}"dateModified": {{ updated | isoDate | json | safe }},{% endif %}
   "datePublished": {{ (date or page.date) | isoDate | json | safe }},
   "articleSection": {{ category | catName(categories) | json | safe }},
   "mainEntityOfPage": {{ pageUrl | json | safe }},
   "author": {
-    "@type": "Person",
+    "@type": {{ ("Organization" if schemaAuthor and schemaAuthor.slug == "ashok" else "Person") | json | safe }},
     "name": {{ (schemaAuthor.name if schemaAuthor else author) | json | safe }}
   },
   "publisher": {
@@ -82,6 +83,17 @@
     }
   }
 }
+</script>
+{% endif %}
+
+{% if category or activeCategory %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":{{ site.url | json | safe }}},
+{"@type":"ListItem","position":2,"name":"Blogs","item":{{ (site.url + "/blogs/") | json | safe }}},
+{"@type":"ListItem","position":3,"name":{{ (category or activeCategory) | catName(categories) | json | safe }},"item":{{ (site.url + "/categories/" + (category or activeCategory) + "/") | json | safe }}}{% if category %},
+{"@type":"ListItem","position":4,"name":{{ title | json | safe }},"item":{{ pageUrl | json | safe }}}{% endif %}
+]}
 </script>
 {% endif %}
 
@@ -179,7 +191,7 @@ gtag('config', '{{ site.googleAnalyticsId }}');
 <div class="footer-column footer-newsletter"><h2>Newsletter</h2><p>Useful guides and important developments, without daily noise.</p><button type="button" disabled>Subscriptions coming soon</button></div>
 </div>
 <div class="footer-watermark" aria-hidden="true">bloogsite</div>
-<div class="footer-bottom"><p>© {{ currentYear }} {{ site.name }}. All Rights Reserved.</p><nav aria-label="Legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><a href="/feed.xml">RSS Feed</a></nav></div>
+<div class="footer-bottom"><p>© {{ currentYear }} {{ site.name }}. All Rights Reserved.</p><nav aria-label="Legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><a href="/editorial-policy/">Editorial policy</a><a href="/feed.xml">RSS Feed</a></nav></div>
 </footer>
 
 <script>

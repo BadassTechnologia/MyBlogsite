@@ -2,3 +2,5 @@ body{margin:0;background:#f5f7fb;color:#222;font-family:Poppins,Arial,sans-serif
 .cms-preview-header{padding:18px 7%;display:flex;justify-content:space-between;background:#fff;border-bottom:1px solid #e5e7eb;color:#4f46e5;}
 .cms-preview-header span{color:#626879;font-size:13px;}
 .cms-site-preview .post-page{background:#f5f7fb;}
+.cms-site-preview .post-body pre{white-space:pre;overflow-wrap:normal;word-break:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;}
+.cms-site-preview .post-body pre code{white-space:inherit;font-family:inherit;}

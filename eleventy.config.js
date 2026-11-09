@@ -54,6 +54,8 @@ module.exports = function (eleventyConfig) {
         && item.outputPath
         && item.outputPath.endsWith(".html")
         && !item.data.draft
+        && !item.data.noindex
+        && !item.data.cat
         && item.url !== "/404.html"
       );
   });

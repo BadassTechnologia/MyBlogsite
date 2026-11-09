@@ -7,7 +7,12 @@ eleventyExcludeFromCollections: true
 {%- for page in collections.sitemapPages %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
-    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    {%- if page.data.updated %}<lastmod>{{ page.data.updated | isoDate }}</lastmod>{% elif page.data.category and page.data.date %}<lastmod>{{ page.data.date | isoDate }}</lastmod>{% endif %}
   </url>
+{%- endfor %}
+{%- for cat in categories %}
+{%- if collections.postsByCategory[cat.slug] | length %}
+  <url><loc>{{ site.url }}/categories/{{ cat.slug }}/</loc></url>
+{%- endif %}
 {%- endfor %}
 </urlset>

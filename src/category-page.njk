@@ -4,6 +4,7 @@ pagination:
   data: categories
   size: 1
   alias: cat
+  addAllPagesToCollections: true
 permalink: "/categories/{{ cat.slug }}/"
 eleventyComputed:
   title: "{{ cat.name }} Articles - Bloogsite"
