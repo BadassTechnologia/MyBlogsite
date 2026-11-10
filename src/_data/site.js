@@ -1,19 +1,15 @@
+const linkedinCandidate = process.env.LINKEDIN_URL || "https://www.linkedin.com/company/144024555/";
+const linkedinUrl = /^https:\/\/(www\.)?linkedin\.com\/(company|in)\//.test(linkedinCandidate) ? linkedinCandidate : "";
+
 const socialLinks = [
   { name: "YouTube", url: "https://www.youtube.com/@Badass_Technologia" },
   { name: "Instagram", url: "https://www.instagram.com/badass_technologia/" },
   { name: "Reddit community", url: "https://www.reddit.com/r/Badass_Technologia/" },
-  { name: "Reddit profile", url: "https://www.reddit.com/user/Badass_Technologia/" },
+  ...(linkedinUrl ? [{ name: "LinkedIn", url: linkedinUrl }] : []),
   { name: "Discord", url: "https://discord.gg/X5X2bkgp" },
   { name: "Threads", url: "https://www.threads.com/@badass_technologia" },
-  { name: "WhatsApp", url: "https://whatsapp.com/channel/0029VbBN5fE8V0tknvqCd828" },
   { name: "X", url: "https://x.com/BadassT16598" },
 ];
-
-const linkedinCandidate = process.env.LINKEDIN_URL || "https://www.linkedin.com/company/144024555/";
-const linkedinUrl = /^https:\/\/(www\.)?linkedin\.com\/(company|in)\//.test(linkedinCandidate) ? linkedinCandidate : "";
-if (linkedinUrl) {
-  socialLinks.push({ name: "LinkedIn", url: linkedinUrl });
-}
 
 const assetVersion = (
   process.env.CF_PAGES_COMMIT_SHA ||

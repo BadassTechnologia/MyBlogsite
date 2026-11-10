@@ -1951,7 +1951,7 @@ margin-bottom:38px;
 }
 
 .about-header h1{
-font-size:clamp(40px,5.6vw,68px);
+font-size:clamp(34px,4.6vw,54px);
 line-height:1.06;
 letter-spacing:-.045em;
 }
@@ -1983,7 +1983,7 @@ background:linear-gradient(145deg,#ffffff 0%,#f5f7ff 100%);
 .mission-card h2{
 max-width:650px;
 margin-bottom:26px;
-font-size:clamp(36px,4.6vw,58px);
+font-size:clamp(30px,3.8vw,46px);
 line-height:1.08;
 letter-spacing:-.04em;
 }
@@ -2258,14 +2258,13 @@ color:#8a8f9c;
 font-size:18px;
 }
 
-.contact-option-1 .contact-platform-icon{background:#fff0f0;color:#e62117;}
-.contact-option-2 .contact-platform-icon{background:#fff0f7;color:#c13584;}
-.contact-option-3 .contact-platform-icon,
-.contact-option-4 .contact-platform-icon{background:#fff3ed;color:#ff4500;}
-.contact-option-5 .contact-platform-icon{background:#f0f1ff;color:#5865f2;}
-.contact-option-6 .contact-platform-icon{background:#f1f1f3;color:#111827;}
-.contact-option-7 .contact-platform-icon{background:#effcf4;color:#16a34a;}
-.contact-option-8 .contact-platform-icon{background:#f1f1f3;color:#111827;}
+.contact-option[href*="youtube.com"] .contact-platform-icon{background:#fff0f0;color:#e62117;}
+.contact-option[href*="instagram.com"] .contact-platform-icon{background:#fff0f7;color:#c13584;}
+.contact-option[href*="reddit.com"] .contact-platform-icon{background:#fff3ed;color:#ff4500;}
+.contact-option[href*="linkedin.com"] .contact-platform-icon{background:#edf6ff;color:#0a66c2;}
+.contact-option[href*="discord.gg"] .contact-platform-icon{background:#f0f1ff;color:#5865f2;}
+.contact-option[href*="threads.com"] .contact-platform-icon,
+.contact-option[href*="x.com"] .contact-platform-icon{background:#f1f1f3;color:#111827;}
 
 .contact-note{
 margin-top:22px;
