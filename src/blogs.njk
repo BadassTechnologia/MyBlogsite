@@ -13,9 +13,9 @@ permalink: /blogs/
 <nav class="blog-filter-list" aria-label="Blog categories"><a class="active" href="/blogs/">All blogs</a>{% for cat in categories %}<a href="/categories/{{ cat.slug }}/">{{ cat.name }}</a>{% endfor %}</nav>
 
 {% if collections.topArticles.length %}
-<section class="blog-index-section" aria-labelledby="top-articles-title"><div class="section-heading"><div><p class="section-kicker">Reader essentials</p><h2 id="top-articles-title">Top articles</h2></div></div><div class="blogs blog-index-grid">{% for post in collections.topArticles %}{{ articleCard(post, categories) }}{% endfor %}</div></section>
+<section class="blog-index-section" aria-labelledby="top-articles-title"><div class="section-heading"><div><p class="section-kicker">Reader essentials</p><h2 id="top-articles-title">Top articles</h2></div></div><div class="blogs blog-index-grid">{% for post in collections.topArticles %}{{ articleCard(post, categories, authors) }}{% endfor %}</div></section>
 {% endif %}
 
 <section class="blog-index-section" aria-labelledby="new-articles-title"><div class="section-heading"><div><p class="section-kicker">Recently published</p><h2 id="new-articles-title">New articles</h2></div></div>
-{% if collections.posts.length %}<div class="blogs blog-index-grid">{% for post in collections.posts %}{{ articleCard(post, categories) }}{% endfor %}</div>{% else %}<div class="blog-empty-state"><h3>The library is being prepared.</h3><p>New practical guides will appear here as soon as they complete editorial review.</p><a href="/about/">Read our editorial mission →</a></div>{% endif %}</section>
+{% if collections.posts.length %}<div class="blogs blog-index-grid">{% for post in collections.posts %}{{ articleCard(post, categories, authors) }}{% endfor %}</div>{% else %}<div class="blog-empty-state"><h3>The library is being prepared.</h3><p>New practical guides will appear here as soon as they complete editorial review.</p><a href="/about/">Read our editorial mission →</a></div>{% endif %}</section>
 </main>

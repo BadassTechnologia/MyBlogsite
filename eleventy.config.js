@@ -74,6 +74,16 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("compactDate", function (dateObj) {
+    if (!dateObj) return "";
+    const d = new Date(dateObj);
+    return d.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  });
+
   eleventyConfig.addFilter("catName", function (slug, cats) {
     const c = (cats || []).find((c) => c.slug === slug);
     if (c) return c.name;

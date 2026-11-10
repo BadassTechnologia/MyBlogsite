@@ -154,6 +154,8 @@ gtag('config', '{{ site.googleAnalyticsId }}');
 </button>
 </div>
 
+<button class="blog-menu-dismiss" type="button" tabindex="-1" aria-label="Close blogs menu"></button>
+
 <div id="category-menu" class="mega-menu blog-mega-menu" aria-label="Blogs menu">
 <div class="blog-mega-categories"><p>Blog categories</p><div>
 {% for cat in categories %}
@@ -202,12 +204,24 @@ gtag('config', '{{ site.googleAnalyticsId }}');
   var navToggleLabel = navToggle && navToggle.querySelector('.visually-hidden');
   var dropdown = document.querySelector('.nav-dropdown');
   var categoryToggle = document.querySelector('.category-toggle');
+  var menuDismiss = document.querySelector('.blog-menu-dismiss');
   var mobileQuery = window.matchMedia('(max-width: 768px)');
 
   if (!header || !nav || !navToggle || !dropdown || !categoryToggle) return;
 
   function setCategoryMenu(open, returnFocus) {
     dropdown.classList.toggle('open', open);
+    if (open && !mobileQuery.matches) {
+      var blogMenu = dropdown.querySelector('.blog-mega-menu');
+      if (blogMenu) {
+        var anchorRect = dropdown.getBoundingClientRect();
+        var menuWidth = blogMenu.offsetWidth;
+        var centeredLeft = anchorRect.width / 2 - menuWidth / 2;
+        var viewportLeft = anchorRect.left + centeredLeft;
+        var clampedLeft = Math.min(Math.max(16, viewportLeft), window.innerWidth - menuWidth - 16);
+        blogMenu.style.setProperty('--blog-menu-x', (clampedLeft - anchorRect.left) + 'px');
+      }
+    }
     categoryToggle.setAttribute('aria-expanded', String(open));
     categoryToggle.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' blogs menu');
     if (returnFocus) categoryToggle.focus();
@@ -230,14 +244,20 @@ gtag('config', '{{ site.googleAnalyticsId }}');
     setCategoryMenu(categoryToggle.getAttribute('aria-expanded') !== 'true', false);
   });
 
+  if (menuDismiss) {
+    menuDismiss.addEventListener('click', function () {
+      setCategoryMenu(false, false);
+    });
+  }
+
   nav.addEventListener('click', function (event) {
     if (mobileQuery.matches && event.target.closest('a')) setMainMenu(false, false);
   });
 
-  document.addEventListener('click', function (event) {
+  document.addEventListener('pointerdown', function (event) {
     if (!dropdown.contains(event.target)) setCategoryMenu(false, false);
     if (mobileQuery.matches && !header.contains(event.target)) setMainMenu(false, false);
-  });
+  }, true);
 
   document.addEventListener('keydown', function (event) {
     if (event.key !== 'Escape') return;

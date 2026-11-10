@@ -98,7 +98,7 @@ activeNav: home
 </div>
 <div class="blogs">
 {% for post in collections.posts | limit(3) %}
-{{ articleCard(post, categories) }}
+{{ articleCard(post, categories, authors) }}
 {% endfor %}
 </div>
 </section>

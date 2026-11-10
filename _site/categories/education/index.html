@@ -116,6 +116,8 @@ gtag('config', 'G-S42N5YN3CV');
 </button>
 </div>
 
+<button class="blog-menu-dismiss" type="button" tabindex="-1" aria-label="Close blogs menu"></button>
+
 <div id="category-menu" class="mega-menu blog-mega-menu" aria-label="Blogs menu">
 <div class="blog-mega-categories"><p>Blog categories</p><div>
 
@@ -191,7 +193,7 @@ Tech Jobs
 
 </div></div>
 <div class="blog-mega-recent"><p>Featured &amp; recently published</p>
-<span class="blog-mega-empty">New practical guides are being prepared.</span>
+<a href="/posts/how-to-create-your-own-minecraft-server-in-2027/"><strong>How to Create Your Own Minecraft Server in 2027</strong><span>Read article →</span></a>
 <a class="blog-mega-all" href="/blogs/">View all blogs →</a></div>
 </div>
 
@@ -221,7 +223,7 @@ Tech Jobs
 <div class="blog-empty-state"><h3>New Education guides are on the way.</h3><p>Articles will appear here after editorial review.</p><a href="/blogs/">Explore all blog topics →</a></div></section>
 
 <aside class="best-articles" aria-labelledby="best-articles-title"><p class="section-kicker">Across Bloogsite</p><h2 id="best-articles-title">Best articles</h2>
-<p class="best-articles-empty">Our first recommended reads will appear here after publication.</p>
+<ol><li><a href="/posts/how-to-create-your-own-minecraft-server-in-2027/"><span>1</span><span><small>Tech</small><strong>How to Create Your Own Minecraft Server in 2027</strong></span></a></li></ol>
 <a class="best-articles-all" href="/blogs/">Browse all blogs →</a></aside>
 </div>
 </main>
@@ -268,12 +270,24 @@ Tech Jobs
   var navToggleLabel = navToggle && navToggle.querySelector('.visually-hidden');
   var dropdown = document.querySelector('.nav-dropdown');
   var categoryToggle = document.querySelector('.category-toggle');
+  var menuDismiss = document.querySelector('.blog-menu-dismiss');
   var mobileQuery = window.matchMedia('(max-width: 768px)');
 
   if (!header || !nav || !navToggle || !dropdown || !categoryToggle) return;
 
   function setCategoryMenu(open, returnFocus) {
     dropdown.classList.toggle('open', open);
+    if (open && !mobileQuery.matches) {
+      var blogMenu = dropdown.querySelector('.blog-mega-menu');
+      if (blogMenu) {
+        var anchorRect = dropdown.getBoundingClientRect();
+        var menuWidth = blogMenu.offsetWidth;
+        var centeredLeft = anchorRect.width / 2 - menuWidth / 2;
+        var viewportLeft = anchorRect.left + centeredLeft;
+        var clampedLeft = Math.min(Math.max(16, viewportLeft), window.innerWidth - menuWidth - 16);
+        blogMenu.style.setProperty('--blog-menu-x', (clampedLeft - anchorRect.left) + 'px');
+      }
+    }
     categoryToggle.setAttribute('aria-expanded', String(open));
     categoryToggle.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' blogs menu');
     if (returnFocus) categoryToggle.focus();
@@ -296,14 +310,20 @@ Tech Jobs
     setCategoryMenu(categoryToggle.getAttribute('aria-expanded') !== 'true', false);
   });
 
+  if (menuDismiss) {
+    menuDismiss.addEventListener('click', function () {
+      setCategoryMenu(false, false);
+    });
+  }
+
   nav.addEventListener('click', function (event) {
     if (mobileQuery.matches && event.target.closest('a')) setMainMenu(false, false);
   });
 
-  document.addEventListener('click', function (event) {
+  document.addEventListener('pointerdown', function (event) {
     if (!dropdown.contains(event.target)) setCategoryMenu(false, false);
     if (mobileQuery.matches && !header.contains(event.target)) setMainMenu(false, false);
-  });
+  }, true);
 
   document.addEventListener('keydown', function (event) {
     if (event.key !== 'Escape') return;

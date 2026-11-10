@@ -1,10 +1,12 @@
-{% macro articleCard(post, categories) %}
+{% macro articleCard(post, categories, authors) %}
 {% set cardTitle = post.data.title or "Untitled article" %}
 {% set cardExcerpt = post.data.excerpt or "Open this article to learn more." %}
 {% set cardImage = post.data.image or "/assets/img/article-fallback.svg" %}
 {% set cardImageAlt = post.data.imageAlt or "" %}
 {% set cardCategory = post.data.category | catName(categories) %}
 {% set cardId = post.page.fileSlug or loop.index %}
+{% set cardAuthor = authors | selectattr("slug", "equalto", post.data.author) | first %}
+{% set cardReadingTime = post.templateContent | readingTime %}
 
 <article class="article-card">
 <a href="{{ post.url }}" class="card" aria-labelledby="article-card-title-{{ cardId }}" aria-describedby="article-card-excerpt-{{ cardId }}">
@@ -24,13 +26,21 @@ onerror="this.onerror=null;this.src='/assets/img/article-fallback.svg';"
 
 <div class="content">
 
+<div class="card-meta-row">
 <span class="tag">{{ cardCategory }}</span>
+{% if cardReadingTime %}<span class="card-reading-time" aria-label="{{ cardReadingTime }} minute read"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>{{ cardReadingTime }} min</span>{% endif %}
+</div>
 
 <h3 id="article-card-title-{{ cardId }}">{{ cardTitle }}</h3>
 
 <p id="article-card-excerpt-{{ cardId }}">{{ cardExcerpt }}</p>
 
-<span class="read" aria-hidden="true">Read More →</span>
+<div class="card-editorial-meta">
+{% if cardAuthor %}<span class="card-author"><img src="{{ cardAuthor.avatar }}" alt="" width="44" height="44" loading="lazy" decoding="async"><span><strong>{{ cardAuthor.name }}</strong><small>Author</small></span></span>{% endif %}
+<time datetime="{{ post.data.date | isoDate }}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M7 3v4M17 3v4M3 10h18"></path></svg>{{ post.data.date | compactDate }}</time>
+</div>
+
+<span class="read" aria-hidden="true">Read article →</span>
 
 </div>
 

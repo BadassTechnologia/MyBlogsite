@@ -19,6 +19,7 @@ layout: base.njk
 <img class="post-hero-img" src="{{ image }}" alt="{{ imageAlt or '' }}" width="900" height="500">
 {% endif %}
 
+<div class="post-reading-column">
 <span class="tag">{{ categoryName }}</span>
 
 <h1>{{ title }}</h1>
@@ -29,7 +30,7 @@ layout: base.njk
 <span>{{ authorData.name }}</span>
 <span>·</span>
 {% endif %}
-<span>{{ date | readableDate }}</span>
+<span>{{ date | compactDate }}</span>
 {% if minutesToRead %}
 <span aria-hidden="true">·</span>
 <span>{{ minutesToRead }} min read</span>
@@ -38,6 +39,7 @@ layout: base.njk
 
 <div class="post-body">
 {{ content | safe }}
+</div>
 </div>
 
 {% if safeVideoUrl %}
@@ -68,7 +70,7 @@ layout: base.njk
 
 <div class="related-articles-grid">
 {% for relatedPost in related %}
-{{ articleCard(relatedPost, categories) }}
+{{ articleCard(relatedPost, categories, authors) }}
 {% endfor %}
 </div>
 </aside>
