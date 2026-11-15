@@ -29,7 +29,10 @@ module.exports = {
   locale: "en-US",
   defaultDescription:
     "Read Beyond the Obvious. Practical guides across technology, finance, careers, health, travel, and modern life so you can act with confidence.",
-  defaultImage: "/assets/img/article-fallback.svg",
+  defaultImage: "/assets/img/social/bloogsite-social.jpg",
+  defaultImageAlt: "Sunset over a green countryside landscape",
+  defaultImageWidth: 1200,
+  defaultImageHeight: 630,
   twitterHandle: "@BadassT16598",
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID || "G-S42N5YN3CV",
   googleSiteVerification: process.env.GOOGLE_SITE_VERIFICATION || "",

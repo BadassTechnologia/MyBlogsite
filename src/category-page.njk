@@ -19,7 +19,7 @@ eleventyComputed:
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blogs/">Blogs</a> / <span>{{ cat.name }}</span></nav>
 
 <header class="category-feature">
-<div class="category-feature-image"><img src="https://picsum.photos/seed/bloogsite-{{ cat.slug }}/1200/700" alt="" width="1200" height="700"></div>
+<div class="category-feature-image"><img src="{{ cat.heroImage }}" alt="" width="1200" height="700" decoding="async"></div>
 <div class="category-feature-copy"><span class="cat-banner-icon" style="background:{{ cat.bg }};"><svg viewBox="0 0 24 24" fill="none" stroke="{{ cat.color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ cat.icon | safe }}</svg></span><p class="section-kicker">Bloogsite topic</p><h1>{{ cat.name }}</h1><p>Practical {{ cat.name | lower }} guides that explain what matters, show your options, and help you decide what to do next.</p><span class="category-count">{{ catPosts | length }} published {{ "article" if catPosts.length == 1 else "articles" }}</span></div>
 </header>
 
