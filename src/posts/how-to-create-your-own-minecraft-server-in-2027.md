@@ -5,6 +5,8 @@ category: tech
 author: ashok
 image: /assets/img/uploads/minecraft-banner.png
 imageAlt: Minecraft server guide banner showing Java and Bedrock players around a shared game world
+imageWidth: 2240
+imageHeight: 1260
 excerpt: Set up a private Minecraft Java or Bedrock server, connect friends on your local network, configure essential settings, and solve common connection problems.
 featured: true
 topArticle: true

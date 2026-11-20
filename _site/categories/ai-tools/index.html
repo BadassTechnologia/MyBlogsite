@@ -13,6 +13,9 @@
 
 
 
+
+
+
 <title>AI Tools Articles - Bloogsite</title>
 <meta name="robots" content="noindex, follow">
 <meta name="description" content="Explore practical AI Tools guides, new articles, and recommended reads from across Bloogsite.">
@@ -27,7 +30,13 @@
 <meta property="og:site_name" content="Bloogsite">
 <meta property="og:title" content="AI Tools Articles - Bloogsite">
 <meta property="og:description" content="Explore practical AI Tools guides, new articles, and recommended reads from across Bloogsite.">
-<meta property="og:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
+<meta property="og:image" content="https://bloogsite.com/assets/img/social/bloogsite-social.jpg">
+<meta property="og:image:secure_url" content="https://bloogsite.com/assets/img/social/bloogsite-social.jpg">
+<meta property="og:image:alt" content="Sunset over a green countryside landscape">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
 <meta property="og:url" content="https://bloogsite.com/categories/ai-tools/">
 
 
@@ -35,10 +44,12 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <meta name="twitter:site" content="@BadassT16598">
+<meta name="twitter:creator" content="@BadassT16598">
 
 <meta name="twitter:title" content="AI Tools Articles - Bloogsite">
 <meta name="twitter:description" content="Explore practical AI Tools guides, new articles, and recommended reads from across Bloogsite.">
-<meta name="twitter:image" content="https://bloogsite.com/assets/img/article-fallback.svg">
+<meta name="twitter:image" content="https://bloogsite.com/assets/img/social/bloogsite-social.jpg">
+<meta name="twitter:image:alt" content="Sunset over a green countryside landscape">
 
 <script type="application/ld+json">
 {
@@ -214,7 +225,7 @@ Tech Jobs
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blogs/">Blogs</a> / <span>AI Tools</span></nav>
 
 <header class="category-feature">
-<div class="category-feature-image"><img src="https://picsum.photos/seed/bloogsite-ai-tools/1200/700" alt="" width="1200" height="700"></div>
+<div class="category-feature-image"><img data-category-hero data-category-slug="ai-tools" data-hero-images='["/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-14%20(1).png","/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-15.png","/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-16.png","/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-17.png","/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-18.png"]' src="/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-14%20(1).png" alt="" width="1200" height="700" decoding="async"></div>
 <div class="category-feature-copy"><span class="cat-banner-icon" style="background:rgba(139,92,246,.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v1a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10V7a5 5 0 0 0-5-5Z"></path><path d="M9 22v-3"></path><path d="M15 22v-3"></path></svg></span><p class="section-kicker">Bloogsite topic</p><h1>AI Tools</h1><p>Practical ai tools guides that explain what matters, show your options, and help you decide what to do next.</p><span class="category-count">0 published articles</span></div>
 </header>
 
@@ -227,6 +238,28 @@ Tech Jobs
 <a class="best-articles-all" href="/blogs/">Browse all blogs →</a></aside>
 </div>
 </main>
+
+<script>
+(function () {
+  var hero = document.querySelector('[data-category-hero]');
+  if (!hero) return;
+
+  var images;
+  try {
+    images = JSON.parse(hero.getAttribute('data-hero-images') || '[]');
+  } catch (error) {
+    images = [];
+  }
+  if (!images.length) return;
+
+  var storageKey = 'bloogsiteCategoryHero:' + hero.getAttribute('data-category-slug');
+  var previous = Number(sessionStorage.getItem(storageKey));
+  var next = Math.floor(Math.random() * images.length);
+  if (images.length > 1 && next === previous) next = (next + 1) % images.length;
+  sessionStorage.setItem(storageKey, String(next));
+  hero.src = images[next];
+})();
+</script>
 
 
 <footer class="site-footer">
