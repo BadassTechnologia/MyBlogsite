@@ -51,6 +51,15 @@ eleventyComputed:
   var next = Math.floor(Math.random() * images.length);
   if (images.length > 1 && next === previous) next = (next + 1) % images.length;
   sessionStorage.setItem(storageKey, String(next));
-  hero.src = images[next];
+  var selectedImage = images[next];
+  var fittedHero = selectedImage.endsWith('/tech%20blogs/jeff.png') || selectedImage.endsWith('/Health/Bloogsite-images-30.png');
+  var imageFrame = hero.parentElement;
+
+  hero.classList.toggle('category-hero-fitted', fittedHero);
+  if (imageFrame) {
+    imageFrame.classList.toggle('category-hero-frame-tech', selectedImage.endsWith('/tech%20blogs/jeff.png'));
+    imageFrame.classList.toggle('category-hero-frame-health', selectedImage.endsWith('/Health/Bloogsite-images-30.png'));
+  }
+  hero.src = selectedImage;
 })();
 </script>
