@@ -244,7 +244,7 @@ Tech Jobs
 </div>
 </div>
 <figure class="hero-image">
-<img src="/assets/img/library/Bloogsite-stock/selected/countryside-sunset.jpg" alt="Sunset over a green countryside landscape" width="1800" height="810" fetchpriority="high" decoding="async">
+<img data-rotating-hero src="/assets/img/library/Bloogsite-stock/selected/countryside-sunset.jpg" alt="Sunset over a green countryside landscape" width="1800" height="810" fetchpriority="high" decoding="async">
 <figcaption class="hero-image-caption"><span aria-hidden="true"></span>A fresh perspective for curious minds.</figcaption>
 </figure>
 </section>
@@ -487,6 +487,30 @@ onerror="this.onerror=null;this.src='/assets/img/article-fallback.svg';"
 </section>
 </main>
 
+<script>
+(function () {
+  var hero = document.querySelector('[data-rotating-hero]');
+  if (!hero) return;
+
+  var images = [
+    { src: '/assets/img/library/Bloogsite-stock/selected/countryside-sunset.jpg', alt: 'Sunset over a green countryside landscape' },
+    { src: '/assets/img/library/Bloogsite-stock/selected/golden-sky.jpg', alt: 'Golden sunlight beneath dramatic clouds' },
+    { src: '/assets/img/library/Bloogsite-stock/selected/lakeside-boats.jpg', alt: 'Colourful boats resting on a mountain lake' },
+    { src: '/assets/img/library/Bloogsite-stock/selected/mountain-flowers.jpg', alt: 'Pink mountain flowers in the foreground' },
+    { src: '/assets/img/library/Bloogsite-stock/selected/mountain-lake.jpg', alt: 'A wide mountain lake beneath a cloud-filled sky' },
+    { src: '/assets/img/library/Bloogsite-stock/Lifestyle/3146490C-AFD0-48E6-8451-A768893CF306.JPG', alt: 'A road leading towards snow-covered mountains' },
+    { src: '/assets/img/library/Bloogsite-stock/Travel/64681376-D732-4BCB-BCCB-DF5E8E6A7EF5.JPG', alt: 'A rainbow crossing a green mountain valley' },
+    { src: '/assets/img/library/Bloogsite-stock/Travel/ED200ED9-91C3-43EF-A9B8-92DBF6B89BB1.JPG', alt: 'A rugged snow-covered mountain ridge' }
+  ];
+
+  var previous = Number(sessionStorage.getItem('bloogsiteHeroIndex'));
+  var next = Math.floor(Math.random() * images.length);
+  if (images.length > 1 && next === previous) next = (next + 1) % images.length;
+  sessionStorage.setItem('bloogsiteHeroIndex', String(next));
+  hero.src = images[next].src;
+  hero.alt = images[next].alt;
+})();
+</script>
 <script src="/assets/js/site-search.js?v=local" defer></script>
 
 

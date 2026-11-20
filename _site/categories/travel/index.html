@@ -225,7 +225,7 @@ Tech Jobs
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blogs/">Blogs</a> / <span>Travel</span></nav>
 
 <header class="category-feature">
-<div class="category-feature-image"><img src="/assets/img/library/Bloogsite-stock/ED200ED9-91C3-43EF-A9B8-92DBF6B89BB1.JPG" alt="" width="1200" height="700" decoding="async"></div>
+<div class="category-feature-image"><img data-category-hero data-category-slug="travel" data-hero-images='["/assets/img/library/Bloogsite-stock/Travel/1000095254.jpg","/assets/img/library/Bloogsite-stock/Travel/2FE74290-E4DB-4BF8-8E53-590E5AA31C12.JPG","/assets/img/library/Bloogsite-stock/Travel/64681376-D732-4BCB-BCCB-DF5E8E6A7EF5.JPG","/assets/img/library/Bloogsite-stock/Travel/67A159B4-DD9C-4AB6-BCFD-68D11948EAE4.JPG","/assets/img/library/Bloogsite-stock/Travel/DA660E12-14AC-4AF5-877E-91F9C2CBB7E4.JPG","/assets/img/library/Bloogsite-stock/Travel/ED200ED9-91C3-43EF-A9B8-92DBF6B89BB1.JPG","/assets/img/library/Bloogsite-stock/Travel/IMG-20210101-WA0020.jpg","/assets/img/library/Bloogsite-stock/Travel/IMG_6725.jpg"]' src="/assets/img/library/Bloogsite-stock/Travel/1000095254.jpg" alt="" width="1200" height="700" decoding="async"></div>
 <div class="category-feature-copy"><span class="cat-banner-icon" style="background:rgba(245,158,11,.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5Z"></path></svg></span><p class="section-kicker">Bloogsite topic</p><h1>Travel</h1><p>Practical travel guides that explain what matters, show your options, and help you decide what to do next.</p><span class="category-count">0 published articles</span></div>
 </header>
 
@@ -238,6 +238,28 @@ Tech Jobs
 <a class="best-articles-all" href="/blogs/">Browse all blogs →</a></aside>
 </div>
 </main>
+
+<script>
+(function () {
+  var hero = document.querySelector('[data-category-hero]');
+  if (!hero) return;
+
+  var images;
+  try {
+    images = JSON.parse(hero.getAttribute('data-hero-images') || '[]');
+  } catch (error) {
+    images = [];
+  }
+  if (!images.length) return;
+
+  var storageKey = 'bloogsiteCategoryHero:' + hero.getAttribute('data-category-slug');
+  var previous = Number(sessionStorage.getItem(storageKey));
+  var next = Math.floor(Math.random() * images.length);
+  if (images.length > 1 && next === previous) next = (next + 1) % images.length;
+  sessionStorage.setItem(storageKey, String(next));
+  hero.src = images[next];
+})();
+</script>
 
 
 <footer class="site-footer">

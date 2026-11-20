@@ -6,7 +6,12 @@
     "color": "#3b82f6",
     "bg": "rgba(59,130,246,.12)",
     "icon": "<polyline points=\"4 17 10 11 4 5\"></polyline><line x1=\"12\" y1=\"19\" x2=\"20\" y2=\"19\"></line>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/3146490C-AFD0-48E6-8451-A768893CF306.JPG"
+    "heroImage": "/assets/img/library/Bloogsite-stock/tech%20blogs/chips.png",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/tech%20blogs/chips.png",
+      "/assets/img/library/Bloogsite-stock/tech%20blogs/game.png",
+      "/assets/img/library/Bloogsite-stock/tech%20blogs/jeff.png"
+    ]
   },
   {
     "slug": "finance",
@@ -15,7 +20,15 @@
     "color": "#10b981",
     "bg": "rgba(16,185,129,.12)",
     "icon": "<line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"23\"></line><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/selected/lakeside-boats.jpg"
+    "heroImage": "/assets/img/library/Bloogsite-stock/Finance/Bloogsite-images-20.png",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/Finance/Bloogsite-images-20.png",
+      "/assets/img/library/Bloogsite-stock/Finance/Bloogsite-images-21.png",
+      "/assets/img/library/Bloogsite-stock/Finance/Bloogsite-images-22.png",
+      "/assets/img/library/Bloogsite-stock/Finance/Bloogsite-images-23.png",
+      "/assets/img/library/Bloogsite-stock/Finance/Bloogsite-images-24.png",
+      "/assets/img/library/Bloogsite-stock/Finance/Bloogsite-images-25.png"
+    ]
   },
   {
     "slug": "education",
@@ -24,7 +37,18 @@
     "color": "#ec4899",
     "bg": "rgba(236,72,153,.12)",
     "icon": "<path d=\"M4 19.5A2.5 2.5 0 0 1 6.5 17H20\"></path><path d=\"M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z\"></path>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/selected/mountain-lake.jpg"
+    "heroImage": "/assets/img/library/Bloogsite-stock/education/Albert-Einstein-qutes.png",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/education/Albert-Einstein-qutes.png",
+      "/assets/img/library/Bloogsite-stock/education/Bloogsite-images-8.png",
+      "/assets/img/library/Bloogsite-stock/education/Bloogsite-images-9%20(1).png",
+      "/assets/img/library/Bloogsite-stock/education/Bloogsite-images-10.png",
+      "/assets/img/library/Bloogsite-stock/education/Bloogsite-images-11.png",
+      "/assets/img/library/Bloogsite-stock/education/Bloogsite-images-12.png",
+      "/assets/img/library/Bloogsite-stock/education/Bloogsite-images-12%20(1).png",
+      "/assets/img/library/Bloogsite-stock/education/Bloogsite-images-14.png",
+      "/assets/img/library/Bloogsite-stock/education/physics.png"
+    ]
   },
   {
     "slug": "lifestyle",
@@ -33,7 +57,20 @@
     "color": "#14b8a6",
     "bg": "rgba(20,184,166,.12)",
     "icon": "<path d=\"M11 20A7 7 0 0 1 4 13c0-4 3-8 8-11 5 3 8 7 8 11a7 7 0 0 1-7 7Z\"></path><path d=\"M12 9v11\"></path>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/selected/countryside-sunset.jpg"
+    "heroImage": "/assets/img/library/Bloogsite-stock/Lifestyle/1000095265.jpg",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/Lifestyle/1000095265.jpg",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/20230819_184544.jpg",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/20240901_173433.jpg",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/3146490C-AFD0-48E6-8451-A768893CF306.JPG",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/3884C623-EC55-4BFE-8F00-91DF5FF840B0.JPG",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/610AC6AE-7A09-42E9-978D-427D88D191A2.JPG",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/AB41A97E-8DFF-475C-91DA-B2F81A0D5248.JPG",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/AB8E331E-0DBD-491A-9B73-5B6E766C9C36.JPG",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/IMG_20230107_224352_909.jpg",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/IMG_6714.jpg",
+      "/assets/img/library/Bloogsite-stock/Lifestyle/IMG_6796.jpg"
+    ]
   },
   {
     "slug": "ai-tools",
@@ -42,7 +79,14 @@
     "color": "#8b5cf6",
     "bg": "rgba(139,92,246,.12)",
     "icon": "<path d=\"M12 2a5 5 0 0 0-5 5v1a5 5 0 0 0 0 10h10a5 5 0 0 0 0-10V7a5 5 0 0 0-5-5Z\"></path><path d=\"M9 22v-3\"></path><path d=\"M15 22v-3\"></path>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/64681376-D732-4BCB-BCCB-DF5E8E6A7EF5.JPG"
+    "heroImage": "/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-14%20(1).png",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-14%20(1).png",
+      "/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-15.png",
+      "/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-16.png",
+      "/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-17.png",
+      "/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-18.png"
+    ]
   },
   {
     "slug": "health",
@@ -51,7 +95,15 @@
     "color": "#ef4444",
     "bg": "rgba(239,68,68,.12)",
     "icon": "<path d=\"M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z\"></path>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/selected/mountain-flowers.jpg"
+    "heroImage": "/assets/img/library/Bloogsite-stock/Health/Bloogsite-images-26.png",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/Health/Bloogsite-images-26.png",
+      "/assets/img/library/Bloogsite-stock/Health/Bloogsite-images-27.png",
+      "/assets/img/library/Bloogsite-stock/Health/Bloogsite-images-28.png",
+      "/assets/img/library/Bloogsite-stock/Health/Bloogsite-images-29.png",
+      "/assets/img/library/Bloogsite-stock/Health/Bloogsite-images-30.png",
+      "/assets/img/library/Bloogsite-stock/Health/Bloogsite-images-31.png"
+    ]
   },
   {
     "slug": "travel",
@@ -60,7 +112,17 @@
     "color": "#f59e0b",
     "bg": "rgba(245,158,11,.12)",
     "icon": "<path d=\"M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5Z\"></path>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/ED200ED9-91C3-43EF-A9B8-92DBF6B89BB1.JPG"
+    "heroImage": "/assets/img/library/Bloogsite-stock/Travel/1000095254.jpg",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/Travel/1000095254.jpg",
+      "/assets/img/library/Bloogsite-stock/Travel/2FE74290-E4DB-4BF8-8E53-590E5AA31C12.JPG",
+      "/assets/img/library/Bloogsite-stock/Travel/64681376-D732-4BCB-BCCB-DF5E8E6A7EF5.JPG",
+      "/assets/img/library/Bloogsite-stock/Travel/67A159B4-DD9C-4AB6-BCFD-68D11948EAE4.JPG",
+      "/assets/img/library/Bloogsite-stock/Travel/DA660E12-14AC-4AF5-877E-91F9C2CBB7E4.JPG",
+      "/assets/img/library/Bloogsite-stock/Travel/ED200ED9-91C3-43EF-A9B8-92DBF6B89BB1.JPG",
+      "/assets/img/library/Bloogsite-stock/Travel/IMG-20210101-WA0020.jpg",
+      "/assets/img/library/Bloogsite-stock/Travel/IMG_6725.jpg"
+    ]
   },
   {
     "slug": "trending",
@@ -69,7 +131,13 @@
     "color": "#06b6d4",
     "bg": "rgba(6,182,212,.12)",
     "icon": "<polyline points=\"3 17 9 11 13 15 21 7\"></polyline><polyline points=\"14 7 21 7 21 14\"></polyline>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/selected/golden-sky.jpg"
+    "heroImage": "/assets/img/library/Bloogsite-stock/tech%20blogs/chips.png",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/tech%20blogs/chips.png",
+      "/assets/img/library/Bloogsite-stock/Finance/Bloogsite-images-20.png",
+      "/assets/img/library/Bloogsite-stock/ai/Bloogsite-images-15.png",
+      "/assets/img/library/Bloogsite-stock/marketing/Bloogsite-images-32.png"
+    ]
   },
   {
     "slug": "marketing",
@@ -78,7 +146,14 @@
     "color": "#f97316",
     "bg": "rgba(249,115,22,.12)",
     "icon": "<path d=\"m3 11 18-8-8 18-2-8-8-2Z\"></path>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/selected/countryside-sunset.jpg"
+    "heroImage": "/assets/img/library/Bloogsite-stock/marketing/Bloogsite-images-32.png",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/marketing/Bloogsite-images-32.png",
+      "/assets/img/library/Bloogsite-stock/marketing/Bloogsite-images-33.png",
+      "/assets/img/library/Bloogsite-stock/marketing/Bloogsite-images-34.png",
+      "/assets/img/library/Bloogsite-stock/marketing/Bloogsite-images-35.png",
+      "/assets/img/library/Bloogsite-stock/marketing/Bloogsite-images-36.png"
+    ]
   },
   {
     "slug": "tech-jobs",
@@ -86,6 +161,14 @@
     "color": "#6366f1",
     "bg": "rgba(99,102,241,.12)",
     "icon": "<rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\"></rect><path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\"></path>",
-    "heroImage": "/assets/img/library/Bloogsite-stock/3146490C-AFD0-48E6-8451-A768893CF306.JPG"
+    "heroImage": "/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-33%20(1).png",
+    "heroImages": [
+      "/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-33%20(1).png",
+      "/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-34%20(1).png",
+      "/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-35%20(1).png",
+      "/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-36%20(1).png",
+      "/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-37.png",
+      "/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-38.png"
+    ]
   }
 ]

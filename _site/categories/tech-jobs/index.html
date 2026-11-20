@@ -225,7 +225,7 @@ Tech Jobs
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blogs/">Blogs</a> / <span>Tech Jobs</span></nav>
 
 <header class="category-feature">
-<div class="category-feature-image"><img src="/assets/img/library/Bloogsite-stock/3146490C-AFD0-48E6-8451-A768893CF306.JPG" alt="" width="1200" height="700" decoding="async"></div>
+<div class="category-feature-image"><img data-category-hero data-category-slug="tech-jobs" data-hero-images='["/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-33%20(1).png","/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-34%20(1).png","/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-35%20(1).png","/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-36%20(1).png","/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-37.png","/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-38.png"]' src="/assets/img/library/Bloogsite-stock/jobs/Bloogsite-images-33%20(1).png" alt="" width="1200" height="700" decoding="async"></div>
 <div class="category-feature-copy"><span class="cat-banner-icon" style="background:rgba(99,102,241,.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></span><p class="section-kicker">Bloogsite topic</p><h1>Tech Jobs</h1><p>Practical tech jobs guides that explain what matters, show your options, and help you decide what to do next.</p><span class="category-count">0 published articles</span></div>
 </header>
 
@@ -238,6 +238,28 @@ Tech Jobs
 <a class="best-articles-all" href="/blogs/">Browse all blogs →</a></aside>
 </div>
 </main>
+
+<script>
+(function () {
+  var hero = document.querySelector('[data-category-hero]');
+  if (!hero) return;
+
+  var images;
+  try {
+    images = JSON.parse(hero.getAttribute('data-hero-images') || '[]');
+  } catch (error) {
+    images = [];
+  }
+  if (!images.length) return;
+
+  var storageKey = 'bloogsiteCategoryHero:' + hero.getAttribute('data-category-slug');
+  var previous = Number(sessionStorage.getItem(storageKey));
+  var next = Math.floor(Math.random() * images.length);
+  if (images.length > 1 && next === previous) next = (next + 1) % images.length;
+  sessionStorage.setItem(storageKey, String(next));
+  hero.src = images[next];
+})();
+</script>
 
 
 <footer class="site-footer">
