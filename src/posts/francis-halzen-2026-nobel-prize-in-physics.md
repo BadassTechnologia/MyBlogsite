@@ -48,3 +48,26 @@ When an observatory detects a neutrino and telescopes see light from the same pa
 ## Conclusion
 
 Halzen’s contribution was to help turn a cubic kilometre of Antarctic ice into a working telescope for neutrinos. IceCube then showed that high-energy neutrinos from space reach Earth in numbers scientists can measure. The 2026 Nobel Prize recognises that achievement. The next question is which objects produce most of these particles and how they give them so much energy.
+
+
+## A closer look at the science and what IceCube makes possible
+
+### Why did Halzen need a cubic kilometre of ice?
+
+A neutrino detector has two jobs. It needs enough matter for a rare interaction to happen, and it needs a way to see the light that follows. Deep South Pole ice can do both. A small detector can register a neutrino, but collecting enough high-energy events to compare with the atmospheric background calls for a much larger target. Halzen helped take the idea from the earlier AMANDA experiment to IceCube, where thousands of light sensors monitor a volume large enough to study those rare events as a group. The collaboration also uses the sensors near the edge of the detector to identify particles that enter from outside. That helps separate those events from interactions that start inside the array. [Nobel scientific background](https://www.kva.se/app/uploads/2026/10/nobel-physics-2026-scientific-background-2.pdf)
+
+A cubic kilometre is the volume of a cube 1,000 metres on each side. Multiplying 1,000 by itself three times gives one billion cubic metres. At roughly 920 kilograms per cubic metre, that volume of ice has a mass of about **920 million metric tonnes**. The sensors occupy a tiny fraction of that volume. It is the amount of ice they monitor that gives the detector so many opportunities to catch an interaction. [IceCube detector facts](https://icecube.wisc.edu/about-us/facts/)
+
+### How do scientists read the light patterns?
+
+A muon is a charged particle related to the electron. When an interaction produces a muon, it can travel far enough to leave a long light pattern called a **track**. Researchers use the times at which sensors recorded light to work backwards to the muon's path and estimate where the neutrino came from. Other interactions make a compact shower of particles called a **cascade**. A cascade contained in the array can give a better measure of the energy deposited, although a long track generally gives a clearer direction. When particles leave the array, some of the original neutrino's energy can escape measurement. [Nobel scientific background](https://www.kva.se/app/uploads/2026/10/nobel-physics-2026-scientific-background-2.pdf)
+
+### What does the 2013 result look like in numbers?
+
+The study's central estimate for the atmospheric background was 10.6 events. Dividing the 28 observed candidates by 10.6 gives about **2.6 times the expected background count**. That ratio describes the size of the excess. To judge whether random variation could explain it, researchers also had to account for uncertainty in the background and consider properties such as event energy and direction. Two events deposited more than one petaelectronvolt, or PeV. One PeV is one quadrillion electronvolts, about **0.00016 joules**. That energy is small on an everyday scale but remarkable when carried by one subatomic particle. [2013 research article](https://doi.org/10.1126/science.1242856) · [IceCube's PeV-event paper](https://doi.org/10.1103/PhysRevLett.111.021103)
+
+### How does this help astronomers today?
+
+When fast protons or atomic nuclei collide with matter or radiation near an astronomical source, they can produce short-lived particles that decay into neutrinos. Charged cosmic rays can be deflected by magnetic fields, while neutrinos travel without that deflection. Finding neutrinos from the direction of a galaxy gives astronomers evidence they can use to investigate whether the galaxy accelerates protons or nuclei. It also points telescopes towards a source they can study with other instruments. [Nobel scientific background](https://www.kva.se/app/uploads/2026/10/nobel-physics-2026-scientific-background-2.pdf)
+
+IceCube can send real-time alerts when it detects a promising event. A telescope can then look in that direction while the source may still be active. The same detector can also look for a burst of lower-energy neutrinos from a stellar collapse in our galaxy. Individual events in such a burst are generally too faint for IceCube to reconstruct. Instead, IceCube looks for a brief rise in the combined sensor counts and can share the signal through the SuperNova Early Warning System. That gives astronomers a chance to coordinate observations of the explosion as it unfolds. [IceCube real-time alerts](https://icecube.wisc.edu/science/real-time-alerts/)
