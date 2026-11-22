@@ -11,9 +11,13 @@ draft: true
 
 <img width="2240" height="1260" alt="Cover image for Francis Halzen and the IceCube Neutrino Observatory" src="https://github.com/user-attachments/assets/3912d5a0-041c-4696-8129-f673f3ae4f6e" />
 
-On 6 October 2026, Francis Halzen won the Nobel Prize in Physics for his role in building the IceCube Neutrino Observatory and discovering high-energy neutrinos from space. To see how unusual that achievement was, picture a telescope with no mirror, buried deep under the South Pole. Its job is to catch brief flashes of light from particles that usually pass straight through Earth.
+## Introduction
 
-Francis Halzen was born in 1944 in Tienen, Belgium. He studied physics at what is now KU Leuven, receiving his master’s degree in 1966 and his PhD in 1969. He joined the physics faculty at the University of Wisconsin–Madison in 1972. A theoretical physicist by training, he went on to lead the international effort to build IceCube.
+How do you study a particle that can cross Earth without leaving a trace? Francis Halzen helped answer that question by turning a cubic kilometre of Antarctic ice into a neutrino observatory. On 6 October 2026, he received the Nobel Prize in Physics for his contributions to IceCube and the discovery of high-energy neutrinos from space. The 2013 discovery paper used **662 days of live data**. Those observations were enough to show why the Antarctic detector was worth building: its sensors recorded more high-energy events than scientists expected from Earth’s atmosphere alone.
+
+## Francis Halzen’s journey
+
+Francis Halzen was born in 1944 in Tienen, Belgium. He earned a master’s degree in physics in 1966 and a PhD in 1969 at what is now KU Leuven. He joined the University of Wisconsin–Madison physics faculty in 1972. Halzen trained as a theoretical physicist and went on to help test a way of doing astronomy with particles. The earlier AMANDA experiment showed that light sensors buried deep in Antarctic ice could detect neutrino interactions. Halzen submitted the IceCube proposal to the US National Science Foundation in 1999 and helped lead the international team that built the larger observatory.
 
 ## What is a neutrino?
 
@@ -43,9 +47,23 @@ An earlier project called AMANDA tested the approach by placing light sensors in
 
 Halzen helped develop and lead the observatory. The international IceCube Collaboration built the detector, recorded the data, and published the analysis. The following steps explain what the team did for its 2013 search.
 
-### 1. Turn deep ice into a detector
+### 1. Build an observatory inside the ice
 
-The team installed 5,160 optical sensors on 86 vertical cables. The sensors sit about 1,450 to 2,450 metres below the South Pole surface. The array monitors roughly one cubic kilometre of ice. Using a representative ice density of 920 kilograms per cubic metre, the approximate mass is `(1,000 m)³ × 920 kg/m³ = 9.2 × 10¹¹ kg`, or **920 million metric tonnes**. A larger target gives rare interactions more chances to occur.
+The original IceCube observatory had three components. The main in-ice array covered the largest volume. DeepCore put sensors closer together to capture fainter events. IceTop measured showers of particles at the surface.
+
+| Component | Instrument setup | What it measures |
+| --- | --- | --- |
+| Main in-ice array | 78 standard strings, about 125 metres apart, with sensors typically spaced 17 metres apart vertically | Light patterns from particles produced by neutrino interactions and from atmospheric muons |
+| DeepCore | Eight additional strings concentrated near the centre of the array, with denser sensor spacing in the deep ice | Fainter events, including those from lower-energy neutrinos |
+| IceTop | 81 surface stations with two ice-filled tanks per station and two optical modules per tank | Particle showers produced when cosmic rays strike the atmosphere |
+
+Construction took several Antarctic summer seasons and ended in December 2010. Crews used hot water to melt deep holes in the ice, lowered a cable carrying 60 sensors into each hole, and let the water freeze around it. Across the main array and DeepCore, the 86 strings carry `86 × 60 = 5,160` sensors, between about 1,450 and 2,450 metres below the surface. IceTop’s 324 sensors are separate from that count.
+
+Each in-ice sensor is a **digital optical module**. A glass sphere protects a photomultiplier tube and electronics. The tube converts faint flashes into electrical pulses. The electronics digitise the pulses, assign timestamps, and send the data up the cable. At the surface, computers look for signals close together in time that could belong to the same interaction. Researchers also use light from calibration LEDs to study how the ice scatters and absorbs light. That calibration helps them infer a particle’s path and energy from the signals arriving at different sensors.
+
+The monitored ice weighs about **920 million metric tonnes**. That estimate uses `(1,000 m)³ × 920 kg/m³ = 9.2 × 10¹¹ kg`. A larger target gives rare neutrino interactions more opportunities to occur.
+
+[Image suggestion: Labelled cross-section of IceCube showing IceTop at the surface, the main strings, the denser DeepCore array, and a close-up of one optical module.]
 
 ### 2. Record the light from an interaction
 
@@ -63,7 +81,7 @@ Cosmic rays hitting the atmosphere produce many muons that can travel down into 
 
 ### 5. Compare the candidates with the atmospheric background
 
-The 2013 paper analysed data from May 2010 through May 2012. The team found **28 candidate events**, compared with a central background estimate of **10.6 events** from atmospheric muons and neutrinos. Dividing `28 ÷ 10.6 ≈ 2.64` shows that the observed count was about 2.6 times the expected background. The researchers also used event energies and directions and accounted for uncertainty in the background. Their analysis rejected a purely atmospheric explanation at about **4 sigma**. The result applies to the sample as a whole. It leaves uncertainty about the origin of any individual candidate.
+The 2013 analysis used **662 days of live time**, meaning the usable observation time included in the study. The calendar window ran from May 2010 to May 2012. IceCube used a 79-string configuration during the first period and all 86 strings during the second. The two-year window describes data collection for the discovery paper. Construction and analysis took additional time, and IceCube continued taking data after the study. The team found **28 candidate events**, compared with a central background estimate of **10.6 events** from atmospheric muons and neutrinos. Dividing `28 ÷ 10.6 ≈ 2.64` shows that the observed count was about 2.6 times the expected background. The researchers also used event energies and directions and accounted for uncertainty in the background. Their analysis rejected a purely atmospheric explanation at about **4 sigma**. The result applies to the sample as a whole. It leaves uncertainty about the origin of any individual candidate.
 
 Two events deposited more than one petaelectronvolt. A petaelectronvolt is `10¹⁵ eV`. Using `1 eV ≈ 1.602 × 10⁻¹⁹ J`, one petaelectronvolt equals about `1.6 × 10⁻⁴ J`. That is a small amount of energy on a household scale, concentrated here in a single particle interaction.
 
@@ -104,3 +122,6 @@ Halzen’s contribution was to help turn a cubic kilometre of Antarctic ice into
 - [IceCube's PeV-event paper](https://doi.org/10.1103/PhysRevLett.111.021103)
 - [IceCube real-time alerts](https://icecube.wisc.edu/science/real-time-alerts/)
 - [IceCube guide to neutrinos and their sources](https://icecube.wisc.edu/outreach/neutrinos/)
+- [IceCube 2013 discovery paper with the observation timeline](https://par.nsf.gov/servlets/purl/10493540)
+- [IceCube Collaboration detector description and module layout](https://doi.org/10.1051/0004-6361/201117810)
+- [IceCube Collaboration optical calibration study](https://tc.copernicus.org/articles/18/75/2024/index.html)
