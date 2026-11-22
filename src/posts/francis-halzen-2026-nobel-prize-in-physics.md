@@ -2,7 +2,6 @@
 
 <img width="2240" height="1260" alt="Cover image for Francis Halzen and the IceCube Neutrino Observatory" src="https://github.com/user-attachments/assets/3912d5a0-041c-4696-8129-f673f3ae4f6e" />
 
-## Introduction
 
 How do you study a particle that can cross Earth without leaving a trace? Francis Halzen helped answer that question by turning a cubic kilometre of Antarctic ice into a neutrino observatory. On 6 October 2026, he received the Nobel Prize in Physics for his contributions to IceCube and the discovery of high-energy neutrinos from space. The 2013 discovery paper used **662 days of live data**. Those observations were enough to show why the Antarctic detector was worth building: its sensors recorded more high-energy events than scientists expected from Earth’s atmosphere alone.
 
@@ -55,13 +54,13 @@ Each in-ice sensor is a **digital optical module**. A glass sphere protects a ph
 
 The monitored ice weighs about **920 million metric tonnes**. That estimate uses `(1,000 m)³ × 920 kg/m³ = 9.2 × 10¹¹ kg`. A larger target gives rare neutrino interactions more opportunities to occur.
 
-[Image suggestion: Labelled cross-section of IceCube showing IceTop at the surface, the main strings, the denser DeepCore array, and a close-up of one optical module.]
+<img width="2240" height="1260" alt="ice" src="https://github.com/user-attachments/assets/c67c7d13-0edf-4d85-bbff-ea1c74b5b995" />
+
 
 ### 2. Record the light from an interaction
 
 When a neutrino interacts with matter in or near the ice, the interaction can produce charged particles. A charged particle travelling faster than light travels *in ice* emits **Cherenkov radiation**, a faint cone of light. The particle still travels below the speed of light in a vacuum. IceCube records the time and amount of light detected by each sensor.
 
-[Image suggestion: Cutaway of IceCube showing a neutrino interaction inside the sensor array, the resulting muon track, and the sensors that record its Cherenkov light.]
 
 ### 3. Reconstruct the event
 
