@@ -29,7 +29,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 1. [Activepieces](https://www.activepieces.com/) for visual app automation
 
-![Activepieces official site for visual workflow automation](outputs/n8n-screenshots/activepieces.jpg)
+[Image suggestion: Insert the captured screenshot of Activepieces official site for visual workflow automation.]
 
 [Activepieces](https://www.activepieces.com/) suits a team moving familiar trigger-and-action workflows off [n8n](https://n8n.io/). A sales team might start with a new form submission, check whether the submitter already exists in its customer database, and notify an account owner when a record needs review. The editor gives each action its own step so you can inspect where a value originated and where it is sent. Before migrating, check for the specific events and actions you need in each connector. An integration that can create a record might offer a different set of triggers from the one you used in [n8n](https://n8n.io/).
 
@@ -37,7 +37,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 2. [Automatisch](https://automatisch.io/) for straightforward app-to-app flows
 
-![Automatisch official site for building app-to-app automations](outputs/n8n-screenshots/automatisch.jpg)
+[Image suggestion: Insert the captured screenshot of Automatisch official site for building app-to-app automations.]
 
 [Automatisch](https://automatisch.io/) is a candidate when most of your work follows a short pattern, such as starting with an event in one application and creating a record in another. A support team could use it for an intake workflow that converts a form response into an issue and then sends a confirmation. Check the exact connector actions early. If your workflow depends on filtering, custom transformation, or a particular authentication method, reproduce that part in a test flow before migrating everything else. The value of the simpler editor depends on how directly your apps map to the features it offers.
 
@@ -45,7 +45,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 3. [Node-RED](https://nodered.org/) for devices and event streams
 
-![Node-RED project page introducing its flow-based editor](outputs/n8n-screenshots/node-red.jpg)
+[Image suggestion: Insert the captured screenshot of Node-RED project page introducing its flow-based editor.]
 
 [Node-RED](https://nodered.org/) uses a browser editor to wire nodes into flows. It works well when messages arrive from sensors, MQTT topics, HTTP endpoints, or other event sources. For example, a flow could read a temperature sensor, standardise its units, record readings, and route threshold events to an alert. The editor makes it easy to see how messages move through the workflow. Check the maintenance and compatibility of any community nodes you depend on. A flow that works on one device can still need changes before it fits a larger deployment.
 
@@ -53,7 +53,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 4. [Windmill](https://www.windmill.dev/) for script-first teams
 
-![Windmill official site for script-based workflows and internal tools](outputs/n8n-screenshots/windmill.jpg)
+[Image suggestion: Insert the captured screenshot of Windmill official site for script-based workflows and internal tools.]
 
 [Windmill](https://www.windmill.dev/) helps developers turn existing scripts into scheduled jobs and multi-step workflows. A team might write one script to validate a CSV file, pass its output to a second script that imports valid rows, and expose the workflow through a form for an operations colleague. This preserves script logic the team already understands while giving it a place to see runs and their inputs. It is a stronger fit if someone can own the scripts over time. Check what your deployment needs for workers, user access, and any enterprise controls.
 
@@ -61,7 +61,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 5. [Kestra](https://kestra.io/) for declarative job orchestration
 
-![Kestra official site introducing workflow orchestration](outputs/n8n-screenshots/kestra.jpg)
+[Image suggestion: Insert the captured screenshot of Kestra official site introducing workflow orchestration.]
 
 [Kestra](https://kestra.io/) defines flows in YAML, which works well when you want to review workflow changes alongside infrastructure code. A data team could schedule an import, run a validation task, and trigger downstream work only after the import passes. The flow definition makes task order and configuration visible in a file you can review through [Git](https://git-scm.com/). Its execution view helps you see which task failed. Teams moving from a drag-and-drop editor should budget time to learn its task definitions and choose plugins for the systems they need.
 
@@ -69,7 +69,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 6. [Huginn](https://github.com/huginn/huginn) for website and feed monitoring
 
-![Huginn official GitHub repository for its event-driven automation agents](outputs/n8n-screenshots/huginn.jpg)
+[Image suggestion: Insert the captured screenshot of Huginn official GitHub repository for its event-driven automation agents.]
 
 [Huginn](https://github.com/huginn/huginn) connects agents that generate and consume events. For example, you can set up an agent to watch a public feed for new notices and pass matching items to another agent that sends a digest. This is useful when the automation revolves around watching external changes over time. Before relying on a website monitor, confirm that you can access the source reliably and are permitted to use it. A change in page layout or feed format can break a monitor even when your own server is healthy.
 
@@ -77,7 +77,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 7. [Apache Airflow](https://airflow.apache.org/) for scheduled data pipelines
 
-![Apache Airflow project page introducing data workflow orchestration](outputs/n8n-screenshots/airflow.jpg)
+[Image suggestion: Insert the captured screenshot of Apache Airflow project page introducing data workflow orchestration.]
 
 [Airflow](https://airflow.apache.org/) is built around workflows with explicit dependencies. A daily pipeline could load yesterday’s data, check whether the expected records arrived, and then refresh a report. Operators can use the web interface to inspect runs, investigate failed tasks, and monitor backfills for earlier dates. [Airflow](https://airflow.apache.org/) suits batches with dependencies and operational ownership. If most of your workflows begin with a form submission and end with one chat message, expect more setup effort than you would spend on a visual app connector.
 
@@ -85,7 +85,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 8. [Prefect](https://www.prefect.io/) for Python-native workflows
 
-![Prefect documentation page for getting started with Python workflows](outputs/n8n-screenshots/prefect.jpg)
+[Image suggestion: Insert the captured screenshot of Prefect documentation page for getting started with Python workflows.]
 
 [Prefect](https://www.prefect.io/) uses Python functions to define flows and tasks. It is a good fit for a team that already has Python code and wants to track state, retries, and deployments without first translating that code into graphical steps. For example, you could wrap a script that fetches reports, process whichever files are present, and keep visibility into failed runs. Think through where the code will execute and who will respond when a deployment fails. The orchestration layer makes the failure visible, while your team still owns the business logic and its external dependencies.
 
@@ -93,7 +93,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 9. [StackStorm](https://stackstorm.com/) for operations runbooks
 
-![StackStorm documentation home for event-driven automation](outputs/n8n-screenshots/stackstorm.jpg)
+[Image suggestion: Insert the captured screenshot of StackStorm documentation home for event-driven automation.]
 
 [StackStorm](https://stackstorm.com/) links events, rules, and actions. An operations team could route a monitoring event to a rule that collects diagnostic information and creates a support ticket. The rule documents what qualifies for automation, while the action handles the work. This is a sensible fit when your team already maintains runbooks and wants to make routine responses repeatable. Start with actions that collect information or notify an operator. Validate permissions and failure handling before using a rule for changes that alter running systems.
 
@@ -101,7 +101,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 10. [Argo Workflows](https://argo-workflows.readthedocs.io/en/latest/) for container jobs on [Kubernetes](https://kubernetes.io/)
 
-![Argo Workflows documentation home for container workflows on Kubernetes](outputs/n8n-screenshots/argo.jpg)
+[Image suggestion: Insert the captured screenshot of Argo Workflows documentation home for container workflows on Kubernetes.]
 
 [Argo Workflows](https://argo-workflows.readthedocs.io/en/latest/) suits teams that already run [Kubernetes](https://kubernetes.io/) and want each workflow step to execute in a container. A processing pipeline can fan out into several independent jobs, wait for them to finish, and combine the results in a final step. Containers let each step carry its own dependencies. The workflow definition records what runs and in which order. Your team needs to own cluster resources, permissions, and artifact storage. For simple app integrations on a single server, a visual automation tool usually takes less effort to set up.
 
