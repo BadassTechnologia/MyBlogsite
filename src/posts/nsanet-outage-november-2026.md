@@ -93,6 +93,14 @@ A follow-up can also clarify how restoration was tested. Imagine an organisation
 
 Finally, look for the source of a claim about cause. An official incident review can connect a maintenance action to a failure through evidence gathered during restoration. A news report based on a person familiar with the event can add context, but readers should be able to see where that context came from and whether the organisation confirmed it. These distinctions explain how the November reports can be useful even while some details remain unknown.
 
+## What IT and reliability teams can apply
+
+Start with a **service-level indicator**, a measurement that reflects whether people can use the service. For an internal messaging application, a useful indicator might be the percentage of test conversations in which a message is sent and received within an agreed time. Pair this with separate measurements for sign-in success, delivery latency, and error rate. Those measurements help distinguish a login problem from a problem inside the messaging application. Use synthetic accounts and test messages for your own monitoring.
+
+Before bringing back the next group of users, compare these measurements with a baseline from a normal workday. An illustrative recovery criterion might require 99 out of 100 test sign-ins to succeed and the slowest 5% of successful sign-ins to begin within an agreed threshold over several checks. Set the actual threshold from your service’s history and user needs. Keep a separate record of timeouts and failed requests, since a latency percentile calculated only from successful requests can look good while users are still seeing errors.
+
+For each stage, document who can halt the next step, where staff can find the latest status, and which tests must pass before usage increases. These are general incident-response practices. The public reporting on NSANet does not identify the agency’s own measurements, thresholds, or recovery procedures.
+
 ## Conclusion
 
 The November 2026 reporting establishes an outage affecting NSANet and a Friday restoration reported by sources familiar with the situation. The NSA said the problem occurred during scheduled maintenance and that mission-critical capabilities remained operational. The staggered return explains how service could be restored in stages. An exact outage duration, full list of affected functions, and technical cause would require a more detailed public account.
