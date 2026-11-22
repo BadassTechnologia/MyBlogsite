@@ -90,6 +90,14 @@ Timing matters to the interpretation. If stimulation changes the choice only bef
 
 Researchers can also ask whether the effect depends on the context. A group of cells might influence choices when a signal is hard to see and have little effect when the signal is obvious. In that case, a report that simply says the cells “control decisions” would lose the useful detail. Saying when the effect appeared helps other groups design comparisons and tells readers how far the result can be applied. That precision is one reason the method matters for understanding how circuits work.
 
+## How to interpret an optogenetics experiment
+
+Students can read an optogenetics paper by tracing four things: the cell population, the intervention, the readout, and the comparison group. If the intervention changes a behaviour, ask whether the study also verified that the targeted cells responded. If the readout is an electrical trace, identify whether the experiment measured a change in membrane voltage or a change in the number of spikes. Those are related measurements that answer different questions.
+
+For researchers, the unit of analysis matters. Consider an illustrative experiment that measures 20 cells in each of five animals. The total is 100 cells, but it is still five animals. Cells from the same animal can share conditions that make their responses more alike. Before interpreting an uncertainty estimate, check whether the analysis accounts for this grouping. The same principle applies to repeated flashes delivered to one cell. More pulses can improve the measurement of that cell’s response, while measurements from more cells or animals help assess how widely the result applies.
+
+Technical readers can use the same framework to compare figures across a paper. A cell recording can show that the intervention changed the intended signal. A circuit or behavioural result can show what happened under the test conditions. Comparing the two helps establish where the evidence is strongest and where the explanation still depends on assumptions.
+
 ## Conclusion
 
 Hegemann, Nagel, Deisseroth, and their collaborators connected three discoveries. Algae use proteins that respond directly to light. One of those proteins, ChR2, allows a flash to change the electrical state of a neuron. Scientists can use that effect to test how selected cells contribute to a circuit. The lasting contribution is the ability to intervene at a chosen moment and measure what changes.
