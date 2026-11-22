@@ -3,10 +3,10 @@ title: "2026 Nobel Prize in Physics: How Francis Halzen Found Cosmic Neutrinos i
 date: 2026-11-21
 category: education
 author: ashok
-image: /assets/img/uploads/how-neutrinos-are-made.webp
-imageAlt: Three diagrams showing how neutrinos form in solar fusion, beta decay, and pion decay
-imageWidth: 1536
-imageHeight: 1024
+image: /assets/img/uploads/francis-halzen-icecube-banner.webp
+imageAlt: Francis Halzen beside the IceCube Neutrino Observatory at the South Pole
+imageWidth: 2240
+imageHeight: 1260
 excerpt: How Francis Halzen helped build IceCube, what it discovered in Antarctic ice, and why the work won the 2026 Nobel Prize in Physics.
 draft: false
 ---
