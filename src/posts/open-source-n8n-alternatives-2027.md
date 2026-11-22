@@ -14,6 +14,8 @@ Start with **[Activepieces](https://www.activepieces.com/) or [Automatisch](http
 
 Open source describes the software licence. It does not eliminate the cost of running a server, retaining logs, or maintaining integrations. The comparison uses the entry cost for the open-source or community edition so every row starts from a comparable baseline. Where a project also sells hosted or enterprise features, check the linked official pricing before buying.
 
+![n8n official landing page for workflow automation](/assets/img/uploads/n8n-alternatives/n8n.webp)
+
 ## Compare all 10 tools
 
 | Tool | Starting software price | How you build | Key features and best fit |
@@ -33,7 +35,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 1. Activepieces for visual app automation
 
-[Image suggestion: Insert the captured screenshot of Activepieces official site for visual workflow automation.]
+![Activepieces official site for visual workflow automation](/assets/img/uploads/n8n-alternatives/activepieces.webp)
 
 [Activepieces](https://www.activepieces.com/) suits a team moving familiar trigger-and-action workflows off [n8n](https://n8n.io/). A sales team might start with a new form submission, check whether the submitter already exists in its customer database, and notify an account owner when a record needs review. The editor gives each action its own step so you can inspect where a value originated and where it is sent. Before migrating, check for the specific events and actions you need in each connector. An integration that can create a record might offer a different set of triggers from the one you used in [n8n](https://n8n.io/).
 
@@ -41,7 +43,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 2. Automatisch for straightforward app-to-app flows
 
-[Image suggestion: Insert the captured screenshot of Automatisch official site for building app-to-app automations.]
+![Automatisch official site for building app-to-app automations](/assets/img/uploads/n8n-alternatives/automatisch.webp)
 
 [Automatisch](https://automatisch.io/) is a candidate when most of your work follows a short pattern, such as starting with an event in one application and creating a record in another. A support team could use it for an intake workflow that converts a form response into an issue and then sends a confirmation. Check the exact connector actions early. If your workflow depends on filtering, custom transformation, or a particular authentication method, reproduce that part in a test flow before migrating everything else. The value of the simpler editor depends on how directly your apps map to the features it offers.
 
@@ -49,7 +51,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 3. Node-RED for devices and event streams
 
-[Image suggestion: Insert the captured screenshot of Node-RED project page introducing its flow-based editor.]
+![Node-RED project page introducing its flow-based editor](/assets/img/uploads/n8n-alternatives/node-red.webp)
 
 [Node-RED](https://nodered.org/) uses a browser editor to wire nodes into flows. It works well when messages arrive from sensors, MQTT topics, HTTP endpoints, or other event sources. For example, a flow could read a temperature sensor, standardise its units, record readings, and route threshold events to an alert. The editor makes it easy to see how messages move through the workflow. Check the maintenance and compatibility of any community nodes you depend on. A flow that works on one device can still need changes before it fits a larger deployment.
 
@@ -57,7 +59,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 4. Windmill for script-first teams
 
-[Image suggestion: Insert the captured screenshot of Windmill official site for script-based workflows and internal tools.]
+![Windmill official site for script-based workflows and internal tools](/assets/img/uploads/n8n-alternatives/windmill.webp)
 
 [Windmill](https://www.windmill.dev/) helps developers turn existing scripts into scheduled jobs and multi-step workflows. A team might write one script to validate a CSV file, pass its output to a second script that imports valid rows, and expose the workflow through a form for an operations colleague. This preserves script logic the team already understands while giving it a place to see runs and their inputs. It is a stronger fit if someone can own the scripts over time. Check what your deployment needs for workers, user access, and any enterprise controls.
 
@@ -65,7 +67,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 5. Kestra for declarative job orchestration
 
-[Image suggestion: Insert the captured screenshot of Kestra official site introducing workflow orchestration.]
+![Kestra official site introducing workflow orchestration](/assets/img/uploads/n8n-alternatives/kestra.webp)
 
 [Kestra](https://kestra.io/) defines flows in YAML, which works well when you want to review workflow changes alongside infrastructure code. A data team could schedule an import, run a validation task, and trigger downstream work only after the import passes. The flow definition makes task order and configuration visible in a file you can review through [Git](https://git-scm.com/). Its execution view helps you see which task failed. Teams moving from a drag-and-drop editor should budget time to learn its task definitions and choose plugins for the systems they need.
 
@@ -73,7 +75,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 6. Huginn for website and feed monitoring
 
-[Image suggestion: Insert the captured screenshot of Huginn official GitHub repository for its event-driven automation agents.]
+![Huginn official GitHub repository for its event-driven automation agents](/assets/img/uploads/n8n-alternatives/huginn.webp)
 
 [Huginn](https://github.com/huginn/huginn) connects agents that generate and consume events. For example, you can set up an agent to watch a public feed for new notices and pass matching items to another agent that sends a digest. This is useful when the automation revolves around watching external changes over time. Before relying on a website monitor, confirm that you can access the source reliably and are permitted to use it. A change in page layout or feed format can break a monitor even when your own server is healthy.
 
@@ -81,7 +83,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 7. Apache Airflow for scheduled data pipelines
 
-[Image suggestion: Insert the captured screenshot of Apache Airflow project page introducing data workflow orchestration.]
+![Apache Airflow project page introducing data workflow orchestration](/assets/img/uploads/n8n-alternatives/airflow.webp)
 
 [Airflow](https://airflow.apache.org/) is built around workflows with explicit dependencies. A daily pipeline could load yesterday’s data, check whether the expected records arrived, and then refresh a report. Operators can use the web interface to inspect runs, investigate failed tasks, and monitor backfills for earlier dates. [Airflow](https://airflow.apache.org/) suits batches with dependencies and operational ownership. If most of your workflows begin with a form submission and end with one chat message, expect more setup effort than you would spend on a visual app connector.
 
@@ -89,7 +91,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 8. Prefect for Python-native workflows
 
-[Image suggestion: Insert the captured screenshot of Prefect documentation page for getting started with Python workflows.]
+![Prefect official landing page for workflow orchestration](/assets/img/uploads/n8n-alternatives/prefect.webp)
 
 [Prefect](https://www.prefect.io/) uses Python functions to define flows and tasks. It is a good fit for a team that already has Python code and wants to track state, retries, and deployments without first translating that code into graphical steps. For example, you could wrap a script that fetches reports, process whichever files are present, and keep visibility into failed runs. Think through where the code will execute and who will respond when a deployment fails. The orchestration layer makes the failure visible, while your team still owns the business logic and its external dependencies.
 
@@ -97,7 +99,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 9. StackStorm for operations runbooks
 
-[Image suggestion: Insert the captured screenshot of StackStorm documentation home for event-driven automation.]
+![StackStorm documentation home for event-driven automation](/assets/img/uploads/n8n-alternatives/stackstorm.webp)
 
 [StackStorm](https://stackstorm.com/) links events, rules, and actions. An operations team could route a monitoring event to a rule that collects diagnostic information and creates a support ticket. The rule documents what qualifies for automation, while the action handles the work. This is a sensible fit when your team already maintains runbooks and wants to make routine responses repeatable. Start with actions that collect information or notify an operator. Validate permissions and failure handling before using a rule for changes that alter running systems.
 
@@ -105,7 +107,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 ## 10. Argo Workflows for container jobs on Kubernetes
 
-[Image suggestion: Insert the captured screenshot of Argo Workflows documentation home for container workflows on Kubernetes.]
+![Argo Workflows documentation home for container workflows on Kubernetes](/assets/img/uploads/n8n-alternatives/argo.webp)
 
 [Argo Workflows](https://argo-workflows.readthedocs.io/en/latest/) suits teams that already run [Kubernetes](https://kubernetes.io/) and want each workflow step to execute in a container. A processing pipeline can fan out into several independent jobs, wait for them to finish, and combine the results in a final step. Containers let each step carry its own dependencies. The workflow definition records what runs and in which order. Your team needs to own cluster resources, permissions, and artifact storage. For simple app integrations on a single server, a visual automation tool usually takes less effort to set up.
 
@@ -116,6 +118,8 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 Pick one representative workflow that includes a trigger, one credential, a transformation, and a failure path. Run it against test accounts and compare the outputs with [n8n](https://n8n.io/). Then retry a failed run and check whether it creates a duplicate record. A flow that succeeds once can still create problems if a retry repeats an action that already completed.
 
 Check the licence for the edition you plan to run, especially if you intend to modify, redistribute, or offer it to customers. Where the project offers an open-source core and separate commercial packages, verify which features belong to each edition. Review connector coverage and ownership costs before moving the rest of your flows.
+
+![Git project landing page for version control](/assets/img/uploads/n8n-alternatives/git.webp)
 
 ## Work out what a migration will cost
 
@@ -140,6 +144,8 @@ If your team supports business integrations, test the candidate with a workflow 
 For a data science or analytics team, exercise a different path. Test one run with late input, one with a missing file, and one that has to be replayed for an earlier date. Record the input version and the output location. Confirm you can distinguish a clean result from a partial result and rerun the same period without corrupting downstream data. If you use [Apache Airflow](https://airflow.apache.org/) or [Prefect](https://www.prefect.io/), compare how much code and operational setup each candidate needs for the examples that matter to you.
 
 A game development team might care more about a scheduled build, an artifact upload, and a notification to the people reviewing the result. Test whether a failed job stops dependent work and whether the team can trace the artifact back to the source revision. If your workloads already run in [Kubernetes](https://kubernetes.io/), [Argo Workflows](https://argo-workflows.readthedocs.io/en/latest/) is a candidate for container steps. For lightweight coordination between services, visual tools such as [Activepieces](https://www.activepieces.com/) may be easier for teammates outside engineering to maintain.
+
+![Kubernetes official landing page for container orchestration](/assets/img/uploads/n8n-alternatives/kubernetes.webp)
 
 ## References
 
