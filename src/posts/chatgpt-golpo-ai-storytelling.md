@@ -6,6 +6,10 @@ excerpt: "Turn a story idea into a short narrated video by drafting the script i
 draft: true
 ---
 
+{add banner image here}
+
+The first ferry is an hour away, the path is dark, and a trail of footprints stops at the last lantern. That is enough to start a one-minute story.
+
 Use [ChatGPT](https://chatgpt.com/) to develop a story, refine the narration, and plan what viewers should see. Then use [Golpo AI](https://video.golpoai.com/) to turn the approved material into a narrated video. The handoff is a script you can read aloud, plus a short scene plan. You can copy the material between the two tools and review it at each stage.
 
 This guide builds a one-minute story about a lantern keeper who finds footprints in fresh snow. The same workflow works for a classroom story, a product demonstration, or a short explainer. The example includes an opening, a clue, a reveal, and an ending so you can see how each part translates into a scene.
@@ -80,6 +84,22 @@ First, watch the cut with the sound on. Check that you can hear the first line, 
 Next, watch with the sound off and read any captions. Check that the action is understandable, the key visual details stay consistent, and text fits on a small screen. For the lantern story, look at the box and the fox in particular. A strong cut gives each a clear moment on screen. If the tool does not offer the caption or edit controls you need, finish that work in your usual editor.
 
 Keep a record of what you changed. If the first cut opens with a wide shot that hides the key, try a closer opening. If the narration runs long, cut a line from the script before generating again. Changing one issue at a time makes it easier to judge what improved and helps avoid spending credits on repeated full-length tests.
+
+## Fix the weak spots in a first cut
+
+A first cut can be technically complete while the story still feels hard to follow. Start with three questions. Can you see what the protagonist wants? Can you recognise the clue when it appears? Does the ending connect the clue to what happened? For the lantern story, watch the first fifteen seconds as a separate clip. If it shows only snow and a figure walking, viewers may miss that the character is racing to light a path before a ferry arrives. Add the deadline to the first narration line and show the dark lanterns in the opening shot.
+
+Then review the handoff between the clue and the reveal. The tracks should remain visible long enough for the viewer to notice their size. The control box and the fox need separate visual moments. If the fox appears before the viewer understands the lever, the shot may solve the mystery of the tracks while leaving the main action unclear. Let the lamps come on and then reveal the fox. The order gives the audience time to understand both events.
+
+You may be able to repair the issue with a shorter line or a revised cut. For example, “The tracks stopped at the reserve lamp box” gives the viewer one clear thought. A longer sentence that also explains the key and describes the condition of the box puts several ideas over one image. Read the line with the scene playing. If you find yourself wanting to pause the video to explain what happened, make the script or the image simpler.
+
+## Adapt the workflow to an explainer
+
+Keep the four-beat structure when the video explains a process. Give the opening a problem, show a concrete example, explain the mechanism, and end by applying it. An explainer about parcel tracking could begin with a customer wondering why a package has stood still for a day. Show a parcel being scanned at a depot, explain that tracking records an event when a scan happens, and end with what someone can check before contacting support. Confirm procedural claims against the carrier’s own help pages before recording them.
+
+For classroom material, ask [ChatGPT](https://chatgpt.com/) to flag terms a learner might not know. Review the result and choose the one or two terms worth defining in narration. Put other detail in the captions or accompanying notes. Then use [Golpo AI](https://video.golpoai.com/) to test whether the visual example is clear enough to carry the explanation. After a first viewing, ask a learner to explain it back using a new example. If they can repeat a definition but cannot apply it, revise the example before spending time polishing the animation.
+
+The same check helps with a promotional video. Specify the problem the audience faces and show the action the product supports. Verify demonstrations and product claims before generating the narration. A polished cut will carry whatever story you gave it, including a claim you have not checked.
 
 ## Conclusion
 
