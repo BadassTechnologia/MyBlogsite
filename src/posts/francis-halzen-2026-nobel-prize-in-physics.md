@@ -1,15 +1,37 @@
-# 2026 Nobel Prize in Physics: How Francis Halzen Found Cosmic Neutrinos in Antarctic Ice
+---
+title: "2026 Nobel Prize in Physics: How Francis Halzen Found Cosmic Neutrinos in Antarctic Ice"
+date: 2026-11-21
+category: education
+author: ashok
+excerpt: "How Francis Halzen helped build IceCube, what it discovered in Antarctic ice, and why the work won the 2026 Nobel Prize in Physics."
+featured: false
+topArticle: false
+draft: true
+---
 
-<img width="2240" height="1260" alt="Untitled - 08 November 2026 at 17 24 49-7" src="https://github.com/user-attachments/assets/3912d5a0-041c-4696-8129-f673f3ae4f6e" />
-
+<img width="2240" height="1260" alt="Cover image for Francis Halzen and the IceCube Neutrino Observatory" src="https://github.com/user-attachments/assets/3912d5a0-041c-4696-8129-f673f3ae4f6e" />
 
 On 6 October 2026, Francis Halzen won the Nobel Prize in Physics for his role in building the IceCube Neutrino Observatory and discovering high-energy neutrinos from space. To see how unusual that achievement was, picture a telescope with no mirror, buried deep under the South Pole. Its job is to catch brief flashes of light from particles that usually pass straight through Earth.
 
 Francis Halzen was born in 1944 in Tienen, Belgium. He studied physics at what is now KU Leuven, receiving his master’s degree in 1966 and his PhD in 1969. He joined the physics faculty at the University of Wisconsin–Madison in 1972. A theoretical physicist by training, he went on to lead the international effort to build IceCube.
 
-## What is a neutrino, and why look for one?
+## What is a neutrino?
 
-A neutrino is a particle with no electric charge and very little mass. It rarely interacts with matter. That means a neutrino can cross a cloud of gas, pass through a planet, and keep going. The same property that makes it hard to catch makes it useful to astronomers. Neutrinos can carry information out of regions where light is absorbed. And because they have no electric charge, magnetic fields do not bend their paths as they do for charged cosmic rays. A neutrino’s arrival direction can therefore give scientists a clue about where it came from.
+A neutrino is an elementary particle with no electric charge and a very small mass. It belongs to the lepton family, which also includes the electron. A neutron is a different particle made of quarks and found in atomic nuclei. Neutrinos come in three types, called **flavours**: electron, muon, and tau. A neutrino produced in one flavour can later be detected as another. This effect, called **neutrino oscillation**, requires differences between neutrino masses.
+
+Neutrinos interact with matter mainly through the weak nuclear force. The chance of an interaction depends on their energy and how much material they cross. Most pass through a detector without interacting. At sufficiently high energies, however, absorption inside Earth becomes measurable. That is why a neutrino’s energy and arrival direction both matter when researchers interpret a sample.
+
+## How do neutrinos form?
+
+Neutrinos are produced in certain reactions and particle decays. The process depends on the source.
+
+- **Inside the Sun**, two protons can fuse to form deuterium, a nucleus containing one proton and one neutron. In the process, one proton changes into a neutron and the reaction emits a positron and an electron neutrino. Measuring solar neutrinos allows scientists to test models of fusion inside the Sun.
+- **In radioactive beta decay**, a neutron can change into a proton, emitting an electron and an electron antineutrino. An antineutrino is the corresponding antiparticle.
+- **Near cosmic accelerators**, fast protons or nuclei collide with gas or interact with light. These reactions can create particles called pions. A positively charged pion can decay into a positive muon and a muon neutrino. The muon can then decay into a positron, an electron neutrino, and a muon antineutrino. In compact notation, the chain is `π⁺ → μ⁺ + νμ`, followed by `μ⁺ → e⁺ + νe + anti-νμ`. Negatively charged pions undergo the corresponding decays with the particles and antiparticles exchanged.
+
+The same type of pion decay happens when cosmic rays hit Earth’s atmosphere. IceCube can therefore see a mixture of neutrinos made close to Earth and neutrinos that travelled from space. The experiment had to determine how much of its signal could come from the atmosphere before it could identify a cosmic contribution.
+
+[Image suggestion: Three-panel diagram showing neutrino production in solar fusion, beta decay, and a charged pion decay chain.]
 
 ## What did Francis Halzen do?
 
@@ -17,19 +39,33 @@ Halzen helped turn a practical idea into a working observatory. If a neutrino al
 
 An earlier project called AMANDA tested the approach by placing light sensors in South Pole ice. Halzen submitted an IceCube proposal to the US National Science Foundation in 1999 and led the collaboration that built the larger detector. The final sensor cable went into the ice in December 2010. Halzen led the effort, and the IceCube Collaboration built the instrument and analysed the data together.
 
-## How does IceCube detect a particle it cannot see?
+## How did Halzen and the IceCube team test for cosmic neutrinos?
 
-IceCube monitors about one cubic kilometre of ice with 5,160 optical sensors spread across 86 vertical cables. The sensors sit between 1,450 and 2,450 metres below the surface. Here is what happens when the detector catches an event.
+Halzen helped develop and lead the observatory. The international IceCube Collaboration built the detector, recorded the data, and published the analysis. The following steps explain what the team did for its 2013 search.
 
-1. **A neutrino interacts in or near the ice.** On rare occasions, it strikes an atomic nucleus and produces other particles.
-2. **Charged particles produce a flash.** If they travel faster than light travels through ice, they emit a faint glow called Cherenkov radiation. They can do this because light travels more slowly in ice than in empty space.
-3. **The sensors record the pattern.** Researchers use the timing and brightness of the flashes to estimate the event’s energy and the direction the neutrino came from. Some events leave long tracks that give a clearer direction, while others produce compact bursts of light.
+### 1. Turn deep ice into a detector
 
-## What did the 2013 discovery show?
+The team installed 5,160 optical sensors on 86 vertical cables. The sensors sit about 1,450 to 2,450 metres below the South Pole surface. The array monitors roughly one cubic kilometre of ice. Using a representative ice density of 920 kilograms per cubic metre, the approximate mass is `(1,000 m)³ × 920 kg/m³ = 9.2 × 10¹¹ kg`, or **920 million metric tonnes**. A larger target gives rare interactions more chances to occur.
 
-Finding a neutrino in IceCube does not automatically mean it came from deep space. Cosmic rays strike Earth’s atmosphere and produce neutrinos there, too. The team had to estimate how many events it would see from these and other atmospheric sources before it could identify a signal from beyond the atmosphere.
+### 2. Record the light from an interaction
 
-In 2013, the IceCube Collaboration reported 28 candidate events from data collected between May 2010 and May 2012. The researchers expected about 11 background events. The excess and the properties of the events gave strong evidence for high-energy neutrinos from cosmic sources. The study established that a population of these particles reaches Earth. Pinpointing which objects produced them was the next challenge.
+When a neutrino interacts with matter in or near the ice, the interaction can produce charged particles. A charged particle travelling faster than light travels *in ice* emits **Cherenkov radiation**, a faint cone of light. The particle still travels below the speed of light in a vacuum. IceCube records the time and amount of light detected by each sensor.
+
+[Image suggestion: Cutaway of IceCube showing a neutrino interaction inside the sensor array, the resulting muon track, and the sensors that record its Cherenkov light.]
+
+### 3. Reconstruct the event
+
+A muon can travel through the ice and leave a long line of light called a **track**. The timing of hits along it helps researchers estimate the arrival direction. Other interactions produce more compact showers called **cascades**. A cascade that stays inside the array can give a useful estimate of the deposited energy. Some energy can escape in particles that leave the detector, so the deposited energy and the incoming neutrino’s full energy can differ.
+
+### 4. Reject particles that enter from outside
+
+Cosmic rays hitting the atmosphere produce many muons that can travel down into the detector. The team used the outer sensors as a **veto**. When the first light appeared near the boundary, the event could be rejected as a particle entering the array. Events that appeared to start in the interior were kept as candidates. Atmospheric neutrinos can also interact inside the array, so the veto still leaves a background that must be estimated.
+
+### 5. Compare the candidates with the atmospheric background
+
+The 2013 paper analysed data from May 2010 through May 2012. The team found **28 candidate events**, compared with a central background estimate of **10.6 events** from atmospheric muons and neutrinos. Dividing `28 ÷ 10.6 ≈ 2.64` shows that the observed count was about 2.6 times the expected background. The researchers also used event energies and directions and accounted for uncertainty in the background. Their analysis rejected a purely atmospheric explanation at about **4 sigma**. The result applies to the sample as a whole. It leaves uncertainty about the origin of any individual candidate.
+
+Two events deposited more than one petaelectronvolt. A petaelectronvolt is `10¹⁵ eV`. Using `1 eV ≈ 1.602 × 10⁻¹⁹ J`, one petaelectronvolt equals about `1.6 × 10⁻⁴ J`. That is a small amount of energy on a household scale, concentrated here in a single particle interaction.
 
 ## Where do high-energy cosmic neutrinos come from?
 
@@ -39,32 +75,16 @@ In 2017, IceCube detected a high-energy neutrino that appeared to come from the 
 
 When an observatory detects a neutrino and telescopes see light from the same part of the sky, scientists can compare two kinds of evidence about one event. The light shows what the object emits at different wavelengths. The neutrino can reveal interactions involving fast-moving particles in places that light may struggle to escape. Using these signals together is called **multimessenger astronomy**, and it gives researchers a way to investigate how galaxies accelerate particles to extreme energies.
 
+### Why this matters beyond the discovery
+
+Charged cosmic rays can lose the directional clues to their origin as magnetic fields bend their paths. Neutrinos retain those clues and can escape some regions opaque to light. A neutrino signal can therefore help astronomers test whether a source accelerates protons and nuclei, especially when telescopes also observe it in gamma rays, visible light, or radio waves.
+
+IceCube can send alerts so telescopes can follow up while a possible source is still active. It can also help detect a stellar collapse in our galaxy. A nearby supernova would produce a burst of neutrinos too faint for IceCube to reconstruct individually. The observatory can look for a brief rise in the total sensor count and share an alert through the SuperNova Early Warning System. That gives other observatories a chance to catch the explosion’s early stages.
+
 ## Conclusion
 
 Halzen’s contribution was to help turn a cubic kilometre of Antarctic ice into a working telescope for neutrinos. IceCube then showed that high-energy neutrinos from space reach Earth in numbers scientists can measure. The 2026 Nobel Prize recognises that achievement. The next question is which objects produce most of these particles and how they give them so much energy.
 
-
-## A closer look at the science and what IceCube makes possible
-
-### Why did Halzen need a cubic kilometre of ice?
-
-A neutrino detector has two jobs. It needs enough matter for a rare interaction to happen, and it needs a way to see the light that follows. Deep South Pole ice can do both. A small detector can register a neutrino, but collecting enough high-energy events to compare with the atmospheric background calls for a much larger target. Halzen helped take the idea from the earlier AMANDA experiment to IceCube, where thousands of light sensors monitor a volume large enough to study those rare events as a group. The collaboration also uses the sensors near the edge of the detector to identify particles that enter from outside. That helps separate those events from interactions that start inside the array.
-
-A cubic kilometre is the volume of a cube 1,000 metres on each side. Multiplying 1,000 by itself three times gives one billion cubic metres. At roughly 920 kilograms per cubic metre, that volume of ice has a mass of about **920 million metric tonnes**. The sensors occupy a tiny fraction of that volume. It is the amount of ice they monitor that gives the detector so many opportunities to catch an interaction.
-
-### How do scientists read the light patterns?
-
-A muon is a charged particle related to the electron. When an interaction produces a muon, it can travel far enough to leave a long light pattern called a **track**. Researchers use the times at which sensors recorded light to work backwards to the muon's path and estimate where the neutrino came from. Other interactions make a compact shower of particles called a **cascade**. A cascade contained in the array can give a better measure of the energy deposited, although a long track generally gives a clearer direction. When particles leave the array, some of the original neutrino's energy can escape measurement.
-
-### What does the 2013 result look like in numbers?
-
-The study's central estimate for the atmospheric background was 10.6 events. Dividing the 28 observed candidates by 10.6 gives about **2.6 times the expected background count**. That ratio describes the size of the excess. To judge whether random variation could explain it, researchers also had to account for uncertainty in the background and consider properties such as event energy and direction. Two events deposited more than one petaelectronvolt, or PeV. One PeV is one quadrillion electronvolts, about **0.00016 joules**. That energy is small on an everyday scale but remarkable when carried by one subatomic particle.
-
-### How does this help astronomers today?
-
-When fast protons or atomic nuclei collide with matter or radiation near an astronomical source, they can produce short-lived particles that decay into neutrinos. Charged cosmic rays can be deflected by magnetic fields, while neutrinos travel without that deflection. Finding neutrinos from the direction of a galaxy gives astronomers evidence they can use to investigate whether the galaxy accelerates protons or nuclei. It also points telescopes towards a source they can study with other instruments.
-
-IceCube can send real-time alerts when it detects a promising event. A telescope can then look in that direction while the source may still be active. The same detector can also look for a burst of lower-energy neutrinos from a stellar collapse in our galaxy. Individual events in such a burst are generally too faint for IceCube to reconstruct. Instead, IceCube looks for a brief rise in the combined sensor counts and can share the signal through the SuperNova Early Warning System. That gives astronomers a chance to coordinate observations of the explosion as it unfolds.
 
 ## References
 
@@ -83,3 +103,4 @@ IceCube can send real-time alerts when it detects a promising event. A telescope
 - [NGC 1068 study and data](https://icecube.wisc.edu/data-releases/2022/11/evidence-for-neutrino-emission-from-the-nearby-active-galaxy-ngc-1068/)
 - [IceCube's PeV-event paper](https://doi.org/10.1103/PhysRevLett.111.021103)
 - [IceCube real-time alerts](https://icecube.wisc.edu/science/real-time-alerts/)
+- [IceCube guide to neutrinos and their sources](https://icecube.wisc.edu/outreach/neutrinos/)
