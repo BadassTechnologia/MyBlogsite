@@ -133,6 +133,14 @@ Finally, plan the cutover for one trigger at a time. A form, timer, or message q
 
 These tests are especially important when a workflow writes data to another service. A workflow that compiles a daily report has different failure costs from one that sends invoices to customers. Choose the next workflow to move based on those costs and on how quickly your team can detect and correct an error.
 
+## Set acceptance criteria for your team
+
+If your team supports business integrations, test the candidate with a workflow that receives a webhook, maps fields, and writes a record. Developers should check how the system versions workflow definitions and how secrets move between staging and production. An operations engineer should be able to find a failed run, identify its owner, and see what will happen if it is retried. Start the evaluation with the real integration pattern your team owns.
+
+For a data science or analytics team, exercise a different path. Test one run with late input, one with a missing file, and one that has to be replayed for an earlier date. Record the input version and the output location. Confirm you can distinguish a clean result from a partial result and rerun the same period without corrupting downstream data. If you use [Apache Airflow](https://airflow.apache.org/) or [Prefect](https://www.prefect.io/), compare how much code and operational setup each candidate needs for the examples that matter to you.
+
+A game development team might care more about a scheduled build, an artifact upload, and a notification to the people reviewing the result. Test whether a failed job stops dependent work and whether the team can trace the artifact back to the source revision. If your workloads already run in [Kubernetes](https://kubernetes.io/), [Argo Workflows](https://argo-workflows.readthedocs.io/en/latest/) is a candidate for container steps. For lightweight coordination between services, visual tools such as [Activepieces](https://www.activepieces.com/) may be easier for teammates outside engineering to maintain.
+
 ## References
 
 - [Activepieces pricing and editions](https://www.activepieces.com/pricing)
