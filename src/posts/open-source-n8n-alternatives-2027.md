@@ -31,7 +31,7 @@ Open source describes the software licence. It does not eliminate the cost of ru
 
 Software prices refer to the listed editions. Hosting, third-party APIs, and paid connectors can add costs. This is a guide for 2027 planning using product information checked in November 2026.
 
-## 1. [Activepieces](https://www.activepieces.com/) for visual app automation
+## 1. Activepieces for visual app automation
 
 [Image suggestion: Insert the captured screenshot of Activepieces official site for visual workflow automation.]
 
@@ -39,7 +39,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 **Pricing.** The self-hosted community edition starts at $0 in licence fees. [Activepieces](https://www.activepieces.com/) lists hosted plans separately, with limits and features that vary by tier.
 
-## 2. [Automatisch](https://automatisch.io/) for straightforward app-to-app flows
+## 2. Automatisch for straightforward app-to-app flows
 
 [Image suggestion: Insert the captured screenshot of Automatisch official site for building app-to-app automations.]
 
@@ -47,7 +47,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 **Pricing.** The open-source community edition is free to self-host. The official pricing page lists hosted and enterprise options separately.
 
-## 3. [Node-RED](https://nodered.org/) for devices and event streams
+## 3. Node-RED for devices and event streams
 
 [Image suggestion: Insert the captured screenshot of Node-RED project page introducing its flow-based editor.]
 
@@ -55,7 +55,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 **Pricing.** [Node-RED](https://nodered.org/) is free to self-host. Budget for the device or server, any storage you need, and ongoing maintenance.
 
-## 4. [Windmill](https://www.windmill.dev/) for script-first teams
+## 4. Windmill for script-first teams
 
 [Image suggestion: Insert the captured screenshot of Windmill official site for script-based workflows and internal tools.]
 
@@ -63,7 +63,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 **Pricing.** [Windmill](https://www.windmill.dev/) lists a $0 self-hosted open-source option. Paid editions and hosting appear separately on its pricing page.
 
-## 5. [Kestra](https://kestra.io/) for declarative job orchestration
+## 5. Kestra for declarative job orchestration
 
 [Image suggestion: Insert the captured screenshot of Kestra official site introducing workflow orchestration.]
 
@@ -71,7 +71,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 **Pricing.** [Kestra](https://kestra.io/) offers a free self-hosted open-source edition. The vendor lists cloud and enterprise offerings separately.
 
-## 6. [Huginn](https://github.com/huginn/huginn) for website and feed monitoring
+## 6. Huginn for website and feed monitoring
 
 [Image suggestion: Insert the captured screenshot of Huginn official GitHub repository for its event-driven automation agents.]
 
@@ -79,7 +79,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 **Pricing.** [Huginn](https://github.com/huginn/huginn) is free to self-host under its MIT licence. You supply hosting, storage, and any paid services used by your agents.
 
-## 7. [Apache Airflow](https://airflow.apache.org/) for scheduled data pipelines
+## 7. Apache Airflow for scheduled data pipelines
 
 [Image suggestion: Insert the captured screenshot of Apache Airflow project page introducing data workflow orchestration.]
 
@@ -87,7 +87,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 **Pricing.** [Apache Airflow](https://airflow.apache.org/) is free to self-host. Managed [Airflow](https://airflow.apache.org/) services are separate products with their own charges.
 
-## 8. [Prefect](https://www.prefect.io/) for Python-native workflows
+## 8. Prefect for Python-native workflows
 
 [Image suggestion: Insert the captured screenshot of Prefect documentation page for getting started with Python workflows.]
 
@@ -95,7 +95,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 **Pricing.** [Prefect](https://www.prefect.io/)’s open-source server is free to self-host. [Prefect Cloud](https://www.prefect.io/) has separate plans and limits.
 
-## 9. [StackStorm](https://stackstorm.com/) for operations runbooks
+## 9. StackStorm for operations runbooks
 
 [Image suggestion: Insert the captured screenshot of StackStorm documentation home for event-driven automation.]
 
@@ -103,7 +103,7 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 
 **Pricing.** The open-source [StackStorm](https://stackstorm.com/) project is free to self-host. Factor in infrastructure, upgrades, and the time to maintain integrations.
 
-## 10. [Argo Workflows](https://argo-workflows.readthedocs.io/en/latest/) for container jobs on [Kubernetes](https://kubernetes.io/)
+## 10. Argo Workflows for container jobs on Kubernetes
 
 [Image suggestion: Insert the captured screenshot of Argo Workflows documentation home for container workflows on Kubernetes.]
 
