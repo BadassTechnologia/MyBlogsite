@@ -6,6 +6,10 @@ excerpt: "Compare 10 open-source n8n alternatives by workflow style, self-hostin
 draft: true
 ---
 
+{add banner image here}
+
+A workflow that runs perfectly on Monday can still create duplicate records the first time it retries. That is why the best replacement depends on what your workflows do when something goes wrong.
+
 Start with **[Activepieces](https://www.activepieces.com/) or [Automatisch](https://automatisch.io/)** if you want an editor for connecting business apps. Choose **[Node-RED](https://nodered.org/)** if you need to route messages between devices, webhooks, and services. If your team already writes scripts, **[Windmill](https://www.windmill.dev/)** is a better place to start. Data pipelines, infrastructure workflows, and [Kubernetes](https://kubernetes.io/) jobs have their own options in the table below.
 
 Open source describes the software licence. It does not eliminate the cost of running a server, retaining logs, or maintaining integrations. The comparison uses the entry cost for the open-source or community edition so every row starts from a comparable baseline. Where a project also sells hosted or enterprise features, check the linked official pricing before buying.
@@ -112,6 +116,22 @@ Software prices refer to the listed editions. Hosting, third-party APIs, and pai
 Pick one representative workflow that includes a trigger, one credential, a transformation, and a failure path. Run it against test accounts and compare the outputs with [n8n](https://n8n.io/). Then retry a failed run and check whether it creates a duplicate record. A flow that succeeds once can still create problems if a retry repeats an action that already completed.
 
 Check the licence for the edition you plan to run, especially if you intend to modify, redistribute, or offer it to customers. Where the project offers an open-source core and separate commercial packages, verify which features belong to each edition. Review connector coverage and ownership costs before moving the rest of your flows.
+
+## Work out what a migration will cost
+
+The table compares software entry prices. For a realistic estimate, add compute, storage, backups, and the time someone spends maintaining the installation. As an illustration, suppose hosting and storage cost US$35 per month and an engineer spends two hours per month on maintenance at an internal rate of US$50 per hour. The estimated recurring cost is US$135. Replace those figures with your own costs. A small team may use a server it already owns, while an organisation with audit and recovery requirements may spend more on operations than on compute.
+
+Count one-off work separately. A migration may require rebuilding triggers, transferring credentials securely, documenting ownership, and testing failure cases. If a team has 30 workflows and each takes an average of 45 minutes to rebuild and check, the first pass takes about 22.5 hours. That estimate leaves out workflows with undocumented dependencies. Start with a representative sample and use the time you record to improve the estimate before making a commitment.
+
+## Test one workflow before moving the rest
+
+Take an example with a specific result, such as creating a ticket when someone submits a form. Write down the expected fields, the service account that performs the action, and what should happen if the ticket service is temporarily unavailable. Then build the same workflow in the candidate tool with test data. If the normal run works, submit a second request with the same identifier and check how the workflow behaves. If a timeout sends the workflow into a retry, inspect which steps run again and whether they create a second record.
+
+A second test should check handover. Ask a teammate to find the run, identify the failing step, and explain how to resume or replay it. A tool can match the old workflow feature for feature while still making maintenance harder for the people who own it. This test shows which editor, logs, and run history fit the team’s working habits. It also gives you a chance to document where credentials are stored and which users can change a workflow.
+
+Finally, plan the cutover for one trigger at a time. A form, timer, or message queue can cause both versions to run if you turn on the new workflow while the old one is still listening. Pause the old trigger during a controlled window, confirm that the replacement receives the next test event, and compare its outputs with the old version. If the replacement fails in a way you cannot resolve immediately, you should know which version to reactivate and how to account for any events that arrived during the switch.
+
+These tests are especially important when a workflow writes data to another service. A workflow that compiles a daily report has different failure costs from one that sends invoices to customers. Choose the next workflow to move based on those costs and on how quickly your team can detect and correct an error.
 
 ## References
 
