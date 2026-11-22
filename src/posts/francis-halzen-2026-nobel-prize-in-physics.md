@@ -1,13 +1,7 @@
----
-title: "2026 Nobel Prize in Physics: How Francis Halzen Found Cosmic Neutrinos in Antarctic Ice"
-date: 2026-11-21
-category: education
-author: ashok
-excerpt: "How Francis Halzen helped build IceCube, what it discovered in Antarctic ice, and why the work won the 2026 Nobel Prize in Physics."
-featured: false
-topArticle: false
-draft: true
----
+# 2026 Nobel Prize in Physics: How Francis Halzen Found Cosmic Neutrinos in Antarctic Ice
+
+<img width="2240" height="1260" alt="Untitled - 08 November 2026 at 17 24 49-7" src="https://github.com/user-attachments/assets/3912d5a0-041c-4696-8129-f673f3ae4f6e" />
+
 
 On 6 October 2026, Francis Halzen won the Nobel Prize in Physics for his role in building the IceCube Neutrino Observatory and discovering high-energy neutrinos from space. To see how unusual that achievement was, picture a telescope with no mirror, buried deep under the South Pole. Its job is to catch brief flashes of light from particles that usually pass straight through Earth.
 
