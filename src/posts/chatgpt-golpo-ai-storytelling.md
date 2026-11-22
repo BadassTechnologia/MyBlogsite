@@ -101,6 +101,14 @@ For classroom material, ask [ChatGPT](https://chatgpt.com/) to flag terms a lear
 
 The same check helps with a promotional video. Specify the problem the audience faces and show the action the product supports. Verify demonstrations and product claims before generating the narration. A polished cut will carry whatever story you gave it, including a claim you have not checked.
 
+## Use the workflow for a developer demo or game tutorial
+
+Start from a working build, a tested command, or a recorded playthrough. Give [ChatGPT](https://chatgpt.com/) the verified sequence and ask it to turn the steps into narration for a specific viewer. A developer learning the feature needs the inputs, expected output, and one common failure. A player learning a mechanic needs to see the action, the visual cue that confirms it worked, and the rule that determines when to use it. Show those details in the opening scene plan.
+
+For a developer demo, make a simple review table with the narration line, the exact interface label or command, and the evidence that it works. If the video explains an API response, preserve the structure of a verified example and remove real tokens, account IDs, and customer data. Keep version information beside the script so you can tell when a later product change makes the video stale. A generated explanation can guide the viewer, while your own screen recording can show the exact code or menus.
+
+For a game tutorial, record a clean example of the mechanic from the player’s perspective. Use [Golpo AI](https://video.golpoai.com/) to generate the setup or a simple animated explanation. Add the gameplay recording when the viewer needs to see the real timing, controls, or HUD. Test the cut with someone who has never played the game and ask them to reproduce the action. If they get the timing wrong, replace the vague instruction with the cue they should watch for.
+
 ## Conclusion
 
 Build the story around one question and four visual beats. Use [ChatGPT](https://chatgpt.com/) to revise the script, time it aloud, and prepare a scene plan. Use [Golpo](https://video.golpoai.com/) to generate a short first cut and check it against the approved narration. Once someone can follow both the clue and the payoff in one viewing, prepare the final export in the format your audience will watch.
