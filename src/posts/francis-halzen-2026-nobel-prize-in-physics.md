@@ -1,13 +1,4 @@
----
-title: "2026 Nobel Prize in Physics: How Francis Halzen Found Cosmic Neutrinos in Antarctic Ice"
-date: 2026-11-21
-category: education
-author: ashok
-excerpt: "How Francis Halzen helped build IceCube, what it discovered in Antarctic ice, and why the work won the 2026 Nobel Prize in Physics."
-featured: false
-topArticle: false
-draft: true
----
+# 2026 Nobel Prize in Physics: How Francis Halzen Found Cosmic Neutrinos in Antarctic Ice
 
 <img width="2240" height="1260" alt="Cover image for Francis Halzen and the IceCube Neutrino Observatory" src="https://github.com/user-attachments/assets/3912d5a0-041c-4696-8129-f673f3ae4f6e" />
 
@@ -35,7 +26,8 @@ Neutrinos are produced in certain reactions and particle decays. The process dep
 
 The same type of pion decay happens when cosmic rays hit Earth’s atmosphere. IceCube can therefore see a mixture of neutrinos made close to Earth and neutrinos that travelled from space. The experiment had to determine how much of its signal could come from the atmosphere before it could identify a cosmic contribution.
 
-[Image suggestion: Three-panel diagram showing neutrino production in solar fusion, beta decay, and a charged pion decay chain.]
+<img width="2240" height="1260" alt="neutrino" src="https://github.com/user-attachments/assets/f70435ea-310b-4b30-a704-5fcbfd688853" />
+
 
 ## What did Francis Halzen do?
 
