@@ -6,6 +6,10 @@ excerpt: "How a light-sensitive protein from algae became a tool for testing wha
 draft: true
 ---
 
+{add banner image here}
+
+A flash of light can make a neuron fire. The discovery that made this possible started with a single-celled alga.
+
 On October 5, 2026, Karl Deisseroth, Peter Hegemann, and Georg Nagel shared the Nobel Prize in Physiology or Medicine for discoveries concerning light-gated ion channels and optogenetics. The work began with a question about how a microscopic alga responds to light. It led to a way for neuroscientists to change the activity of selected nerve cells at a chosen moment and measure what happens next.
 
 ## What is optogenetics?
@@ -69,6 +73,22 @@ There are also limits to what a single experiment can establish. Light spreads i
 The immediate value is in research. Understanding which circuits contribute to an action, sensation, or symptom can help researchers decide what to study next. For example, an experiment in an animal model can test whether a group of cells influences a behaviour linked to a condition. A result can guide further investigation of that circuit, even if the eventual treatment uses a different method.
 
 Clinical applications face their own questions. Researchers need a way to reach the right cells, deliver light to the right location, and establish safety and durability in people. A promising laboratory result answers a question about a model or a set of cells. Evidence from clinical research is needed to answer whether a proposed intervention helps patients. The prize recognises a method that changed how scientists investigate nervous systems.
+
+## How do researchers know the light caused the change?
+
+Imagine that a group of cells fires every time a light flashes. That pattern is promising, but it still leaves several explanations. The light may have opened the intended channels. The recording equipment might have picked up a disturbance at the moment the light switched on. In a behavioural study, an animal might respond to a visible glow or a sound from the equipment. A well-designed comparison helps distinguish these possibilities.
+
+One useful comparison is between cells that contain the light-sensitive protein and similar cells that lack it. If the same flash produces the expected electrical response only in the first group, that strengthens the evidence that the protein matters. Researchers can also compare responses during pulses with activity between pulses. Looking at a series of trials helps establish whether the response follows the light consistently or appears only in an isolated recording. The most informative controls depend on what the study is measuring.
+
+A voltage trace makes the logic easier to see. First mark the time when the light turns on. Then look at when the voltage starts to change and whether it crosses the threshold for a spike. If an illustrative trace shows a flash at 100 milliseconds and a spike at 107 milliseconds, the delay is 7 milliseconds. A single trace shows one response. Repeated measurements show whether the response usually occurs within a similar interval and how often it fails. These example numbers describe how to read a trace and do not reproduce a result from the 2005 paper.
+
+## What can a circuit experiment prove?
+
+Suppose researchers think a group of neurons helps an animal choose a direction. They could begin by recording the group during left and right turns. If the cells fire shortly before left turns, they have found a pattern. The next question is whether changing the group’s activity changes the likelihood of a left turn. An optogenetics experiment lets them ask that question during a defined part of the task.
+
+Timing matters to the interpretation. If stimulation changes the choice only before a cue appears, the cells may play a different role from a group whose stimulation changes movement after the choice is made. The experiment can narrow the possibilities, but it still needs recordings and other evidence to distinguish roles such as preparing a movement, signalling a cue, and carrying out a decision.
+
+Researchers can also ask whether the effect depends on the context. A group of cells might influence choices when a signal is hard to see and have little effect when the signal is obvious. In that case, a report that simply says the cells “control decisions” would lose the useful detail. Saying when the effect appeared helps other groups design comparisons and tells readers how far the result can be applied. That precision is one reason the method matters for understanding how circuits work.
 
 ## Conclusion
 
