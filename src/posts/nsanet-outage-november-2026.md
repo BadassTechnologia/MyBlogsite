@@ -6,6 +6,10 @@ excerpt: "A timeline of the November 2026 NSANet outage, what the NSA said, how 
 draft: true
 ---
 
+{add banner image here}
+
+What does it mean for a classified network to be back if staff are still returning in groups?
+
 On Tuesday, November 17, 2026, the Associated Press reported that a classified internal communications network used by the US National Security Agency was offline. The NSA said some internal systems experienced temporary degradation during scheduled maintenance and that mission-critical capabilities remained operational. On Friday, November 20, CNN reported that the network, known as NSANet, had been restored after a disruption that sources described as lasting nearly four days.
 
 Those accounts answer different questions. The agency addressed whether it could still carry out critical work. Reporters described the experience of employees using the affected network and how they were told to return. Together, the accounts establish a disruption and a reported restoration. They leave gaps about the precise cause, the services affected, and the time individual users regained access.
@@ -72,6 +76,22 @@ If you are responsible for a service your colleagues rely on, start by naming a 
 It also helps to agree in advance on a channel for status updates. An outage in an internal communications tool can make it harder for employees to learn whether they should report to work, wait, or use an alternate process. Give people a way to learn what work can continue, when the next update is due, and how broadly the issue affects the organisation. This is a general continuity practice. The public sources do not describe the NSA’s internal procedures in enough detail to use them as a technical template.
 
 Finally, give staff a status statement they can act on. “Some users can sign in, and the next group should try at 11 a.m.” conveys more than “the system is back” when access is being restored in stages. If an exact cause is still under investigation, give the time of the next update and distinguish verified facts from provisional explanations.
+
+## What a public outage report can tell you
+
+An outage has at least three timelines. The first starts when a service stops behaving as expected. The second starts when someone notices and reports the problem. The third follows the return of ordinary workloads. In a detailed incident review, these timelines might have different start and end points. A first public news report is a useful fixed point on the reporting timeline. It does not date the first internal symptom.
+
+A similar distinction applies to the scope of the report. Consider two employees who use the same internal network. One may need access to a messaging service, while another may need to reach a separate internal application. If messaging is unavailable for the first employee, the practical effect can be a complete work stoppage. The second employee may keep working. Both experiences can fit an organisation’s statement that some systems are affected. A useful account of the incident keeps the description of each service tied to evidence about that service.
+
+There is also a difference between the report that staff were told to return in groups and the explanation for why those groups were needed. The CNN report describes the instructions and attributes the login concern to a source. A public technical report could go further by showing how the organisation measured load before deciding that another group could return. Without those measurements, readers can understand the purpose of staggering arrivals without assuming a particular capacity figure or technical failure.
+
+## What would make a follow-up report more informative?
+
+Look for an update that identifies the affected services in terms people can understand. A statement that messaging was unavailable at several locations, for example, would tell readers more than a statement that the network was degraded. Exact times, with a time zone, would make it possible to distinguish the duration of a full interruption from the time it took to restore normal access for everyone. Even a broad description of how critical functions were maintained would help readers understand the limits of the interruption.
+
+A follow-up can also clarify how restoration was tested. Imagine an organisation says its network was restored at noon, but most employees are scheduled to return later. A reporter could ask whether that statement means a monitoring check passed, a pilot group used the service successfully, or regular workloads had already returned. Each answer supplies a different level of evidence. A precise answer can help an employee decide whether to sign in now and help an outside reader decide how to describe the recovery.
+
+Finally, look for the source of a claim about cause. An official incident review can connect a maintenance action to a failure through evidence gathered during restoration. A news report based on a person familiar with the event can add context, but readers should be able to see where that context came from and whether the organisation confirmed it. These distinctions explain how the November reports can be useful even while some details remain unknown.
 
 ## Conclusion
 
