@@ -71,6 +71,8 @@ A workplace study would face a different problem. A scheduled holiday and an unp
 
 The best reading of the coverage is therefore local and specific. We can say a named school reportedly offered an attendance incentive. We can say that the game launched on the date Rockstar announced and that the publisher reported extraordinary opening sales. We cannot infer a global absence total from those observations. The absence story would need a separate dataset to move from a vivid anecdote to a measured phenomenon.
 
+A useful follow-up would compare the same school across several ordinary Thursdays and Fridays, then report how the launch dates fit within that range. Publishing the comparison as an aggregate would give readers more context without turning individual pupils into examples. If a school had no comparable figures available, its account could still explain why staff acted and what they observed, with the limits of that account stated alongside it.
+
 ## What lasts after the launch joke fades?
 
 GTA Flu makes sense as a record of expectations around the release. An entertainment company, a school, and a group of players may all respond to the same calendar date while focusing on different outcomes. The company wants a successful launch, the school wants pupils in class, and players want enough time to enjoy an event they have waited years for. The story becomes more informative when each of those outcomes is tied to evidence appropriate to it.
