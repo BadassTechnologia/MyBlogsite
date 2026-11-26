@@ -83,6 +83,8 @@ For each service, record the setting, network status, allowed-price estimate, ap
 
 The resulting number is a planning estimate. Its biggest value is showing which question could change your decision. If it is the MRI price, ask for an estimate that includes the relevant facility and interpretation. If it is a drug, confirm the tier and pharmacy. If it is a deductible or family threshold, ask for an example using the plan’s wording. You can then compare plans on details that affect the care you actually expect to use.
 
+Keep a separate column for services you may use but have not decided to schedule. This lets you compare the plan with and without those services. If the preference changes, verify those rows first. You will often learn more from one clarified estimate than from refining every line by a few dollars.
+
 ## References
 
 - [CMS Summary of Benefits and Coverage overview and glossary](https://www.cms.gov/cciio/resources/fact-sheets-and-faqs/indexsummarybenefitscoverage)
