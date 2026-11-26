@@ -83,6 +83,8 @@ Make a worksheet with provider, current monthly total, changed line item, action
 
 Revisit the list after one full billing cycle and schedule a quick review before the next annual renewal. Use the dates you found to set reminders for promotions and recurring contracts. A useful result might be a lower bill, a corrected error, or the decision to keep a charge that covers something the household genuinely needs. The aim is to know what you pay, why it is on the bill, and whether another option would produce a better total.
 
+If multiple household members pay the bills, schedule one short handover after the first review. Each person can report which provider they contacted, what outcome was promised, and when it should appear. That prevents two people from requesting the same change or assuming it went through. Keep the confirmation separate from the planning estimate so anyone reviewing next month’s statement can see what to look for.
+
 ## References
 
 - [FCC guide to broadband consumer labels](https://www.fcc.gov/broadbandlabels)
