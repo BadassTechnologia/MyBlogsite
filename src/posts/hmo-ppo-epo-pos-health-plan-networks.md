@@ -91,6 +91,8 @@ The plan type is a quick description of the rules. Your decision should rest on 
 
 Recheck participation when the plan renews and before a major scheduled service. Ask for a current estimate if the facility changes or the appointment moves to another location. If you help someone else compare plans, have them identify the providers they are comfortable switching and the providers they need to keep. That gives the comparison a clear priority and avoids spending time comparing the cost of a plan that cannot support the intended care.
 
+When comparing provider directories, search for the same zip code and use the same travel radius for each plan. An apparent network advantage can disappear if one directory defaults to a wider area than another. Also confirm the specialty under which the provider is listed. A practice may be available for one type of appointment and refer patients elsewhere for procedures or subspecialty care.
+
 ## References
 
 - [HealthCare.gov definitions of HMO, PPO, EPO, and POS](https://www.healthcare.gov/choose-a-plan/plan-types/)
