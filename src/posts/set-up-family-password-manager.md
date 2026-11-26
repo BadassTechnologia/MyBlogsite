@@ -86,6 +86,8 @@ If you keep a vault backup, read the vendor’s documentation on export formats 
 
 Finally, make a short rule for unexpected requests. If someone receives a message asking for a family login, pause and verify it through an existing trusted channel. Open the service from a saved address or the official app. A shared vault makes legitimate access easier, and it also gives the household a normal place to look for a credential without following a link in an unsolicited message.
 
+Agree on a way to handle a shared login when the organizer is unreachable. Start with the service’s own support process and the recovery information held by an authorized person. If an account cannot be recovered by someone else under the provider’s rules, record that limitation in the household plan. That is more useful than storing a password that no longer works or promising access that the service does not grant.
+
 ## References
 
 - [Bitwarden password manager plans and family sharing](https://bitwarden.com/help/password-manager-plans/)
