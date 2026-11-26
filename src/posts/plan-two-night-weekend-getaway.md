@@ -96,6 +96,8 @@ Before leaving, make one final pass over the essential facts. Check the destinat
 
 After the trip, compare the actual spend with the budget. Record the costs you missed, such as a parking tax or an extra ride, and keep the changes that made the schedule work. A useful template improves with the evidence of how your group travels. For the next weekend, start with one activity, one base, and one return deadline. Build everything else around those three facts.
 
+Use the same itinerary on a car-free weekend by replacing the parking blocks with walking and transfer time. Check whether the last return from the main attraction still runs on Saturdays and whether Sunday has a different timetable. A short connection on a weekday may become a long wait on a weekend. Give every traveler the name of the correct station and a practical meeting point. If luggage or mobility affects the route, verify lift availability and the route from the station to lodging before you book. Add the actual door-to-door time to the schedule so the group can see what the trip requires.
+
 ## References
 
 - [Roadtrippers official trip planner](https://roadtrippers.com/)
