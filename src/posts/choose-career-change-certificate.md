@@ -85,6 +85,8 @@ A career-change certificate can help organize study, supply a recognized qualifi
 
 Keep the comparison when you finish the course. It can become the basis for a stronger résumé entry. Name the credential accurately, then describe what you made and how you checked it. If the certificate involved a formal exam, say so. If it was a course with an independently developed project, give the project its own line. This helps an employer see both the qualification and the skill it represents.
 
+If you are comparing programs offered by employers, ask the employer what kind of evidence it accepts from applicants who studied elsewhere. A written answer about a specific credential is more informative than a logo on a course landing page. When that answer is unavailable, use several recent job descriptions and treat recognition as an open question instead of assuming the credential will change the hiring decision.
+
 ## References
 
 - [U.S. Bureau of Labor Statistics Occupational Outlook Handbook](https://www.bls.gov/ooh/)
