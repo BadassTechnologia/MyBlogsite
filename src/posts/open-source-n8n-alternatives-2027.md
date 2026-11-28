@@ -1,6 +1,6 @@
 ---
 title: "10 Open-Source n8n Alternatives for 2027 Compared"
-date: 2026-11-22
+date: 2026-11-16
 category: tech
 excerpt: "Compare 10 open-source n8n alternatives by workflow style, self-hosting cost, and use case, from visual app automation to Kubernetes jobs."
 draft: true
@@ -20,16 +20,16 @@ Open source describes the software licence. It does not eliminate the cost of ru
 
 | Tool | Starting software price | How you build | Key features and best fit |
 | --- | --- | --- | --- |
-| [Activepieces](https://www.activepieces.com/) | $0 self-hosted community edition | Visual flows | App connectors, triggers, and multi-step business workflows |
-| [Automatisch](https://automatisch.io/) | $0 self-hosted community edition | Visual flows | Straightforward app-to-app automation |
-| [Node-RED](https://nodered.org/) | $0 self-hosted | Browser-based node editor | MQTT, HTTP events, message transformation, and edge devices |
-| [Windmill](https://www.windmill.dev/) | $0 self-hosted open-source option | Scripts and visual flows | Script inputs, jobs, schedules, and internal tools |
-| [Kestra](https://kestra.io/) | $0 self-hosted open-source edition | Declarative YAML | Scheduling, orchestration, and task execution history |
-| [Huginn](https://github.com/huginn/huginn) | $0 self-hosted | Configured agents | Website and feed monitoring with event chains |
-| [Apache Airflow](https://airflow.apache.org/) | $0 self-hosted | Python-defined workflows | Scheduled data pipelines, dependencies, and backfills |
-| [Prefect](https://www.prefect.io/) | $0 self-hosted server | Python functions | Flow and task state, retries, and deployment management |
-| [StackStorm](https://stackstorm.com/) | $0 self-hosted | Rules and actions | Event-driven operations and infrastructure runbooks |
-| [Argo Workflows](https://argo-workflows.readthedocs.io/en/latest/) | $0 self-hosted | [Kubernetes](https://kubernetes.io/) manifests | Container-native jobs, parallel steps, and dependencies |
+| [Activepieces](https://www.activepieces.com/) | self-hosted community edition | Visual flows | App connectors, triggers, and multi-step business workflows |
+| [Automatisch](https://automatisch.io/) | self-hosted community edition | Visual flows | Straightforward app-to-app automation |
+| [Node-RED](https://nodered.org/) |  self-hosted | Browser-based node editor | MQTT, HTTP events, message transformation, and edge devices |
+| [Windmill](https://www.windmill.dev/) |  self-hosted open-source option | Scripts and visual flows | Script inputs, jobs, schedules, and internal tools |
+| [Kestra](https://kestra.io/) |  self-hosted open-source edition | Declarative YAML | Scheduling, orchestration, and task execution history |
+| [Huginn](https://github.com/huginn/huginn) | self-hosted | Configured agents | Website and feed monitoring with event chains |
+| [Apache Airflow](https://airflow.apache.org/) | self-hosted | Python-defined workflows | Scheduled data pipelines, dependencies, and backfills |
+| [Prefect](https://www.prefect.io/) | self-hosted server | Python functions | Flow and task state, retries, and deployment management |
+| [StackStorm](https://stackstorm.com/) | self-hosted | Rules and actions | Event-driven operations and infrastructure runbooks |
+| [Argo Workflows](https://argo-workflows.readthedocs.io/en/latest/) | self-hosted | [Kubernetes](https://kubernetes.io/) manifests | Container-native jobs, parallel steps, and dependencies |
 
 Software prices refer to the listed editions. Hosting, third-party APIs, and paid connectors can add costs. This is a guide for 2027 planning using product information checked in November 2026.
 
